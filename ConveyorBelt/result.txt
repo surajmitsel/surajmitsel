@@ -1,0 +1,1542 @@
+[Running] cd "c:\SURAJ\Progs\ConveyorBelt\" && g++ ConveyorBelt.cpp -o ConveyorBelt && "c:\SURAJ\Progs\ConveyorBelt\"ConveyorBelt
+-----------------------------conveyorBelt initial items-----------------------
+A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+-----------------------------conveyorBelt initial items------------------------
+num of items and slots:100
+thread id:2
+upper wrki0:1 lower wrki0:0
+upper wrki1:1 lower wrki1:0
+upper wrki2:1 lower wrki2:0
+- - - A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:1
+- - - - - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:1
+upper wrki2:0 lower wrki2:0
+- - - - - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:0
+- - - - B A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:1 lower wrki0:0
+upper wrki1:1 lower wrki1:0
+upper wrki2:0 lower wrki2:1
+- - - - - - - C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:2
+- - - - - - - C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:2 lower wrki0:0
+upper wrki1:1 lower wrki1:0
+upper wrki2:1 lower wrki2:0
+- - - - - - - - - - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:3
+- - - - - - - - - P A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:3 lower wrki0:0
+upper wrki1:2 lower wrki1:0
+upper wrki2:2 lower wrki2:1
+- - - - - - - - P P - B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:1
+- - - - - - - - P P - - C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:3 lower wrki1:0
+upper wrki2:0 lower wrki2:2
+- - - - - - - - P P - P C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:1
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:1 lower wrki1:0
+upper wrki2:3 lower wrki2:0
+- - - - - - - - P P - P - - P A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:1
+upper wrki2:1 lower wrki2:1
+- - - - - - - - P P - P - - P - - C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:3 lower wrki1:2
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:1 lower wrki1:0
+upper wrki2:1 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:3
+- - - - - - - - P P - P - - P - P - - P A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:2 lower wrki1:0
+upper wrki2:2 lower wrki2:1
+- - - - - - - - P P - P - - P - P - - P - B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:1
+- - - - - - - - P P - P - - P - P - - P - - C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:3 lower wrki1:0
+upper wrki2:0 lower wrki2:2
+- - - - - - - - P P - P - - P - P - - P - P C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:1
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:1 lower wrki1:0
+upper wrki2:3 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:1
+upper wrki2:1 lower wrki2:1
+- - - - - - - - P P - P - - P - P - - P - P - - P - - C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:3 lower wrki1:2
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:1 lower wrki1:0
+upper wrki2:1 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:3
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:2 lower wrki1:0
+upper wrki2:2 lower wrki2:1
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:1
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - - C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:3 lower wrki1:0
+upper wrki2:0 lower wrki2:2
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:1
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:1 lower wrki1:0
+upper wrki2:3 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:1
+upper wrki2:1 lower wrki2:1
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - - C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:3 lower wrki1:2
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:1 lower wrki1:0
+upper wrki2:1 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:3
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:2 lower wrki1:0
+upper wrki2:2 lower wrki2:1
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:1
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - - C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:3 lower wrki1:0
+upper wrki2:0 lower wrki2:2
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:1
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:1 lower wrki1:0
+upper wrki2:3 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:1
+upper wrki2:1 lower wrki2:1
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - - C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:3 lower wrki1:2
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:1 lower wrki1:0
+upper wrki2:1 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:3
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:2 lower wrki1:0
+upper wrki2:2 lower wrki2:1
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:1
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - - C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:3 lower wrki1:0
+upper wrki2:0 lower wrki2:2
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:1
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:1 lower wrki1:0
+upper wrki2:3 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:1
+upper wrki2:1 lower wrki2:1
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - - C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:3 lower wrki1:2
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:1 lower wrki1:0
+upper wrki2:1 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:3
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:2 lower wrki1:0
+upper wrki2:2 lower wrki2:1
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:1
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - - C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:3 lower wrki1:0
+upper wrki2:0 lower wrki2:2
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:1
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:1 lower wrki1:0
+upper wrki2:3 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:1
+upper wrki2:1 lower wrki2:1
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - - C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:3 lower wrki1:2
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:1 lower wrki1:0
+upper wrki2:1 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:3
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:2 lower wrki1:0
+upper wrki2:2 lower wrki2:1
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:1
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - - C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:3 lower wrki1:0
+upper wrki2:0 lower wrki2:2
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:1
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:1 lower wrki1:0
+upper wrki2:3 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:1
+upper wrki2:1 lower wrki2:1
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - - C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:3 lower wrki1:2
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:1 lower wrki1:0
+upper wrki2:1 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - - A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:3
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P A B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:2 lower wrki1:0
+upper wrki2:2 lower wrki2:1
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - B C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:1
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - - C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:3 lower wrki1:0
+upper wrki2:0 lower wrki2:2
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P C A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:1
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - A - A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:1 lower wrki1:0
+upper wrki2:3 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P A B C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:1
+upper wrki2:1 lower wrki2:1
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - - C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:3 lower wrki1:2
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P C A - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:1 lower wrki1:0
+upper wrki2:1 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - - A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:3
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P A B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:2 lower wrki1:0
+upper wrki2:2 lower wrki2:1
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - B C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:1
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - - C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:3 lower wrki1:0
+upper wrki2:0 lower wrki2:2
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P C A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:1
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - A - A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:1 lower wrki1:0
+upper wrki2:3 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P A B C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:1
+upper wrki2:1 lower wrki2:1
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - - C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:3 lower wrki1:2
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P C A - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:1 lower wrki1:0
+upper wrki2:1 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:3
+- - P - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:2 lower wrki1:0
+upper wrki2:2 lower wrki2:0
+- - P - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:0
+- - P - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - - 
+thread id:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:3 lower wrki1:0
+upper wrki2:3 lower wrki2:0
+- - P - P P - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - - 
+going to exit thread id:2 in cycle:1 in steps:101 total product:40
+
+[Done] exited with code=0 in 3.02 seconds
+
+[Running] cd "c:\SURAJ\Progs\ConveyorBelt\" && g++ ConveyorBelt.cpp -o ConveyorBelt && "c:\SURAJ\Progs\ConveyorBelt\"ConveyorBelt
+-----------------------------conveyorBelt initial items-----------------------
+A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+-----------------------------conveyorBelt initial items------------------------
+num of items and slots:100
+thread id:2, step:0
+upper wrki0:1 lower wrki0:0
+upper wrki1:1 lower wrki1:0
+upper wrki2:1 lower wrki2:0
+- - - A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:1
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:1
+- - - - - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:1
+upper wrki2:0 lower wrki2:0
+- - - - - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:3
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:0
+- - - - B A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:4
+upper wrki0:1 lower wrki0:0
+upper wrki1:1 lower wrki1:0
+upper wrki2:0 lower wrki2:1
+- - - - - - - C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:5
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:2
+- - - - - - - C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:6
+upper wrki0:2 lower wrki0:0
+upper wrki1:1 lower wrki1:0
+upper wrki2:1 lower wrki2:0
+- - - - - - - - - - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:7
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:3
+- - - - - - - - - P A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:8
+upper wrki0:3 lower wrki0:0
+upper wrki1:2 lower wrki1:0
+upper wrki2:2 lower wrki2:1
+- - - - - - - - P P - B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:9
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:1
+- - - - - - - - P P - - C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:10
+upper wrki0:0 lower wrki0:0
+upper wrki1:3 lower wrki1:0
+upper wrki2:0 lower wrki2:2
+- - - - - - - - P P - P C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:11
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:1
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:12
+upper wrki0:0 lower wrki0:0
+upper wrki1:1 lower wrki1:0
+upper wrki2:3 lower wrki2:0
+- - - - - - - - P P - P - - P A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:13
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:14
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:1
+upper wrki2:1 lower wrki2:1
+- - - - - - - - P P - P - - P - - C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:15
+upper wrki0:0 lower wrki0:0
+upper wrki1:3 lower wrki1:2
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:16
+upper wrki0:0 lower wrki0:0
+upper wrki1:1 lower wrki1:0
+upper wrki2:1 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:17
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:3
+- - - - - - - - P P - P - - P - P - - P A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:18
+upper wrki0:0 lower wrki0:0
+upper wrki1:2 lower wrki1:0
+upper wrki2:2 lower wrki2:1
+- - - - - - - - P P - P - - P - P - - P - B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:19
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:1
+- - - - - - - - P P - P - - P - P - - P - - C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:20
+upper wrki0:0 lower wrki0:0
+upper wrki1:3 lower wrki1:0
+upper wrki2:0 lower wrki2:2
+- - - - - - - - P P - P - - P - P - - P - P C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:21
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:1
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:22
+upper wrki0:0 lower wrki0:0
+upper wrki1:1 lower wrki1:0
+upper wrki2:3 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:23
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:24
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:1
+upper wrki2:1 lower wrki2:1
+- - - - - - - - P P - P - - P - P - - P - P - - P - - C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:25
+upper wrki0:0 lower wrki0:0
+upper wrki1:3 lower wrki1:2
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:26
+upper wrki0:0 lower wrki0:0
+upper wrki1:1 lower wrki1:0
+upper wrki2:1 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:27
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:3
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:28
+upper wrki0:0 lower wrki0:0
+upper wrki1:2 lower wrki1:0
+upper wrki2:2 lower wrki2:1
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:29
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:1
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - - C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:30
+upper wrki0:0 lower wrki0:0
+upper wrki1:3 lower wrki1:0
+upper wrki2:0 lower wrki2:2
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:31
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:1
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:32
+upper wrki0:0 lower wrki0:0
+upper wrki1:1 lower wrki1:0
+upper wrki2:3 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:33
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:34
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:1
+upper wrki2:1 lower wrki2:1
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - - C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:35
+upper wrki0:0 lower wrki0:0
+upper wrki1:3 lower wrki1:2
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:36
+upper wrki0:0 lower wrki0:0
+upper wrki1:1 lower wrki1:0
+upper wrki2:1 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:37
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:3
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:38
+upper wrki0:0 lower wrki0:0
+upper wrki1:2 lower wrki1:0
+upper wrki2:2 lower wrki2:1
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:39
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:1
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - - C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:40
+upper wrki0:0 lower wrki0:0
+upper wrki1:3 lower wrki1:0
+upper wrki2:0 lower wrki2:2
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:41
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:1
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:42
+upper wrki0:0 lower wrki0:0
+upper wrki1:1 lower wrki1:0
+upper wrki2:3 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:43
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:44
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:1
+upper wrki2:1 lower wrki2:1
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - - C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:45
+upper wrki0:0 lower wrki0:0
+upper wrki1:3 lower wrki1:2
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:46
+upper wrki0:0 lower wrki0:0
+upper wrki1:1 lower wrki1:0
+upper wrki2:1 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:47
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:3
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:48
+upper wrki0:0 lower wrki0:0
+upper wrki1:2 lower wrki1:0
+upper wrki2:2 lower wrki2:1
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:49
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:1
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - - C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:50
+upper wrki0:0 lower wrki0:0
+upper wrki1:3 lower wrki1:0
+upper wrki2:0 lower wrki2:2
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:51
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:1
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:52
+upper wrki0:0 lower wrki0:0
+upper wrki1:1 lower wrki1:0
+upper wrki2:3 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:53
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:54
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:1
+upper wrki2:1 lower wrki2:1
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - - C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:55
+upper wrki0:0 lower wrki0:0
+upper wrki1:3 lower wrki1:2
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:56
+upper wrki0:0 lower wrki0:0
+upper wrki1:1 lower wrki1:0
+upper wrki2:1 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:57
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:3
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:58
+upper wrki0:0 lower wrki0:0
+upper wrki1:2 lower wrki1:0
+upper wrki2:2 lower wrki2:1
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:59
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:1
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - - C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:60
+upper wrki0:0 lower wrki0:0
+upper wrki1:3 lower wrki1:0
+upper wrki2:0 lower wrki2:2
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:61
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:1
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:62
+upper wrki0:0 lower wrki0:0
+upper wrki1:1 lower wrki1:0
+upper wrki2:3 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:63
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:64
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:1
+upper wrki2:1 lower wrki2:1
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - - C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:65
+upper wrki0:0 lower wrki0:0
+upper wrki1:3 lower wrki1:2
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:66
+upper wrki0:0 lower wrki0:0
+upper wrki1:1 lower wrki1:0
+upper wrki2:1 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:67
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:3
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:68
+upper wrki0:0 lower wrki0:0
+upper wrki1:2 lower wrki1:0
+upper wrki2:2 lower wrki2:1
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:69
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:1
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - - C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:70
+upper wrki0:0 lower wrki0:0
+upper wrki1:3 lower wrki1:0
+upper wrki2:0 lower wrki2:2
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:71
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:1
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:72
+upper wrki0:0 lower wrki0:0
+upper wrki1:1 lower wrki1:0
+upper wrki2:3 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:73
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:74
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:1
+upper wrki2:1 lower wrki2:1
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - - C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:75
+upper wrki0:0 lower wrki0:0
+upper wrki1:3 lower wrki1:2
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:76
+upper wrki0:0 lower wrki0:0
+upper wrki1:1 lower wrki1:0
+upper wrki2:1 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:77
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:3
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:78
+upper wrki0:0 lower wrki0:0
+upper wrki1:2 lower wrki1:0
+upper wrki2:2 lower wrki2:1
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:79
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:1
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - - C A - A B C A - A B C A - A B C A - 
+thread id:2, step:80
+upper wrki0:0 lower wrki0:0
+upper wrki1:3 lower wrki1:0
+upper wrki2:0 lower wrki2:2
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P C A - A B C A - A B C A - A B C A - 
+thread id:2, step:81
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:1
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - A - A B C A - A B C A - A B C A - 
+thread id:2, step:82
+upper wrki0:0 lower wrki0:0
+upper wrki1:1 lower wrki1:0
+upper wrki2:3 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P A B C A - A B C A - A B C A - 
+thread id:2, step:83
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P A B C A - A B C A - A B C A - 
+thread id:2, step:84
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:1
+upper wrki2:1 lower wrki2:1
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - - C A - A B C A - A B C A - 
+thread id:2, step:85
+upper wrki0:0 lower wrki0:0
+upper wrki1:3 lower wrki1:2
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P C A - A B C A - A B C A - 
+thread id:2, step:86
+upper wrki0:0 lower wrki0:0
+upper wrki1:1 lower wrki1:0
+upper wrki2:1 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - - A B C A - A B C A - 
+thread id:2, step:87
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:3
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P A B C A - A B C A - 
+thread id:2, step:88
+upper wrki0:0 lower wrki0:0
+upper wrki1:2 lower wrki1:0
+upper wrki2:2 lower wrki2:1
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - B C A - A B C A - 
+thread id:2, step:89
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:1
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - - C A - A B C A - 
+thread id:2, step:90
+upper wrki0:0 lower wrki0:0
+upper wrki1:3 lower wrki1:0
+upper wrki2:0 lower wrki2:2
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P C A - A B C A - 
+thread id:2, step:91
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:1
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - A - A B C A - 
+thread id:2, step:92
+upper wrki0:0 lower wrki0:0
+upper wrki1:1 lower wrki1:0
+upper wrki2:3 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P A B C A - 
+thread id:2, step:93
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P A B C A - 
+thread id:2, step:94
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:1
+upper wrki2:1 lower wrki2:1
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - - C A - 
+thread id:2, step:95
+upper wrki0:0 lower wrki0:0
+upper wrki1:3 lower wrki1:2
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P C A - 
+thread id:2, step:96
+upper wrki0:0 lower wrki0:0
+upper wrki1:1 lower wrki1:0
+upper wrki2:1 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - - 
+thread id:2, step:97
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:3
+- - P - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - - 
+thread id:2, step:98
+upper wrki0:0 lower wrki0:0
+upper wrki1:2 lower wrki1:0
+upper wrki2:2 lower wrki2:0
+- - P - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - - 
+thread id:2, step:99
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:0
+- - P - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - - 
+thread id:2, step:100
+upper wrki0:0 lower wrki0:0
+upper wrki1:3 lower wrki1:0
+upper wrki2:3 lower wrki2:0
+- - P - P P - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - - 
+going to exit thread id:2 in cycle:1 in steps:101 total product:40
+
+[Done] exited with code=0 in 3.123 seconds
+
+[Running] cd "c:\SURAJ\Progs\ConveyorBelt\" && g++ ConveyorBelt.cpp -o ConveyorBelt && "c:\SURAJ\Progs\ConveyorBelt\"ConveyorBelt
+-----------------------------conveyorBelt initial items-----------------------
+A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+-----------------------------conveyorBelt initial items------------------------
+num of items and slots:100
+thread id:2, step:1
+upper wrki0:1 lower wrki0:0
+upper wrki1:1 lower wrki1:0
+upper wrki2:1 lower wrki2:0
+- - - A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:2
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:1
+- - - - - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:3
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:1
+upper wrki2:0 lower wrki2:0
+- - - - - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:4
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:0
+- - - - B A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:5
+upper wrki0:1 lower wrki0:0
+upper wrki1:1 lower wrki1:0
+upper wrki2:0 lower wrki2:1
+- - - - - - - C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:6
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:2
+- - - - - - - C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:7
+upper wrki0:2 lower wrki0:0
+upper wrki1:1 lower wrki1:0
+upper wrki2:1 lower wrki2:0
+- - - - - - - - - - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:8
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:3
+- - - - - - - - - P A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:9
+upper wrki0:3 lower wrki0:0
+upper wrki1:2 lower wrki1:0
+upper wrki2:2 lower wrki2:1
+- - - - - - - - P P - B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:10
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:1
+- - - - - - - - P P - - C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:11
+upper wrki0:0 lower wrki0:0
+upper wrki1:3 lower wrki1:0
+upper wrki2:0 lower wrki2:2
+- - - - - - - - P P - P C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:12
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:1
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:13
+upper wrki0:0 lower wrki0:0
+upper wrki1:1 lower wrki1:0
+upper wrki2:3 lower wrki2:0
+- - - - - - - - P P - P - - P A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:14
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:15
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:1
+upper wrki2:1 lower wrki2:1
+- - - - - - - - P P - P - - P - - C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:16
+upper wrki0:0 lower wrki0:0
+upper wrki1:3 lower wrki1:2
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:17
+upper wrki0:0 lower wrki0:0
+upper wrki1:1 lower wrki1:0
+upper wrki2:1 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:18
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:3
+- - - - - - - - P P - P - - P - P - - P A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:19
+upper wrki0:0 lower wrki0:0
+upper wrki1:2 lower wrki1:0
+upper wrki2:2 lower wrki2:1
+- - - - - - - - P P - P - - P - P - - P - B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:20
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:1
+- - - - - - - - P P - P - - P - P - - P - - C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:21
+upper wrki0:0 lower wrki0:0
+upper wrki1:3 lower wrki1:0
+upper wrki2:0 lower wrki2:2
+- - - - - - - - P P - P - - P - P - - P - P C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:22
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:1
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:23
+upper wrki0:0 lower wrki0:0
+upper wrki1:1 lower wrki1:0
+upper wrki2:3 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:24
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:25
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:1
+upper wrki2:1 lower wrki2:1
+- - - - - - - - P P - P - - P - P - - P - P - - P - - C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:26
+upper wrki0:0 lower wrki0:0
+upper wrki1:3 lower wrki1:2
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:27
+upper wrki0:0 lower wrki0:0
+upper wrki1:1 lower wrki1:0
+upper wrki2:1 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:28
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:3
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:29
+upper wrki0:0 lower wrki0:0
+upper wrki1:2 lower wrki1:0
+upper wrki2:2 lower wrki2:1
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:30
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:1
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - - C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:31
+upper wrki0:0 lower wrki0:0
+upper wrki1:3 lower wrki1:0
+upper wrki2:0 lower wrki2:2
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:32
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:1
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:33
+upper wrki0:0 lower wrki0:0
+upper wrki1:1 lower wrki1:0
+upper wrki2:3 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:34
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:35
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:1
+upper wrki2:1 lower wrki2:1
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - - C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:36
+upper wrki0:0 lower wrki0:0
+upper wrki1:3 lower wrki1:2
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:37
+upper wrki0:0 lower wrki0:0
+upper wrki1:1 lower wrki1:0
+upper wrki2:1 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:38
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:3
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:39
+upper wrki0:0 lower wrki0:0
+upper wrki1:2 lower wrki1:0
+upper wrki2:2 lower wrki2:1
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:40
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:1
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - - C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:41
+upper wrki0:0 lower wrki0:0
+upper wrki1:3 lower wrki1:0
+upper wrki2:0 lower wrki2:2
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:42
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:1
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:43
+upper wrki0:0 lower wrki0:0
+upper wrki1:1 lower wrki1:0
+upper wrki2:3 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:44
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:45
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:1
+upper wrki2:1 lower wrki2:1
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - - C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:46
+upper wrki0:0 lower wrki0:0
+upper wrki1:3 lower wrki1:2
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:47
+upper wrki0:0 lower wrki0:0
+upper wrki1:1 lower wrki1:0
+upper wrki2:1 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:48
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:3
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:49
+upper wrki0:0 lower wrki0:0
+upper wrki1:2 lower wrki1:0
+upper wrki2:2 lower wrki2:1
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:50
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:1
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - - C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:51
+upper wrki0:0 lower wrki0:0
+upper wrki1:3 lower wrki1:0
+upper wrki2:0 lower wrki2:2
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:52
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:1
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:53
+upper wrki0:0 lower wrki0:0
+upper wrki1:1 lower wrki1:0
+upper wrki2:3 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:54
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:55
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:1
+upper wrki2:1 lower wrki2:1
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - - C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:56
+upper wrki0:0 lower wrki0:0
+upper wrki1:3 lower wrki1:2
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:57
+upper wrki0:0 lower wrki0:0
+upper wrki1:1 lower wrki1:0
+upper wrki2:1 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:58
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:3
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:59
+upper wrki0:0 lower wrki0:0
+upper wrki1:2 lower wrki1:0
+upper wrki2:2 lower wrki2:1
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:60
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:1
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - - C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:61
+upper wrki0:0 lower wrki0:0
+upper wrki1:3 lower wrki1:0
+upper wrki2:0 lower wrki2:2
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:62
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:1
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:63
+upper wrki0:0 lower wrki0:0
+upper wrki1:1 lower wrki1:0
+upper wrki2:3 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:64
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:65
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:1
+upper wrki2:1 lower wrki2:1
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - - C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:66
+upper wrki0:0 lower wrki0:0
+upper wrki1:3 lower wrki1:2
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P C A - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:67
+upper wrki0:0 lower wrki0:0
+upper wrki1:1 lower wrki1:0
+upper wrki2:1 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - - A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:68
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:3
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P A B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:69
+upper wrki0:0 lower wrki0:0
+upper wrki1:2 lower wrki1:0
+upper wrki2:2 lower wrki2:1
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - B C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:70
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:1
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - - C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:71
+upper wrki0:0 lower wrki0:0
+upper wrki1:3 lower wrki1:0
+upper wrki2:0 lower wrki2:2
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P C A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:72
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:1
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - A - A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:73
+upper wrki0:0 lower wrki0:0
+upper wrki1:1 lower wrki1:0
+upper wrki2:3 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:74
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P A B C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:75
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:1
+upper wrki2:1 lower wrki2:1
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - - C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:76
+upper wrki0:0 lower wrki0:0
+upper wrki1:3 lower wrki1:2
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P C A - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:77
+upper wrki0:0 lower wrki0:0
+upper wrki1:1 lower wrki1:0
+upper wrki2:1 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - - A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:78
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:3
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P A B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:79
+upper wrki0:0 lower wrki0:0
+upper wrki1:2 lower wrki1:0
+upper wrki2:2 lower wrki2:1
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - B C A - A B C A - A B C A - A B C A - 
+thread id:2, step:80
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:1
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - - C A - A B C A - A B C A - A B C A - 
+thread id:2, step:81
+upper wrki0:0 lower wrki0:0
+upper wrki1:3 lower wrki1:0
+upper wrki2:0 lower wrki2:2
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P C A - A B C A - A B C A - A B C A - 
+thread id:2, step:82
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:1
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - A - A B C A - A B C A - A B C A - 
+thread id:2, step:83
+upper wrki0:0 lower wrki0:0
+upper wrki1:1 lower wrki1:0
+upper wrki2:3 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P A B C A - A B C A - A B C A - 
+thread id:2, step:84
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P A B C A - A B C A - A B C A - 
+thread id:2, step:85
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:1
+upper wrki2:1 lower wrki2:1
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - - C A - A B C A - A B C A - 
+thread id:2, step:86
+upper wrki0:0 lower wrki0:0
+upper wrki1:3 lower wrki1:2
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P C A - A B C A - A B C A - 
+thread id:2, step:87
+upper wrki0:0 lower wrki0:0
+upper wrki1:1 lower wrki1:0
+upper wrki2:1 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - - A B C A - A B C A - 
+thread id:2, step:88
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:3
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P A B C A - A B C A - 
+thread id:2, step:89
+upper wrki0:0 lower wrki0:0
+upper wrki1:2 lower wrki1:0
+upper wrki2:2 lower wrki2:1
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - B C A - A B C A - 
+thread id:2, step:90
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:1
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - - C A - A B C A - 
+thread id:2, step:91
+upper wrki0:0 lower wrki0:0
+upper wrki1:3 lower wrki1:0
+upper wrki2:0 lower wrki2:2
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P C A - A B C A - 
+thread id:2, step:92
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:1
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - A - A B C A - 
+thread id:2, step:93
+upper wrki0:0 lower wrki0:0
+upper wrki1:1 lower wrki1:0
+upper wrki2:3 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P A B C A - 
+thread id:2, step:94
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P A B C A - 
+thread id:2, step:95
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:1
+upper wrki2:1 lower wrki2:1
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - - C A - 
+thread id:2, step:96
+upper wrki0:0 lower wrki0:0
+upper wrki1:3 lower wrki1:2
+upper wrki2:0 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P C A - 
+thread id:2, step:97
+upper wrki0:0 lower wrki0:0
+upper wrki1:1 lower wrki1:0
+upper wrki2:1 lower wrki2:0
+- - - - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - - 
+thread id:2, step:98
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:3
+- - P - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - - 
+thread id:2, step:99
+upper wrki0:0 lower wrki0:0
+upper wrki1:2 lower wrki1:0
+upper wrki2:2 lower wrki2:0
+- - P - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - - 
+thread id:2, step:100
+upper wrki0:0 lower wrki0:0
+upper wrki1:0 lower wrki1:0
+upper wrki2:0 lower wrki2:0
+- - P - - - - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - - 
+thread id:2, step:101
+upper wrki0:0 lower wrki0:0
+upper wrki1:3 lower wrki1:0
+upper wrki2:3 lower wrki2:0
+- - P - P P - - P P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - P - P - - - 
+going to exit thread id:2 in cycle:1 in steps:101 total product:40
+
+[Done] exited with code=0 in 3.097 seconds
+

@@ -1,0 +1,53 @@
+
+
+endpoint getting the tempurature
+
+feching and saving into memory <key,value> => <date, temp>
+                               
+
+exposing the tempurature 
+
+
+top 14 temp in last 7 days
+
+API => invoke and return tempurature and date & time
+
+sensor -> server[endpoint<key,value>] --> App client last top 11 temp form last 70 days
+
+sensor_name/tmp 
+
+make_pait<{
+	int temp;
+	date 
+}>
+
+class Enpoint{
+
+unordered_map <DT,int> myTempMap; > hash 
+unordered_map <DT,int> last_sent_map; 
+
+public:
+void update_API(int tempurature){
+ 
+ date = get_current_time();
+ myTempMap[date] = tempurature; 
+
+}
+
+vector read_last_n_days_data(int LastnumDays, int numEntries){
+
+	unordered_map<int,DT> lastNEntries = get_entries();
+	sort(lastNEntries.begin(), lastNEntries.end());
+	retunrn lastNEntries;
+	
+}
+}
+
+ 
+
+
+
+
+
+
+

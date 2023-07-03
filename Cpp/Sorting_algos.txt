@@ -1,0 +1,13 @@
+/*
+	                           Time Complexity	                Space Complexity
+Sorting Algorithm   Best Case	  Average Case	  Worst Case	  Worst Case
+Bubble Sort	        O(N)	      T(N2)	          O(N2)	        O(1)
+Selection Sort	    O(N2)	      T(N2)	          O(N2)	        O(1)
+Insertion Sort	    O(N)	      T(N2)	          O(N2)	        O(1)
+Merge Sort	        O(N log N)	  T(N log N)	  O(N log N)	O(N)
+Heap Sort	        O(N log N)	  T(N log N)	  O(N log N)	O(1)
+Quick Sort	        O(N log N)	  T(N log N)	  O(N2)	        O(log N)
+Radix Sort	        O(N k)	      T(N k)	      O(N k)	    O(N + k)
+Count Sort	        O(N + k)	  T(N + k)	      O(N + k)	    O(k)
+Bucket Sort	        O(N + k)	  T(N + k)	      O(N2)	        O(N)
+*/
