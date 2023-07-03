@@ -6,6 +6,7 @@ using namespace std;
 int binarySearchIndex_rec(int array[], int low, int high, int value) {
   if (high > low) {
     int mid = low + (high - low) / 2;
+    
     if (array[mid] == value)
       return mid;
     else if (value < array[mid])
