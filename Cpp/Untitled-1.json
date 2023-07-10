@@ -1,8 +1,0 @@
-{
-    "cloud_url": "https://eirncicd4.ciscoiotdev.io",
-    "tenant_id": "ffa6ec0a-1a12-4c19-87ff-bf49d11cd1f4",
-    "api_username": "iotnms-admin@cisco.com",
-    "api_password": "Rainier!20",
-    "quiet": false,
-    "compare_only": false
-}
