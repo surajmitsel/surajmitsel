@@ -8,17 +8,17 @@
   - Move
 - It enables the object to initialize itself.
 - It invokes automatically when object is created
-- A construtor which does not accept any parameter called adefault constructor eg. `A::A()`
+- A constructor which does not accept any parameter called a default constructor eg. `A::A()`
 - When no Constructor is defined compiler supply `default constructor`.
-- There is no return type not even a void so constructor can not return any value.
+- There is no return type not even a void so constructor cannot return any value.
 - They cannot be inherited by derived class
 - An object with Constructor-destructor cannot be a member of union
 - when Constructor is parameterized then we must pass the argument to the constructor when object is created
 - Constructor is a member function of a class which initialize object.
-- Constuctor can not be `virtual` because at the time when the constructor is invoked the `vitual table` may not be available in the memory.
-- The concept of `vitual constructor` can be acheived by `factory method` pattern.
-- Constuctor can not be `static` because its an memeber function to a class but `static` functions are not part of the class.
-- Constuctor can be a `friend function` to other class 
+- Constructor cannot be `virtual` because at the time when the constructor is invoked the `virtual table` may not be available in the memory.
+- The concept of `virtual constructor` can be achieved by `factory method` pattern.
+- Constructor cannot be `static` because it's an member function to a class but `static` functions are not part of the class.
+- Constructor can be a `friend function` to other class 
 - You can declare constructor as `protected` or `private`.
 - It can be declare as `inline`, `explicit`, `friend` or `constexpr`. 
 
@@ -48,14 +48,14 @@
 ```
 - Compiler creates default constructor implicitly  if its not defined by user.
 
-## Parameterized constrctor ##
+## Parameterized constructor ##
 - It is possible to pass the parameter to a constructor. It can be called explicitly or implicitly.
 ``` cpp
     Example e = Example(0,50); // Explicitly
     Example e(0,50);  // implicitly  
 ```
 - Class can have more than one parameterized constructor this is also called `constructor overloading`.
-- Parameter of a constructor can be of anytype except that of the class to which it belongs to.
+- Parameter of a constructor can be of any type except that of the class to which it belongs to.
 - constructor can be defined as an inline function.
 - Whenever we define one or more non-default constructor i.e parameterized constructor so in that case we also need to define default constructor.
 - Constructor can be private generally for the `singleton` design patterns.
@@ -98,22 +98,22 @@ int main(){
 - When we do not define copy constructor compiler create a default copy constructor and which does member wise copy of between objects
 - When object of the class is passed by value to a function.
 - When object is constructed based on another object of the same class.
-- When compiler generates temprory objects.
-- Its not guranteed that a copy constructor will be called in all these cases bcz the c++ standerd compiler also optimize the code for eg. return value.
+- When compiler generates temporary objects.
+- It's not guaranteed that a copy constructor will be called in all these cases bcz the c++ standard compiler also optimize the code for eg. return value.
 
 ### When is user defined copy constructor is needed ###
 - When we do not define copy constructor compiler create a default copy constructor and which does member wise copy of between objects.
 - The compiler created copy constructor works fine in general.
-- We need not to define our own copy constructor only if the object has pointers or any runtime allocation of the resources like file handler, n/w resorces etc.
+- We need not to define our own copy constructor only if the object has pointers or any runtime allocation of the resources like file handler, n/w resources etc.
 - Default copy constructor does only `shallow copy`.
-- `Deep copy` is possible only with user defined copy construtor so that we can make sure the pointer or references can point to new memory location.
+- `Deep copy` is possible only with user defined copy constructor so that we can make sure the pointer or references can point to new memory location.
 
 ## Move Constructor ##
-- `c++11` defines two new function to serve `move symantic` a move constructor and move assignment operator. 
+- `c++11` defines two new function to serve `move semantic` a move constructor and move assignment operator. 
 - Whereas the goal of copy constructor or copy assignment operator is to make a copy of the one object to other object.
-- The goal of move constructor and move assignement is to `move the owenership` of the resource from one object to another object, which is much less expensive then making a copy.
-- Whereas copy flavor of these function take a `const l-value reference`, and move flavor if these function takes a `non-const r-value referance`
-- It does not allocate new resouces instead it `pliffer` new resource with the old resource and it sets old resource to default state.
+- The goal of move constructor and move assignment is to `move the ownership` of the resource from one object to another object, which is much less expensive then making a copy.
+- Whereas copy flavour of these function take a `const l-value reference`, and move flavour if these function takes a `non-const r-value reference`
+- It does not allocate new resources instead it `pilfer` new resource with the old resource and it sets old resource to default state.
 
 ``` cpp
     // Move
@@ -127,9 +127,9 @@ int main(){
     // copy assignment
     className& operator=(const className &); // const l-value reference
 ```
-- A move constructor allows the resorces owned by an `r-value` object to bemoved into an `l-value` without creating its copy.
-- An `r-value` is an expression which dose not have any moemory address and `l-value` is an expression with a moemory address
-- A move constructor can be called explicitly with the `move()` fuction for already create object
+- A move constructor allows the resources owned by an `r-value` object to be moved into an `l-value` without creating its copy.
+- An `r-value` is an expression which dose not have any memory address and `l-value` is an expression with a memory address
+- A move constructor can be called explicitly with the `move()` function for already create object
 
 ```cpp
     class memoryPage{
@@ -142,7 +142,7 @@ int main(){
                 buf = new char[size];
             }
             memoryPage(memoryPage&&); // move 
-            memoryPage& operator = (memoryPage &&); // move assignement
+            memoryPage& operator = (memoryPage &&); // move assignment
     };
     memoryPage::memoryPage(memoryPage && other){
         this->size = other.size;
@@ -195,13 +195,13 @@ int main(){
     return 0;
 }
 ```
-- Now when the above code is executed the default constructor is called at the time that the temprorary object of Test is pushed back in the vector.
-- So in above code there is a serious performance overhead as temproray object Test is created first then its copied using copy constructor, which can be solve using move without performance overhead. So for a large number of push_back() statement better to use move constructor.
+- Now when the above code is executed the default constructor is called at the time that the temporary object of Test is pushed back in the vector.
+- So in above code there is a serious performance overhead as temporary object Test is created first then its copied using copy constructor, which can be solve using move without performance overhead. So for a large number of push_back() statement better to use move constructor.
 
 ## explicit keyword for constructor ##
 - It tells compiler that a certain constructor many not be used to implicitly case an expression to its class Type.
 - The explicit keyword is an optional declaration for constructor that takes exactly `one argument`.
-- It only applys to single argument constructor since those are the constructor can be used in type casting.
+- It only applies to single argument constructor since those are the constructor can be used in type casting.
 
 ``` cpp
     class foo{
@@ -229,7 +229,7 @@ int main(){
         bar w = (bar) 3.14;
     }
 ```
-- But sometime we want to prevent this sort of impicit parameter or implicit type conversion
+- But sometime we want to prevent this sort of implicit parameter or implicit type conversion
 
 ```cpp
     class foo{
@@ -336,7 +336,7 @@ int main(){
     return 0;
 }
 ```
-In the following situation we must do the initialization of data memeber using intializer list
+In the following situation we must do the initialization of data member using initializer list
 - For initialization of non-static const data members.
 - For initializtion of reference members.
 ```cpp
@@ -350,7 +350,7 @@ class Test{
         int getY()const {return y;}
 }
 ```
-- For initializtion of member object which does not have default constructor.
+- For initialization of member object which does not have default constructor.
 - Like above point, parameterized constructor of a base class can only be called using initializer list.
 ```cpp
 class Test{
@@ -372,7 +372,7 @@ public:
 
 ```cpp
 class Test{
-    // Type is alreay a class which is having its own constructor and operator
+    // Type is already a class which is having its own constructor and operator
     Type var;
     public:
         Test(Type a){
@@ -380,11 +380,11 @@ class Test{
         }
 };
 ```
-- Here compiler follows stepes to create an object of type Test
+- Here compiler follows steps to create an object of type Test
     - Type object constructor is called first for `a`
     - The assignment operator `Type` is called inside body of Test() constructor to assign
     - And then finally destructor of `Type` is called for `a` since it goes out of scope.
-    - 3 calls[Constructor + destructor + assignement operator]
+    - 3 calls[Constructor + destructor + assignment operator]
 
 ```cpp
 //with initialization list
