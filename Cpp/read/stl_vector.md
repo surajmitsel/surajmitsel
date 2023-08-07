@@ -1,0 +1,198 @@
+## vector<> ##
+- vectors are same as dynamic array with the ability to resize itself automatically when an element is inserted or deleted with their storage being handled automatically by the container
+- vector elements are placed in contiguous storage so that they can be accessed and traversed using iterators.
+- In vector data is inserted at the end inserting at the end take different time as sometime there may be a need of extending array.
+- Removing the last element takes only constant time because no resizing happens, inserting and erasing at the beginning or in the middle is linear in time.
+```cpp
+/* 1. create */
+vector<int> vec1;           // vec.size() = 0
+vector<int> vec2{1,2,3,4};  // vec.size() = 4
+
+// creating vector using array
+int arr[] = { 10, 20, 30 };
+int n = sizeof(arr) / sizeof(arr[0]);  
+vector<int> vec3(arr, arr + n);
+
+// creating array with size 10
+vector<int> vec4(10);  
+```
+```cpp
+/* 2. insert remove element */
+vector<int> vec;  
+vec.push_back(4);
+vec.push_back(1);
+vec.push_back(8);   // vec {4,1,8}, vec.size() = 3
+vec[1] = 5;         // vec {4,5,8}  
+
+cout << vec[2];     // 8 no range check
+cout << vec.at(2);  // 8 throw range error exception if out of range
+
+// removes last element
+vec.pop_back();
+
+// removes the first element
+vec.erase(vec.begin());
+
+// inserts at the beginning
+vec.emplace(v.begin(), 5);
+
+// Inserts 20 at the end
+vec.emplace_back(20);
+```
+
+```cpp
+ /* 3. traverse the vector */
+
+// using for loop
+for(int i = 0; i<vec.size(); i++){
+    cout << vec[i] <<",";
+}
+
+// Recommended way using iterator
+for(vector<int> :: iterator itr = vec.begin();
+    itr != vec.end();
+    itr++){
+        cout << *itr <<",";
+}
+
+// one more way c++11
+for(auto x:vec){
+    cout << x << ",";
+}
+```
+```cpp
+/* 4. find element in vector*/
+vector<int>vec{10,20,50,35};
+int search = 50;
+auto it = std::find(vec.begin(),vec.end(),search);
+if(it != vec.end()){
+    cout << "found, Pos:" << it - vec.begin();
+}else{cout << "not found" ;}
+```
+```cpp
+// check empty 
+vector<int> vec{1,2,3};
+if(!vec.empty()){
+    cout << "not empty" << endl;
+}
+cout << vec.size() << endl; // 3
+
+// clear vector
+vector<int> vec2(vec); // vec2{1,2,3}
+vec.clear(); // clear all element
+
+// swap to other vector
+vector<int> vec3;
+vec2.swap(vec3); // vec2 becomes empty and vec3 {1,2,3} 
+
+// Size
+vector<int> vec4;
+for(int i=0; i<5; i++){
+    vec4.push_back(i);
+}
+
+cout << vec4.size() << endl;     // 5
+cout << vec4.capacity() << endl; // 8
+cout << vec4.maxSize() << endl;  // uint32_max
+cout << vec4.data() << endl;     // 1 first element
+vec4.resize(4);
+cout << vec4.size() << endl;     // 4
+vec4.shrink_to_fit();   
+cout << vec4.capacity() << endl; // 4
+```
+```cpp
+/* acccess by const reference */
+vector<int> test = {0,1,2,3,4,5};
+for(const int& i : test){
+    cout << i << "," << endl; // 1,2,3,4,5,
+}
+
+/* access by value */
+for(auto i : test){
+    cout << i << "," << endl; // 1,2,3,4,5,
+}
+
+/* access by forwarding reference */
+for(auto && i : test){ // type of i is: int&
+    cout << i << "," << endl; // 1,2,3,4,5,
+}
+
+/* access by forwording reference type */
+const auto & cv = test;
+for(auto && i : cv){ // type of i is : const int &
+   cout << i << "," << endl; // 1,2,3,4,5,
+}
+
+```
+## Property ##
+- vector element can be randomly accessed.
+- It is a dynamic array altered at contiguous memory location.
+- fast insert, remove at the end O(1).
+- slow insert, remove at the middle or at the beginning O(n).
+- slow search O(n).
+
+## Modifiers ##
+- `assign()` – It assigns new value to the vector elements by replacing old ones
+- `push_back()` – It push the elements into a vector from the back
+- `pop_back()` – It is used to pop or remove elements from a vector from the back.
+- `insert()` – It inserts new elements before the element at the specified position
+- `erase()` – It is used to remove elements from a container from the specified position or range.
+- `swap()` – It is used to swap the contents of one vector with another vector of same type. Sizes may differ.
+- `clear()` – It is used to remove all the elements of the vector container
+- `emplace()` – It extends the container by inserting new element at position
+- `emplace_back()` – It is used to insert a new element into the vector container, the new element is added to the end of the vector
+
+## Iterators ## 
+- `begin()` – Returns an iterator pointing to the first element in the vector
+- `end()` – Returns an iterator pointing to the theoretical element that follows the last element in the vector
+- `rbegin()` – Returns a reverse iterator pointing to the last element in the vector (reverse beginning). It moves from last to first element
+- `rend()` – Returns a reverse iterator pointing to the theoretical element preceding the first element in the vector (considered as reverse end)
+- `cbegin()` – Returns a constant iterator pointing to the first element in the vector.
+- `cend()` – Returns a constant iterator pointing to the theoretical element that follows the last element in the vector.
+- `crbegin()` – Returns a constant reverse iterator pointing to the last element in the vector (reverse beginning). It moves from last to first element
+- `crend()` – Returns a constant reverse iterator pointing to the theoretical element preceding the first element in the vector (considered as reverse end)
+
+## way to copy a vector in c++ ##
+- `Iterative method`
+```cpp
+int main(){
+    vector<int> vec1 {1,2,3,4,5};
+    vector<int> vec2;
+    for(int i=0 ;i<vec1.size()>; i++){
+        vec2.push_back(i);
+    }
+    return 0;
+}
+```
+- `By assignment = operator`: this is not possible in array (deep copy)
+```cpp
+int main(){
+    vector<int> vec1{1,2,3,4,5};
+    vector<int> vec2;
+    vec2 = vec1;
+    vec2[0] = 5; // {5,2,3,4,5}
+}
+```
+
+- `By passing to constructor `: (deep copy)
+```cpp
+int main(){
+    vector<int> vec1{1,2,3,4,5};
+    vector<int> vec2(vec1);
+    vec2[0] = 5; // {5,2,3,4,5}
+}
+```
+- `By using a inbuild method`
+```cpp
+// copy(first_iterator, last_iterator, back_inserter())
+
+int main(){
+    vector<int> vec1 {1,2,3,4,5};
+    vector<int> vec2;
+    copy(vec1.begin(), vec1.end(), back_inserter(vec2));
+    // vec2: {1,2,3,4,5}
+}
+```
+
+
+
