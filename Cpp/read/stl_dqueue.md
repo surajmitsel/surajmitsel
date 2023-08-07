@@ -1,11 +1,11 @@
 ## deque<> ##
-- Its a double ended queue. 
+- It’s a double ended queue. 
 - It is a sequence container with dynamic in size that can expanded or contracted on both sides either front or on back.
 - its similar interface like vector
 - It does not provide contiguous memory but vector provide that
 - It provide random access
 - Fast insert/remove at the beginning and at the end
-- Slow insert/remove at the middel: O(n)
+- Slow insert/remove at the middle: O(n)
 - Slow search: O(n)
 - Accessing elements in a deque by offsetting a pointer to another element causes undefined behaviour.
 - For operation that involves frequent insertion or removal of element at position other than beginning or at the end perform worst and have less consistent iterator and reference then list and forward list.
@@ -49,5 +49,6 @@ deq.erase(deq.begin() + 5);
 deq.clear();
 
 ```
+
 
 

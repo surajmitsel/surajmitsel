@@ -1,10 +1,10 @@
 ## list<> ##
-- It is adoubly linked list
-- list are sequential conatiner that allows you constant time insert and deletion operation anywhare within the sequence and interation in both direction.
+- It is a doubly linked list
+- list are sequential container that allows you constant time insert and deletion operation anywhere within the sequence and iteration in both direction.
 - it allow non-contiguous memory allocation. As compared to the vector, the list has slow traversal, but once a position has been found, insertion and deletion are quick (constant time).
 - Fast insert/remove at anyplace : O(1)
 - Slow search: O(n) {slower than vector}
-- No random access no [] opearator
+- No random access no [] operator
 - Consume more memory than vector, its having two pointer
 - Its having one function `splice` which other container does not have.
 
@@ -62,3 +62,4 @@ int main(){
     // 5,4,3,2,1 complexity is O(1)
 }
 ```
+
