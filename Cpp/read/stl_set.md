@@ -72,6 +72,5 @@ int a[] = {12,82,37,64,15};
 set<int> first(a,a+5); // first {12,15,37,64,82} sorted 
 set<int> second; // empty {}
 second = first; // second {12,15,37,64,82}, first {}
-
 ```
 
