@@ -50,7 +50,11 @@ void stop(void){
     SDA = 1;
 }
 ```
+### Master Tranmitter
+![](image/I2C_master_transmitter.jpg)
 
+### Master Receiver
+![](image/I2C_master_receiver.jpg)
 ```cpp
 // Write Data at memory location
 void write_BYTE(U8 addr, U8 data){
