@@ -101,6 +101,6 @@ This field does not affect handling of the underlying TCP data transmissions; it
 `mosquitto_pub -h localhost -t kitchen/sensor/temperature -m 22 -q 2`
 
 ### mosquitto_sub example
-- mosquitto_sub -h localhost -t kitchen/coffeemaker -q 1
-- mosquitto_sub -t kitchen/sensors/+ -q 2
+- `mosquitto_sub -h localhost -t kitchen/coffeemaker -q 1`
+- `mosquitto_sub -t kitchen/sensors/+ -q 2`
 
