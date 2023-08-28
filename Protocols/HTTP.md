@@ -93,3 +93,10 @@ Connection: Closed
 ### HTTP Error code
 ![](image/https_status_code.jpeg)
 ![](image/HTTP-Error-Codes.jpg)
+
+### HTTP Connections
+- Non-Persistent
+- Persistent
+
+Difference between Persistent and Non-Persistent Connections
+![](image/http_persist_nonPersist.png)
