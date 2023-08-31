@@ -36,3 +36,9 @@ A Ping-of-Death attack involves an attacker sending an extremely large ping to a
 
 - `Smurf Attack`
 In a Smurf attack, the attacker transmits an ICMP packet that has a spoofed or faked IP address. When the equipment on the network replies, each reply gets sent to the spoofed IP address, and the target is flooded with a ton of ICMP packets. This kind of attack is also typically only a problem for older equipment.
+
+### Is ICMP the same as ping?
+ICMP and ping are two different things although they are related. ICMP is a protocol that controls how messages are sent between devices. The echo requests and replies the ICMP protocol sends are commonly referred to as pings. So while a ping is produced using ICMP, it is not ICMP.
+
+### How does ICMP ping work?
+The ICMP ping process is a way to test if two devices on the network can connect to each other. It can also be used to check for packet loss and delay within a network. The ping command transmits a request for an ICMP echo to a network device. That device then replies right away with an ICMP echo. This data can then be analyzed by software to ascertain delays and whether or not data is being transmitted as it should be.
