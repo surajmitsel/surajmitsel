@@ -59,3 +59,6 @@ Following are some of the important features of Linux Operating System.
 
 - `Security` − Linux provides user security using authentication features like password protection/ controlled access to specific files/ encryption of data.
 
+## Linux vs Window
+![](image/linux_window_differance.png)
+

@@ -10,13 +10,8 @@
 ![](image/kube_master.png)
 
 ### 3.1 Kube-apiserver
-- Exposes REST interface into the
-kubernetes control plane and Data
-Store.
-- All clients, including Nodes, Users
-and other applications interact with
-kubernetes strictly through the API
-Server.
+- Exposes REST interface into the kubernetes control plane and Data Store.
+- All clients, including Nodes, Users and other applications interact with kubernetes strictly through the API Server.
 - Acting as the gatekeeper to the
 cluster by handling:
     - Authentication and Authorization

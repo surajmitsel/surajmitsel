@@ -42,3 +42,4 @@ ICMP and ping are two different things although they are related. ICMP is a prot
 
 ### How does ICMP ping work?
 The ICMP ping process is a way to test if two devices on the network can connect to each other. It can also be used to check for packet loss and delay within a network. The ping command transmits a request for an ICMP echo to a network device. That device then replies right away with an ICMP echo. This data can then be analyzed by software to ascertain delays and whether or not data is being transmitted as it should be.
+    
