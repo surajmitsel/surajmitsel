@@ -50,6 +50,13 @@ In Linux, five Shells are used:
 - Generally, to access a file, a user uses the file name but internally file name is first mapped with respective Inode number stored in a table.
 - Inode doesn't contain the file name. Reason for this is to maintain hard-links for the files. When all the other information is separated from the file name then only we can have various file names pointing to the same Inode.
 
+### Linux process 
+In Linux, there are mainly three common kinds of processes which are as follows:
+
+- Batch : The batch process is submitted through a processes queue and is not related to the command line. These processes are well suited to perform recurring operations if the usage of the system is low.
+- Interactive: The interactive process is interactively executed by the user on the command line.
+- Daemon: The daemon is identified by a system like those processes whose parent process contains a PID of one.
+
 ### Inode Contents
 An Inode is a data structure containing metadata about the files.
 
@@ -82,3 +89,26 @@ Following contents are stored in the Inode from a file:
 ### Orphan Process
 - Zombie processes should not be confused with orphan processes. An orphan process is a process that is still executing, but whose parent has died. When the parent dies, the orphaned child process is adopted by init (process ID 1). 
 - When orphan processes die, they do not remain as zombie processes; instead, they are waited on by init. The result is that a process that is both a zombie and an orphan will be reaped automatically.
+
+### Daemon Process
+- A daemon process is a background process that is not under the direct control of the user. This process is usually started when the system is bootstrapped and it terminated with the system shut down.
+
+- Usually the parent process of the daemon process is the init process. This is because the init process usually adopts the daemon process after the parent process forks the daemon process and terminates.
+
+- `int becomeDeamon(int flags)` that perfoms the seteps in order to turn the caller process into a deamon.
+
+- `service --status-all` OR `systemctl | grep daemon`command can list all running deamon process in system. 
+
+The daemon process names normally end with a d. Some of the examples of daemon processes in Unix are −
+
+- `crond`
+This is a job scheduler that runs jobs in the background.
+
+- `syslogd`
+This is the system logger that implements the system logging facility and collects system messages.
+
+- `httpd`
+This is the web server daemon process that handles the Hypertext Transfer Protocol.
+
+- `dhcpd`
+This daemon configures the TCP/IP information for users dynamically.

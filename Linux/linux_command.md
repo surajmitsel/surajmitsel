@@ -36,3 +36,8 @@ If we want to create a file name “jayesh” with gzip compression
 
 ### N/W troubleshooting command
 - https://www.geeksforgeeks.org/network-configuration-trouble-shooting-commands-linux/
+
+### list process command
+- ps -aux
+- ps
+-  `service --status-all` OR `systemctl | grep daemon` for deamon
