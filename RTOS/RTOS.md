@@ -181,3 +181,9 @@ EndlessLoopTask ()
     }
 }
 ```
+### Process vs thread
+![](image/rtos_process_thread.png)
+
+### Synchronous vs Asyncronous
+![](image/rtos_sync_asyc.png)
+

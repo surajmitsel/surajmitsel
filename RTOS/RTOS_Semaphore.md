@@ -84,3 +84,41 @@ shared resource.
 - recursive shared-resource-access synchronization, and
 - multiple shared-resource-access synchronization.
 
+### Mutex vs Sempahore
+- Mutex is mutual exclusion technique for synchronization while semaphore is a signaling mechanism.
+- Use mutex where you want to allow piece of code (normally called critical section) to be executed by one thread at a time. Use semaphore to signal/notify about some event. For eg. for logging into onefile for multiple threads batter to use mutex for critical section of logging message.
+- We can use priority for certain thread using sempahore.
+- Mutex is an object while semaphre is an integer.
+- Mutex uses lock() and unlock() call while semaphore uses wait() and signal() call.
+- Mutex can be released by thread which has locked it but semphore can be released by any thread which actually did not acquire it.
+
+```cpp
+//mutex
+while(1){
+    lock(m1);
+    /* critical section */
+    unlock(m1);
+}
+```
+
+```cpp
+//semaphore
+semaphore s1 = 0; // unavailable
+semaphore s2 = 1; // available
+void Thread1(){
+    while(1){
+        sem_wait(s1);
+        /* critical section */
+        sem_post(s2);
+    }
+}
+
+void Thread2(){
+    while(1){
+        sem_wait(s2);
+        /* critical section */
+        sem_post(s1);
+    }
+}
+// Thread 2 will be executed first
+```

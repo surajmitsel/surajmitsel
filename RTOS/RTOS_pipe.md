@@ -76,3 +76,11 @@ pipe(s).
 - it is mainly used for task-to-task or ISR-to-task data transfer, 
 - Another common use of pipes is for inter-task synchronization.
 ![](image/rtos_use_of_pipe.png)
+
+### Difference b/w message queue and pipe
+- No message boundries exist in a pipe because the data maintained in it is unstructured.
+- There are no message header so it is impossible to determine the original producer of the data bytes.
+- Data written to the pipe cannot be prioritize each data byte is having same priority.
+- Pipe can not be used for broadcasting of message unlike message queue.
+
+![](image/rtos_msg_pipe.png)
