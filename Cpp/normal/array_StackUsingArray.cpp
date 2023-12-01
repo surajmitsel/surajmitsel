@@ -2,7 +2,8 @@
 #include <iostream>
 
 using namespace std;
-template <typename T, int size> class Stack {
+template <typename T, int size> 
+class Stack {
 private:
   int top;
   int capacity;

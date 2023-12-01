@@ -71,11 +71,11 @@ int main() {
   head3->next->next->next->next->next = new node(700);
 
   std::cout << "ConcatenateList_rcv" << endl;
-  ConcatenateList_rcv(head1, head2); // head1 = head1+head2+head2
+  ConcatenateList_rcv(head1, head2); // head1 = head1+head2
   printlist(head1);
 
   cout << "ConcatenateList_itr" << endl;
-  ConcatenateList_itr(head1, head3); // head1 = head1+head2
+  ConcatenateList_itr(head1, head3); // head1 = head1+head2+head3
   printlist(head1);
 
   return 0;

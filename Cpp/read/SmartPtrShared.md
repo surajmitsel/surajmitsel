@@ -3,6 +3,7 @@
 - Counter is incremented with each time a new pointer pointes to the resource and decremented when destructor of the object is called.
 - We should use `shared-ptr` when we want to assign raw pointer to multiple owners.
 - It should be used when you want to share the ownership of resource.
+- the object you call shared_from_this on must be owned by a shared_ptr object
 ### Reference counting ###
 - It is technique of storing the number of references pointers or handles to a resource such as an object, block of memory, disk space or other resource.
 - A object referenced by the contained raw pointer will not be destroyed until reference counter is greater than zero i.e. until all the copies of shared_ptr has been deleted.
@@ -214,4 +215,58 @@ int main() {
   return 0;
 }
 ```
+
+## Getting shared_ptr Objects In Member Functions
+- The following code like this won't work correctly:
+```cpp
+int *ip = new int;
+shared_ptr<int> sp1(ip);
+shared_ptr<int> sp2(ip);
+```
+
+- Neither of the two shared_ptr objects knows about the other, so both will try to release the resource when they are destroyed. That usually leads to problems. Similarly, if a member function needs a shared_ptr object that owns the object that it's being called on, it can't just create an object on the fly:
+
+```cpp
+struct S {
+shared_ptr<S> dangerous() {
+  return shared_ptr<S>(this);   // don't do this!
+  }
+};
+
+int main() {
+  shared_ptr<S> sp1(new S);
+  shared_ptr<S> sp2 = sp1->dangerous();
+  return 0;
+}
+```
+
+- This code has the same problem as the earlier example, although in a more subtle form. When it is constructed, the `shared_ptr` object `sp1` owns the newly allocated resource. The code inside the member function `S::dangerous` doesn't know about that shared_ptr object, so the shared_ptr object that it returns is distinct from sp1. Copying the new shared_ptr object to sp2 doesn't help; when sp2 goes out of scope, it will release the resource, and when sp1 goes out of scope, it will release the resource again.
+
+- The way to avoid this problem is to use the class template enable_shared_from_this [6]. The template takes one template type argument, which is the name of the class that defines the managed resource. That class must, in turn, be derived publicly from the template; like this:
+
+```cpp
+struct S : enable_shared_from_this<S> {
+  shared_ptr<S> dangerous() {
+  return shared_from_this();
+  }
+};
+
+int main()  {
+shared_ptr<S> sp1(new S);
+shared_ptr<S> sp2 = sp->dangerous();    // not dangerous
+
+return 0;
+}
+```
+
+- The member function S::dangerous is no longer dangerous. When you do this, keep in mind that the object you call shared_from_this on must be owned by a shared_ptr object. This won't work:
+
+```cpp
+int main() {
+  S *p = new S;
+  shared_ptr<S> sp2 = p->dangerous();     // don't do this
+}
+```
+- Listing 6 (available at http://www.cuj.com/code/) has a synopsis of the template class enable_shared_from_this. 
+The protected members provide ordinary construction and copy semantics, while preventing creation of standalone enable_shared_from_this objects. The two public member functions return shared_ptr objects with appropriate const qualifications 
 

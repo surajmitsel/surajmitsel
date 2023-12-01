@@ -9,7 +9,7 @@ struct node {
 };
 typedef struct node *NODE;
 //---------------------------------------------
-// METHOD1 by treversion two times to list
+// METHOD1 by traversion two times to list
 bool isPalindrom(NODE head) {
   stack<int> stk;
   NODE tmp = head;

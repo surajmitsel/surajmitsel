@@ -5,10 +5,10 @@ template <typename T, int size>
 class Queue {
   T *data{nullptr};
   T *array{nullptr};
-  int length{0};
-  int front{0};
-  int rear{-1};
-  int cnt{0};
+  int length{0}; // Total length
+  int front{0}; // remove from front
+  int rear{-1}; // insert from rear
+  int cnt{0}; // how many elememnt present right now in queue
 
 public:
   Queue() {

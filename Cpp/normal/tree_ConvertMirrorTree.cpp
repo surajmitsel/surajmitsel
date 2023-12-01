@@ -37,6 +37,13 @@ int main(void) {
   root->left->left = new node(4);
   root->left->right = new node(5);
 
+
+  /*        1
+          2   3
+        4  5
+  */
+
+
   inorder(root);
   mirror(root);
   cout << std::endl;

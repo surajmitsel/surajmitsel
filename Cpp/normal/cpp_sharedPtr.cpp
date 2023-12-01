@@ -3,7 +3,8 @@
 // more than one pointer to same object
 // reference counting model is used
 using namespace std;
-template <typename T> class SharedPtr {
+template <typename T> 
+class SharedPtr {
   class counter {
     int ct{0};
 

@@ -1,5 +1,6 @@
 #include <iostream>
 #include <locale>
+#include <unordered_set>
 using namespace std;
 
 struct node {
@@ -30,7 +31,7 @@ void insert_back(NODE *head, int data) {
   temp->next = new_node;
 }
 
-// find loop in list
+// Method1: find loop in list using iteration
 bool findloop(NODE head) {
   NODE slow, fast;
   slow = fast = head;
@@ -41,6 +42,18 @@ bool findloop(NODE head) {
       return true;
   }
   return false;
+}
+
+// Method2: find loop in list in hash
+bool findLoop_usingHash(NODE head){
+    unordered_set<NODE> mySet;
+    while (head != nullptr) {
+        if (mySet.find(head) != mySet.end())
+            return true;
+        mySet.insert(head);
+        head = head->next;
+    }
+    return false;
 }
 
 // find loop node in a list
@@ -135,11 +148,13 @@ int main() {
   // create loop in list 7th and 3rd
   head->next->next->next->next->next->next = head->next->next;
   if (findloop(head)) {
-    NODE loopNode = findloopNode(head);
-    cout << "Found loop, loop node = " << loopNode->data << endl;
-    cout << "loop node count:" << countLoopNode(head) << endl;
-    removeLoop(head);
-    printlist(head);
+    if(findLoop_usingHash(head)){
+      NODE loopNode = findloopNode(head);
+      cout << "Found loop, loop node = " << loopNode->data << endl;
+      cout << "loop node count:" << countLoopNode(head) << endl;
+      removeLoop(head);
+      printlist(head);
+    }
   } else {
     cout << "no loop found" << endl;
     printlist(head);

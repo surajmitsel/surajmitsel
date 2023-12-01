@@ -15,8 +15,15 @@ ways.
 - Pick a random element as a pivot.
 - Pick median as a pivot.
 */
-int partition(int array[], int low, int high) {
+void print_array(int arr[]){
+  for (int i = 0; i < 10; i++) {
+    cout << arr[i] << ",";
+  }
+}  
 
+int partition(int array[], int low, int high) {
+  cout << "partition:" << "low:" << low << ",high:" << high << ",pivot:" <<array[high]<<endl; 
+  
   int pivot = array[high]; // actual pivot
   int i = low;             // index of smallest element
 
@@ -34,7 +41,8 @@ int partition(int array[], int low, int high) {
 
 void quick_sort(int array[], int low, int high) {
   if (low < high) {
-
+    cout << "quick_sort:"; print_array(array);
+    
     // get the partition index
     int pi = partition(array, low, high);
 
@@ -45,6 +53,8 @@ void quick_sort(int array[], int low, int high) {
     quick_sort(array, pi + 1, high);
   }
 }
+
+
 int main() {
   int array_q[10] = {70, 50, 40, 40, 30, 60, 100, 90, 80, 10};
   int numElem = sizeof(array_q) / sizeof(array_q[0]);

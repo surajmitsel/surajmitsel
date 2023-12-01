@@ -36,7 +36,7 @@ public:
   UniquePtr(const UniquePtr<T> &ptr) = delete; // delete copy
 
   UniquePtr<T> &
-  operator=(const UniquePtr<T> &&ptr) = delete; // delete assignment
+  operator=(const UniquePtr<T> &ptr) = delete; // delete assignment
 };
 int main() {
   UniquePtr<int> ptr1(new int(10));
@@ -51,9 +51,9 @@ int main() {
 
   UniquePtr<int> ptr3(std::move(ptr2)); // move constructor
 
-  cout << "ptr1 = " << ptr1.getPtr() << ",value = " << *ptr1 << endl;
+  cout << "ptr1 = " << ptr1.getPtr() << endl;
   cout << "ptr2 = " << ptr2.getPtr() << endl;
-  cout << "ptr3 = " << ptr3.getPtr() << endl;
+  cout << "ptr3 = " << ptr3.getPtr() << ", value = " << *ptr3 << endl ;
 
   return 0;
 }
