@@ -1,0 +1,5 @@
+Generate:
+https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens
+
+Update:
+https://joshuawilfred.medium.com/how-to-update-github-token-6f3b3a19225a
