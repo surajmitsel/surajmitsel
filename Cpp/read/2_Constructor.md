@@ -137,7 +137,7 @@ int main(){
         char *buf{nullptr};
         
         public:
-            explicit memoryPage(int size = 512){
+            explicit memoryPage(int sz = 512){
                 size = sz;
                 buf = new char[size];
             }
@@ -157,7 +157,7 @@ int main(){
             delete[] buf;
 
             this->size = other.size;
-            this->buf = other.  ;
+            this->buf = other.buf;
 
             other.size = 0;    //reset
             other.buf = nullptr;
