@@ -4,9 +4,7 @@
 #include <iostream>
 #include <string.h>
 
-class test {
-  test(test &) {}
-};
+
 struct node {
   int value;
   struct node *left{nullptr};
@@ -39,12 +37,12 @@ NODE FindMinValueNode(NODE root) {
 void pre_order(NODE root) {
   if (!root)
     return;
-  else {
-    pre_order(root->left);
-    std::cout << root->value << ",";
-    pre_order(root->right);
-  }
+
+  pre_order(root->left);
+  std::cout << root->value << ",";
+  pre_order(root->right);
 }
+
 int height(NODE root) {
   if (root == nullptr)
     return 0;

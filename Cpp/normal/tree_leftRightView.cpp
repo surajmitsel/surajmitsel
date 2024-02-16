@@ -17,7 +17,7 @@ void leftViewUntil(NODE root, int level, int *maxLevel) {
     *maxLevel = level;
   }
   leftViewUntil(root->left, level + 1, maxLevel);  // first left
-  leftViewUntil(root->right, level + 1, maxLevel); // then left
+  leftViewUntil(root->right, level + 1, maxLevel); // then right
 }
 
 void rightViewUntil(NODE root, int level, int *maxLevel) {

@@ -39,7 +39,7 @@ int main() {
   int val_clr = 0x1452; // 0001 0100 0101 0010
   cout << "before:0x" << std::hex << val_clr << endl;
   CLEAR_BIT(val_clr, 4);
-  cout << "after:0x" << std::hex << val_clr << endl;
+  cout << "after:0x" << std::hex << val_clr << endl; //0x1442
 
   // SET_BIT
   cout << endl << endl;
@@ -47,7 +47,7 @@ int main() {
   int val_set = 0x1452; // 0001 0100 0101 0010
   cout << "before:0x" << std::hex << val_set << endl;
   SET_BIT(val_set, 15);
-  cout << "after:0x" << std::hex << val_set << endl;
+  cout << "after:0x" << std::hex << val_set << endl; //0x9452
 
   // TOGGLE_BIT
   cout << endl << endl;
@@ -55,9 +55,9 @@ int main() {
   int val_tog = 0x1452; // 0001 0100 0101 0010
   cout << "before:0x" << std::hex << val_tog << endl;
   TOGGLE_BIT(val_tog, 0);
-  cout << "after:0x" << std::hex << val_tog << endl;
+  cout << "after:0x" << std::hex << val_tog << endl; // 0x1453
   TOGGLE_BIT(val_tog, 4);
-  cout << "after:0x" << std::hex << val_tog << endl;
+  cout << "after:0x" << std::hex << val_tog << endl; // 0x1443
 
   // SWAP values
   cout << endl << endl;

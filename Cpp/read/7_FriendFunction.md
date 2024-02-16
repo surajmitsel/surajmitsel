@@ -1,16 +1,20 @@
 ## `friend` function ##
 - The `friend` function are declared with the keyword `friend`, it is not the member of the class but it has right to access `private data member` of a class.
-- `friend` class can access `private` and `protected` member of other class in which it is declared as `friend`. For example linked-list class may be allowed to access `private` member of Node.
+- `friend` class can access `private` and `protected` member of other class in which it is declared as `friend`. For example 
+linked-list class may be allowed to access `private` member of Node.
+- `inline`: Friend functions can be defined (given a function body) inside class declarations.
+
 ### friend function cannot be ###
 - `const` member function
 - `static` function
 - `virtual` function
 - `inherited` to derived class
 - `called by object` of the class
--  Scope of the class so it cannot have `this` pointer access
-- `mutual friendship` supportive
-- `member function` of the class so it cannot be defined inside class
+-  Scope of the class but it cannot have `this` pointer access
+- `friendship` is not mutual until specified as such 
+- `member function` of the class but it cannot be defined inside class
 - having `const object` as parameter.
+
 
 ```cpp
 class Node{
@@ -113,7 +117,7 @@ public:
 };
 ```
 - `friend` fuction can be used for `operator-overloading` and it takes one argument for `unary-operator` and two argument for `binary-operator`.
-- `friend` function in c++ cannot be declared as `virtual` and therefore no dynamic binding of `friend` function is not possible.
+- `friend` function in c++ cannot be declared as `virtual` and therefore no dynamic binding of `friend` function is possible.
 -  `friend` function cannot be `static` because `static` member functions can access only static data member whereas `friend` function can access all the members, second is `friend` function also required an object to access the members whereas `static` member cannot access. Another thing `static` functions are member function but `friend` functions are not member functions.
 - `friend` function cannot be `const` because `const` keyword can only be added to member functions not to `friend` functions, even the parameter to the `friend` function cannot be `const` object. It will give compilation error.
 - `friend` function cannot be inherited in derived class.
@@ -160,7 +164,7 @@ class Test{
 private:
     int a;
 public:
-    void set_a(int x){x = a;};
+    void set_a(int x){a = x;};
     int get_a();
     friend void operator - (Test &obj); // unary operator
 };
@@ -191,7 +195,7 @@ public:
 
 Test operator * (Test &obj1, Test & obj2){
     Test tmp;
-    tmp.a = obj1.a * obj2;
+    tmp.a = obj1.a * obj2.a;
     return tmp;
 }
 int main(){
@@ -221,7 +225,7 @@ public:
 };
 
 int main(){
-    Test t2;
+    Another a1;
     return 0;
 }
 ```
@@ -231,5 +235,5 @@ constructor Another()
 ```
 - If you comment the line (1) then you will encounter below error
 ```cpp
-error: Test::Test() is private Test(){}
+error: ‘Test::Test()’ is private within this context
 ```

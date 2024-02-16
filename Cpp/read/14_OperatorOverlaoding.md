@@ -15,7 +15,7 @@ return_type classname::operator op(arg-list)
 - The operator which cannot be overloaded
     - .(dot), ::, ?:, sizeof(), #, ##
     - .* (member selection through pointer to function)
-- operator overloadind should not be used to change the way operator works built-in type.
+- operator overloading should not be used to change the way operator works built-in type.
 - It is the job of the programmer to redefine operator in consistance and understandable manner.
 ```cpp
 void operator ++()
@@ -80,7 +80,7 @@ complex :: complex operator + (const complex & obj){
 }
 
 complex :: complex operator + (const complex & obj1, const complex & obj2){
-    return complex(c1.real + c2.real, c1.image + c2.image);
+    return complex(obj1.real + obj2.real, obj1.image + obj2.image);
 }
 
 int main(){

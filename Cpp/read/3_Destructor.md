@@ -13,11 +13,11 @@
 - When a class contains a pointer to memory allocated in class the we should write a destructor to release memory before the class instance is destroyed. This must be done to avoid memory leak.
 
 ## Virtual destructor ##
-- Destructor cannot be virtual but constructor can be, infect its good idea to make destructor virtual in base class when we have virtual function in class.
+- Constructor cannot be virtual but destructor can be, infect its good idea to make destructor virtual in base class when we have virtual function in class.
 - Deleting a derived class object using a pointer to base class that has a non-virtual destructor results in undefined behaviour base class should be defined with virtual destructor.
 - Making base class destructor virtual guarantees that the object of derived class is destructed properly i.e. both base class and derived class destructor are called in reverse order.
 - Virtual destructor are used for the same purpose as virtual functions,
-when you remove an object of subclass which is referenced by parent class pointer only destructor of base class will executed buf if the destructor is defined with the keyword virtual and both the destrcutor will be invoked in reverse order of inheritance.
+when you remove an object of subclass which is referenced by parent class pointer only destructor of base class will executed buf if the destructor is defined with the keyword virtual then both the destrcutors will be invoked in reverse order of inheritance.
 ```cpp
 class Base{
     public:
@@ -35,7 +35,7 @@ class Derived:public Base{
 };
 ```
 ## Pure virtual destructor ##
-- Yes it's possible to have pure virtual destructor, one of the most important thing to remember is that if a class contains a pure virtual destructor then it must provide a function body for the pure virtual destructor.
+- Yes it's possible to have `pure virtual destructor`, one of the most important thing to remember is that if a class contains a pure virtual destructor then it must provide a function body for the pure virtual destructor.
 - You may be wondering why pure virtual destructor required function body.
 The reason is because destructor (unlike other function) not really overridden rather than they are always called in the reverse order of the inheritence. So if the definition of the pure virtual function is not provided then what function body will be called during destruction ?
 Therefore the compiler and linker enforce the existance of a function body for pure virtual destructors.

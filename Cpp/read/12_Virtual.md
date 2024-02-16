@@ -41,13 +41,13 @@ public:
     virtual void function2() {};
 };
 
-class D1: public Base
+class D1: public virtual Base
 {
 public:
     void function1() override {};
 };
 
-class D2: public Base
+class D2: public virtual Base
 {
 public:
     void function2() override {};

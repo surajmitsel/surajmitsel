@@ -7,7 +7,13 @@ struct node {
   // Constructor
   node(int data) : data(data) {}
 };
-
+//method1
+int hight(struct node * root) {
+  if (!root)
+    return 0;
+  return 1 + std::fmax(hight(root->left), hight(root->right));
+}
+//method2
 int hightOfTree(struct node *root) {
   if (!root)
     return 0;
@@ -39,4 +45,5 @@ int main() {
   root->left->left->left->left->left->left = new node(12); // @level 7
 
   cout << "Hight of Tree " << hightOfTree(root) << endl;
+  cout << "Hight of Tree " << hight(root) << endl;
 }

@@ -19,6 +19,6 @@ class subClass_name: access_mode baseClass_name{
     - protected
     - public
 
-- Derived class can never inherite the private data members. So inheritance will not be full it would be partial if in case base calss holds the data member in private access mode.
+- Derived class can never inherite the private data members. So inheritance will not be full it would be partial if in case base class holds the data member in private access mode.
 
 ![Inheritance_level](image/Inheritance_level.jpg)

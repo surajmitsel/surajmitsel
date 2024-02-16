@@ -9,7 +9,7 @@ using namespace std;
 int SubString(string &str, vector<int> &vec) {
   int ret = 1;
   int cnt = 1;
-  for (unsigned int i = 1; i < str.length(); i++) {
+  for (unsigned int i = 1; i < str.length(); i++) { // i=1
     if (str[i] == str[i - 1]) {
       ++cnt;
     } else {
@@ -46,4 +46,5 @@ int main() {
 
   cout << "vec size = " << vec.size() << endl;
   cout << "maxlengh = " << subStrMaxLengh << " total " << total << endl;
+  // maxlengh = 5 total 9
 }

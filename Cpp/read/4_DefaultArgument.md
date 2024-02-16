@@ -64,7 +64,7 @@ int main(){
 Derived::func(), x: 0
 ```
 
--Dafault value is used at compile time. when compiler sees that an argument is missing in a function call ut substitues the default value given.
+- Dafault value is used at compile time. when compiler sees that an argument is missing in a function call it substitues the default value given.
 - Therefore default argument does not participate in signature of function so signature of fun() of Base class and derived class are considered same.
 
 ```cpp
@@ -89,6 +89,6 @@ int main(){
 ```
 ```cpp
 //o/p
-Derived::func(), x: 10
+Derived::func(), x: 0
 ```
-- The value is still considered x = 0 at the compile time and teh virtual function is resolved at run time. So the default value of the Base class is taken and function of derived class is called.
+- The value is still considered x = 0 at the compile time and the virtual function is resolved at run time. So the default value of the Base class is taken and function of derived class is called.

@@ -1,7 +1,7 @@
 ## default function ##
 - A defaulted function needs to be a special member function eg. default copy constructor, default constructor, default destructor etc. or has no default arguments.
 - Non-special member function cannot be defaulted.
-- For eg whenever we declare a parameterized constructor, the compiler will not create default constructor. In such a case we can use the default specifier in order to create a default one.
+- For eg. whenever we declare a parameterized constructor, the compiler will not create default constructor. In such case we can use the default specifier in order to create a default one.
 ```cpp
 class test{
 public:

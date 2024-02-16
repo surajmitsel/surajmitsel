@@ -34,7 +34,8 @@ this is char* ten
     - Number of parameters
     - Order of parameters
     - return type + (any of the above)
-- return type alone is not sufficient for function overloading in that case compiler give error.
+- return type alone is not sufficient for function overloading in that case compiler give error 
+but in case of if its overloaded based on const type then it is allows to have same parames and return type.
 
 ## Const Overloading ##
 - C++ allows member methods to be overloaded on the basis if const type.
@@ -84,6 +85,8 @@ int main(){
 
 ```cpp
 // this is allowed and no compilation error
+// error: redefinition of ‘void fun(int)’
+
 void fun(const int &i){
     cout << "fun(const int i)"<<endl;
 }
@@ -122,18 +125,26 @@ int func();
 ```
 
 ```cpp
+// valid for Overloading
+int func(int * a);
+int func(int a);
+```
+
+```cpp
 // Invalid for Overloading
 int func(const int a);
 int func(int a);
 ```
 
+
+
 ## function overloading and float ##
 ```cpp
 void test(float s, float t) {} // ---1
 void test(int s, int t) {} // ----2
-int main{
+int main(){
     test(3.5,5.6); // compile time error
-    test (3.5f, 5.6f) // no error
+    test(3.5f, 5.6f) // no error
     return 0;
 }
 
