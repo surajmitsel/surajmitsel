@@ -11,6 +11,8 @@ one argument --- [unary-operator]  ---- No argument
 two argument --- [binary-operator] ---- one argument
 
 return_type classname::operator op(arg-list)
+
+// return type and arg-list is user defined it can be anything
 ```
 - The operator which cannot be overloaded
     - .(dot), ::, ?:, sizeof(), #, ##
@@ -69,17 +71,24 @@ public:
         real = r;
         image = i;
     }
-    complex operator + (const complex & obj) // ------(1)
+    complex operator + (const complex & obj); // ------(1)
     friend complex operator+(const complex & obj1, const complex & obj2); // ------(2)
+    
+    void print(){
+        cout << "real:" << real << endl;
+        cout << "image:" << image << endl;
+    }
 };
-complex :: complex operator + (const complex & obj){
+complex complex:: operator + (const complex & obj){
+    cout << "class operator called" << endl;
     complex res;
     res.real = real + obj.real;
     res.image = image + obj.image;
     return res;
 }
 
-complex :: complex operator + (const complex & obj1, const complex & obj2){
+complex operator + (const complex & obj1, const complex & obj2){
+    cout << "friend operator called" << endl;
     return complex(obj1.real + obj2.real, obj1.image + obj2.image);
 }
 
@@ -89,6 +98,13 @@ int main(){
     c3.print();
     return 0;
 }
+/*
+class operator called
+real:12
+image:9
+
+Note: If class operator overloading take first priority then friend function
+*/
 ```
 ## Overload `pointer` operators ##
 ```cpp
@@ -122,17 +138,19 @@ int main(){
 - The real advantage of functor they can help state
 ```cpp
 class Matcher{
-    int target;
+    string name;
 public:
-    Matcher(int x) {target = m;}
-    bool operator()(int x){return x == target;}
+    Matcher(string x) {name = x;}
+    bool operator()(string x){return x == name;}
 };
 int main(){
-    Matcher obj(5);
-    if(obj(5)){
-        //do something
+    Matcher obj("suraj");
+    if(obj("suraj")){
+        cout << "this is suraj object" << endl;
     }
 }
+// o/p
+// this is suraj object
 ```
 - Functors are commonly used in STL algorithms, for eg. you can define multiply functor that multiplies it's arguments by a specified amount.
 ```cpp
@@ -146,6 +164,7 @@ public:
 }
 ```
 - Then you could pass a multiply by object to an algorithm like std::transfer
+
 ```cpp
 int array[5] = {1,2,3,4,5};
 std::transform (array,array+5,array,multiplyBy(3));
@@ -154,8 +173,7 @@ std::transform (array,array+5,array,multiplyBy(3));
 - Advantage:
     - functors often may be inline which is not true with function pointers.
     - functor object may hold state.
-    - functor object (non-virtual) does not require `vtable` and runtime
-    dispacting.
+    - functor object (non-virtual) does not require `vtable` and runtime dispacting.
     - Its fits into oops.
 
 - disAdvantage:
@@ -295,9 +313,7 @@ int main(){
 // o/p:  v
 ```
 - In above statement both cout gives the output `v` due to the exclusive property of `[]` operator. The compiler reads both the statement in similar way there is no difference b/w *(name+5) and *(5+name).
-- Overloading of `[]` may be useful when we want to check for index out of bound.
-- We must return reference in function because an expression like `array[i]` can be used a `l-value`.
-- Overlaoding of [] may be useful when we want to check for index out of bound.
+- Overlaoding of `[]` may be useful when we want to check for index out of bound.
 - We must return by reference in function because an expression like `array[i]` can be used an `l-value`.
 ```cpp
 class Array{

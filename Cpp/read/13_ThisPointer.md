@@ -52,7 +52,7 @@ int main(){
 - An object `this` pointer is not the part of the object itself it is not reflected in the sizeof() statement on the object. 
 - `this` pointer is not used to calculate the size of object but `vptr` is used.
 - `this` pointer is not modifiable assignment to this is not allowed.
-- Whne a non-static member function is called for an object the address of the object is passed by a compiler as a hidden argument to the function for eg.
+- When a non-static member function is called for an object the address of the object is passed by a compiler as a hidden argument to the function for eg.
 
 ```cpp
 mydate.setMonth(3);

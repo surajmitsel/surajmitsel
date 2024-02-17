@@ -113,6 +113,7 @@ The answer is to halve the packet further into pieces, and `this process is know
 `IPv4`: When the Don’t Fragment (DF) flag is active, the fragmentation of the packet is not possible. If DF status is inactive, the router can split a packet into fragments. The target device can rejoin the fragments later. It will return the packet to the source network without fragmentation.
 `IPv6`: Packets can’t get fragmented by routers and returned to the source network.
 Let’s now see how fragmentation works. The following figure shows a  source data link or MTU of 1500 Bytes and the target MTU of 1200 Bytes. Considering fragmentation is allowed, the packet size of 1400 Bytes gets divided into 1200 Bytes and 200 Bytes:
+
 ![](image/TCP_Fragment.png)
 
 We must be wondering what happens to the original packet during fragmentation? They get discarded, and the data within them gets fragmented.
@@ -125,7 +126,7 @@ No overhead of `Path MTU Discovery (PMTUD).`
 - The first fragment only contains the header that may lead to issues with the devices that depend on inspecting the headers.
 Fragmentation may need reordering, particularly if few packets are only fragmented.
 
-### 6. Importance of MTU
+## 6. Importance of MTU
 - MTU is a unit of estimation indicating the maximum size of a data bundle that a network resource can acknowledge effectively. It’s the most important parameter that the other networks should know for establishing a TCP connection. 
 - A larger MTU supports more data to fit within lesser packets, resulting in faster and improved transmission performance. However, if an error occurs in communication, the packet takes longer to re-transmit. 
 - A smaller MTU can improve network latency.

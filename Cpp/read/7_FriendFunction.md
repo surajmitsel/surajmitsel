@@ -84,10 +84,19 @@ public:
     friend int compute(Example x);
 };
 int Example::sum(int a,int b){
+    this->a = a;
+    this->b = b;
     return a+b;
 }
 int compute (Example x){
     return x.a + x.b -5;
+}
+
+int main(){
+    Example e;
+    cout << e.sum(10,6); // 16
+    cout << compute(e);  //11
+
 }
 ```
 
@@ -133,11 +142,12 @@ private:
 
 class Final{
 public:
-    final(){cout <<"Final constructor";}
+    Final(){cout <<"Final constructor" << endl;}
 };
 
-class Drv:public Final{
-    Drv(){cout <<"Drv constructor";}
+class Drv: public Final{
+    public:
+    Drv(){cout <<"Drv constructor" << endl;}
 };
 
 int main(int argc, const char* argv[]){
@@ -153,10 +163,38 @@ in constructor Drv::Drv(): error MakeFinal::MakeFinal() is private.
 - We can do `friend` function `overloading` 
 ```cpp
 class Example{
+    int x;
 public:
     friend void func();
-    friend void func(int a);
+    friend void func(Example&);
+    friend void func(Example*, int a);
 };
+
+void func(Example& e){
+    cout << e.x << endl;
+}
+
+void func(Example& e, int a){
+    cout << "void func(Example& e, int a)" << endl;
+}
+
+void func(){
+    cout << "empty" << endl;
+}
+
+int main(int argc, const char* argv[]){
+    Example obj;
+    func();
+    func(obj);
+    func(obj,5);
+    return 0;
+}
+
+// o/p
+// empty
+// 287539201
+// void func(Example& e, int a)
+
 ```
 ## Unary operator `-` overloading using friend funcion ##
 ```cpp

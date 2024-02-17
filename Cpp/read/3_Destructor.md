@@ -64,6 +64,7 @@ int main(){
 }
 ```
 - Its important to not that the class becomes abstract class because it contains pure virtual function.
+  So if we can not create the object of class base. It must have the derived class to call this destructor.
 - Its possbile to call the constructor and destructor explicitly
 ```cpp
 class Test{

@@ -108,6 +108,11 @@ int sum(char a, char b) {return a + b;}
 int sum(char a, char b, char c) {return a+b+c;}
 ```
 ```cpp
+// valid for Overloading (order of params)
+int sum(int a, char b){return a + b;}
+int sum(char a, int b) {return a + b;}
+```
+```cpp
 // valid for Overloading 
 int func(const int &a);
 int func(int &a);

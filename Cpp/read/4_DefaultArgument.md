@@ -69,12 +69,12 @@ Derived::func(), x: 0
 
 ```cpp
 class Base{
-    virtual void func(int x = 0){
+    virtual void func(int x = 0) {
         cout << "Base::func(), x: "<< x <<endl;
     }
 };
 
-class Derived::public Base{
+class Derived: public Base {
     virtual void func(int x = 10){
         cout << "Derived::func(), x: "<< x <<endl;
     }

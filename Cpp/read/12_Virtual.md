@@ -183,8 +183,8 @@ int main(){
 ## `inline` and `virtual` function ##
 - Virtual functions are used to achieve runtime polymorphism but inline is meant for compile time. By default all the function defined inside the class are implicitly or automatically as inline except virtual function.
 - inline is a request to the compiler its compiler choices to make the function as inline or not.
-- Whenever virtual function is called using base class reference or pointer the it cannot be inline because it will be resolved at runtime.
-- But whenever virtual function is called using base class object (without reference or pointer) of that class then it can be inlined because compiler knows the exact class of the object at compile time.
+- Whenever virtual function is called using base class reference or pointer then it cannot be inline because it will be resolved at runtime.
+- But whenever virtual function is called using base class object (without reference or pointer) of that class then it `can be` inlined because compiler knows the exact class of the object at compile time.
 ```cpp
 class Base{
     public: 
@@ -224,14 +224,45 @@ class Test{
 In this design all the public or protected member of class A will become public or protected twice for class D via class B and class C so it shows the ambiguity this can be avoided by virtual base class. This is also called diamond issue.
 ![diamond ](image/diamond.jpg)
 ```cpp
-class A{};
+class A{
+    public:
+    void show();
+};
 
 class B:public A{};
 
-class C:public C{};
+class C:public A{};
 
 class D:public B, public C{};
 
+int main(){
+    D d;
+    d.show();
+}
+/*
+test.cpp:20:7: error: non-static member 'show' found in multiple base-class subobjects of type 'A':
+    class D -> B -> A
+    class D -> C -> A
+    d.show();
+*/
+
+```
+```cpp
+class A{
+    public:
+    void show(){cout << "show" << endl;};
+};
+
+class B:virtual public A{};
+
+class C:virtual public A{};
+
+class D:public B, public C{};
+
+int main(){
+    D d;
+    d.show();
+}
 // only one copy of A will be inherited
 ```
 

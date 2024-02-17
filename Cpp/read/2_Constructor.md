@@ -280,7 +280,7 @@ int main(){
             }
             A(int z) {
                 x = y = 0;
-                this z = z;
+                this->z = z;
             }
             void show(){
                 std::cout << x << "," << y << "," << z << endl;
@@ -322,11 +322,11 @@ int main(){
 ```cpp
 class Point{
     private:
-    int x,y;
+        int x,y;
     public:
-    Point(int i=0, int j=0):x(i),y(j){}
-    int getX()const{return x;}
-    int getY()const{return y;}
+        Point(int i=0, int j=0):x(i),y(j){}
+        int getX()const{return x;}
+        int getY()const{return y;}
 };
 
 int main(){
@@ -362,7 +362,7 @@ public:
 class drv:public Test{
     int j;
 public:
-    drv::dev(int y) : Test(y){
+    drv::drv(int y) : Test(y){
         j = y;
     }
 };

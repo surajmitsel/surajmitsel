@@ -34,7 +34,7 @@ int main(){
 //output
 passing `const Test` as `this` argument Test::getValue() discard qualifier.
 ```
-- Note that just because a function declared as `const` that doesn't prohibit `npn-const` functions from using it. the rule is
+- Note that just because a function declared as `const` that doesn't prohibit `non-const` functions from using it. the rule is
     - `const` functions can always be called.
     - `non-const` function can only be called by `non-const` objects.
 
