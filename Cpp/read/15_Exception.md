@@ -10,9 +10,10 @@
 - `throw`
     - used to throw the exception also used to list the exceptions that a function throws but does not handle itself.
 ### Why exception handling ###
-- Separation of error handling code from a normal code.
+- The main benefit of using exceptions is that it allows you to separate the error handling code from the normal code, making it more readable and maintainable. .
 - Function/method can handle only those error which they choose to handle.
 - Grouping of error types in c++ both basic types and objects can be thrown as exception. We can create a hierarchy of exception objects group exception objects in namespace or classes categorize them according to types.
+- in distributed or sperate lib developers can define there exception which could be thrown in particular situation and caller can alway put try-catch block on the call of the lib function or on API call.
 
 ## Examples ##
 - following is the simple example to show exception handling in c++. The output of the program explain flow of execution if try/catch blocks
@@ -40,7 +41,7 @@ inside catch
 x:-1
 after try
 ```
-- there is a special catch block call `catch-all catch(...)` that can be used to catch all type of exceptions for eg. in the following program an `int` is thrown as an exception but there is no catch block for int so catch(...) block will be executed.
+- there is a special catch block call catch-all `catch(...)` that can be used to catch all type of exceptions for eg. in the following program an `int` is thrown as an exception but there is no catch block for int so catch(...) block will be executed.
 
 ```cpp
 int main(){
@@ -54,7 +55,7 @@ int main(){
     return 0;
 }
 //output
-undefined exception
+//undefined exception
 ```
 - implicit type conversion doesn't happens for particular types for Eg.
 ```cpp
@@ -69,7 +70,7 @@ int main(){
     return 0;
 }
 //output
-default exception
+//default exception
 ```
 - If exception is thrown and not caught anywhere then program terminates abnormally. For e.g. in the following program a `char` is thrown but there is no catch block to catch a `char`.
 ```cpp

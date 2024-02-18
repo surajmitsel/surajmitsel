@@ -316,15 +316,16 @@ int main(){
 - Overlaoding of `[]` may be useful when we want to check for index out of bound.
 - We must return by reference in function because an expression like `array[i]` can be used an `l-value`.
 ```cpp
-class Array{
+class myArray{
     int * ptr;
     int size;
 public:
-    Array(int *, int);
+    myArray(int *p = nullptr, int s = 0);
     int & operator[](int);
     void print() const;
-}
-Array::Array(int *p = nullptr, int s = 0){
+};
+
+myArray::myArray(int *p, int s){
     size = s;
     ptr = nullptr;
     if(size){
@@ -333,31 +334,37 @@ Array::Array(int *p = nullptr, int s = 0){
             ptr[i] = p[i];
     }
 }
-int & Array::operator[](int index){
+int & myArray::operator[](int index){
     if (index >= size){
         cout << "array index out of bound" << endl;
         exit(0);
     }
     return ptr[index];
 }
-void Array::print()const{
+void myArray::print()const{
     for(int i = 0; i < size; i++)
     cout << ptr[i] << "," <<endl;
 }
+
 int main(){
     int a[] = {1,2,4,5};
 
-    Array arr(a,4);
+    myArray arr(a,4);
     arr[2] = 6;
     arr.print();
-    arr[8] = 6;
+    arr[4] = 16;
+    arr.print();
     return 0;
 }
-```
-```cpp
-//output
-1 2 6 5
-array index out of bound, exiting
+
+/*
+o/p
+1,
+2,
+6,
+5,
+array index out of bound
+*/
 ```
 
 ## String add using `+` Overloading ##
@@ -399,7 +406,7 @@ class CompareString{
         }
         return 0;
     }
-    int operator >= (CompareSring s2){
+    int operator <= (CompareSring s2){
         if(strlen(str) <= strlen(s2)){
             return 1;
         }
