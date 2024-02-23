@@ -11,12 +11,12 @@ void reverse_str(string &str) { // pass by reference is must
   }
 }
 
-void reverseStr_rev(string &str, int i, int len_1) {
+void reverseStr_rec(string &str, int i, int len_1) {
   if (i > len_1) { // base case
     return;
   }
   swap(str[i], str[len_1]);
-  reverseStr_rev(str, i + 1, len_1 - 1);
+  reverseStr_rec(str, i + 1, len_1 - 1);
 }
 
 int main() {
@@ -26,8 +26,8 @@ int main() {
   reverse_str(str);
   cout << "1.reverse_str:" << str << endl;
 
-  reverseStr_rev(str, 0, str.length() - 1);
-  cout << "2.reverseStr_rev:" << str << endl;
+  reverseStr_rec(str, 0, str.length() - 1);
+  cout << "2.reverseStr_rec:" << str << endl;
 
   // inbuild
   reverse(str.begin(), str.end());

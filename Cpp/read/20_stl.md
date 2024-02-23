@@ -58,3 +58,7 @@ The STL includes classes that overload the function call operator. Instances of 
 - `Learning curve`: The STL can be difficult to learn, especially for beginners, due to its complex syntax and use of advanced features like iterators and function objects.
 - `Lack of control`: When using the STL, you have to rely on the implementation provided by the library, which can limit your control over certain aspects of your code.
 - `Performance`: In some cases, using the STL can result in slower execution times compared to custom code, especially when dealing with small amounts of data.
+
+
+### time complexity of various containers
+https://www.geeksforgeeks.org/analysis-of-time-and-space-complexity-of-stl-containers/

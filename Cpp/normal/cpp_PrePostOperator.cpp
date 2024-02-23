@@ -11,14 +11,14 @@ public:
 
   PrePost &operator++() // Pre increment
   {
-    this->data = this->data + 1;
+    this->data++;
     return *this;
   }
 
   PrePost &operator++(int) // Post increment
   {
     static PrePost old(*this); // Copy old in static obj
-    this->data = this->data + 1;
+    this->data++;
     return old;
   }
 };

@@ -5,15 +5,13 @@ using namespace std;
 template <typename T, int size> 
 class Stack {
 private:
-  int top;
-  int capacity;
   T *array;
+  int top{-1};
+  int capacity{size};
 
 public:
   Stack() {
     array = new T[size];
-    top = -1;
-    capacity = size;
   }
 
   ~Stack() {

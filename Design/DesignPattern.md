@@ -20,7 +20,7 @@ These design patterns are all about class instantiation.
     A class of which only a single instance can exist
 
 ### Structural design patterns (`ABCDFFPP`)
-These design patterns are all about Class and Object composition.Structural object-patterns define ways to compose objects to obtain new functionality.
+These design patterns are all about Class and Object composition. Structural object-patterns define ways to compose objects to obtain new functionality.
 - `Adapter`
 Match interfaces of different classes
 - `Bridge`

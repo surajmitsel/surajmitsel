@@ -7,9 +7,29 @@ struct node {
   node(int data) : data(data) {}
 };
 
-struct node *reverse(struct node *root) {
-  struct node *next = nullptr;
-  struct node *new_root = nullptr;
+typedef struct node * NODE;
+
+
+// Method1
+NODE reverseList(NODE head) {
+    NODE prev = nullptr;
+    NODE current = head;
+    NODE nextNode = nullptr;
+    
+    while (current != nullptr) {
+        nextNode = current->next;
+        current->next = prev;
+        prev = current;
+        current = nextNode;
+    }
+    
+    return prev; // new head of the reversed list
+}
+
+// Method 2
+NODE reverse(NODE root) {
+  NODE next = nullptr;
+  NODE new_root = nullptr;
   while (root) {
     next = root->next;
     root->next = new_root;

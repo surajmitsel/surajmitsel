@@ -46,18 +46,45 @@ int usingSet(int array[], int n) {
 
   return j;
 }
+
+// METHOD 3 
+void removeDupFromVec(vector<int> &vec){
+    set<int> myset; // bst no duplicate: O(logn) 
+
+    for(auto& i : vec)
+        myset.insert(i);  
+    
+    vec.clear();
+    
+    for(auto & i: myset)
+         vec.push_back(i);
+}
 int main() {
   int array[] = {1, 2, 3, 4, 5, 4, 3, 2, 1, 1, 1, 2, 2};
   int numelem = sizeof(array) / sizeof(array[0]);
   struct node *root = nullptr;
+  //----------------------
+  cout << "usingBST" << endl;
   for (int i; i < numelem; i++) {
     root = bst_insert(root, array[i]);
   }
   bst_print(root);
 
+  //----------------------
+  cout << "usingSet" << endl;
   int cnt = usingSet(array, numelem);
   for (int i = 0; i < cnt; i++) {
     cout << array[i] << ",";
   }
+  cout << endl;
+
+  //----------------------
+  cout << "removeDupFromVec" << endl;
+  vector<int> vec{1,5,6,7,8,4,1,5,8,10,1,6};
+  removeDupFromVec(vec);
+  for (int &i:vec)
+      cout << i << ",";
+  cout << endl;
+
   return 0;
 }

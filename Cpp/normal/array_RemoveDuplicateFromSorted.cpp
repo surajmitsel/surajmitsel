@@ -10,10 +10,13 @@ int removeDuplicate(int array[], int numelem) {
       array[j++] = array[i];
     }
   }
+  // Store the last element as whether it is unique or
+  // repeated, it hasn't stored previously
+  array[j++]= array[numelem - 1];
   return j;
 }
 int main() {
-  int array[] = {10, 20, 20, 30, 40, 40, 40, 50, 60};
+  int array[] = {10, 20, 20, 30, 40, 40, 40, 50};
   int numelem = sizeof(array) / sizeof(array[0]);
   int numUnique = removeDuplicate(array, numelem);
   for (int i = 0; i < numUnique; i++) {

@@ -8,6 +8,22 @@ struct node {
 };
 typedef struct node *NODE;
 
+// Method1
+NODE deleteDuplicates(NODE head) {
+  NODE current = head;
+  while (current && current->next) {
+      if (current->val == current->next->val) {
+          NODE temp = current->next;
+          current->next = current->next->next;
+          delete temp;
+      } else {
+          current = current->next;
+      }
+  }
+  return head;
+}
+
+// Method2
 void removeDuplicate(NODE root) {
   std::cout << "removeDuplicate:" << endl;
   if (root == nullptr || root->next == nullptr) {

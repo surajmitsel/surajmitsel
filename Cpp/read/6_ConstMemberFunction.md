@@ -4,6 +4,8 @@
 - like member function the object of the class can also be declare as constant.
 - `const` object cannot be modified and hence can invoke only `const` member functions as these function ensure not to modify the object. Any attempt to change the data member of `const` objects results in a compile time error.
 ```cpp
+- The primary difference between const and constexpr variables is that the initialization of a const variable can be deferred until run time. A constexpr variable must be initialized at compile time. All constexpr variables are const
+
 const ClassName Obj;
 ```
 - The `const` keyword required to put both in declaration and definition.
@@ -84,4 +86,25 @@ int main(){
 - `friend` function cannot be declared as const function in C++ because friend means that the function is global hence it does not have `this` pointer and `const` means we cannot change `*this` 
 - `static` function also cannot be `const`
 - `const` data member of a class must be initialized using initializer list in the class.
+
+
+#### Constexpr vs const
+- `const` is a keyword used to declare variables as constants. 
+- Once initialized, the value of a const variable cannot be changed. 
+- It is evaluated at runtime. const can be applied to variables, functions, pointers, and references.
+```cpp
+const int x = 5;
+```
+- `constexpr`is a keyword introduced in C++11 to represent constant expressions. It ensures that the value of the expression can be evaluated at compile time.
+- It allows the computation of values during compilation rather than runtime, providing performance benefits.
+- `constexpr` can be applied to variables and functions, indicating that they can be evaluated at compile time.
+```cpp
+constexpr int square(int x) {
+    return x * x;
+}
+constexpr int result = square(5); // evaluated at compile time
+```
+
+- In summary, const is used to declare runtime constants, while constexpr is used for compile-time constants and expressions. 
+- constexpr offers the advantage of compile-time evaluation, potentially improving performance and enabling certain optimizations.
 

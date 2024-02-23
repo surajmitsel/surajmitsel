@@ -4,8 +4,6 @@
 #include <vector>
 using namespace std;
 
-// you can write to stdout for debugging purposes, e.g.
-// cout << "this is a debug message" << endl;
 int SubString(string &str, vector<int> &vec) {
   int ret = 1;
   int cnt = 1;

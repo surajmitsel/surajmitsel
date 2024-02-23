@@ -4,7 +4,7 @@ using namespace std;
 
 // METHOD1: recursive
 int binarySearchIndex_rec(int array[], int low, int high, int value) {
-  if (high > low) {
+  if (low < high) {
     int mid = low + (high - low) / 2;
     if (array[mid] == value)
       return mid;
@@ -18,7 +18,7 @@ int binarySearchIndex_rec(int array[], int low, int high, int value) {
 
 // METHOD2: interative
 int binarySearchIndex_itr(int array[], int low, int high, int value) {
-  while (high > low) {
+  while (low < low) {
     int mid = low + (high - low) / 2;
     if (array[mid] == value)
       return mid;
