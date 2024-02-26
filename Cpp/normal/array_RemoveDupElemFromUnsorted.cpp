@@ -59,6 +59,18 @@ void removeDupFromVec(vector<int> &vec){
     for(auto & i: myset)
          vec.push_back(i);
 }
+//METHOD 4
+void removeDuplicatesUnsortedVector(vector<int>& nums) {
+    // First, sort the vector
+    std::sort(nums.begin(), nums.end());
+
+    // Then, use unique to remove adjacent duplicates it will push to the end
+    auto last = std::unique(nums.begin(), nums.end());
+
+    // Erase the elements beyond the new end
+    nums.erase(last, nums.end());
+}
+
 int main() {
   int array[] = {1, 2, 3, 4, 5, 4, 3, 2, 1, 1, 1, 2, 2};
   int numelem = sizeof(array) / sizeof(array[0]);
@@ -83,6 +95,14 @@ int main() {
   vector<int> vec{1,5,6,7,8,4,1,5,8,10,1,6};
   removeDupFromVec(vec);
   for (int &i:vec)
+      cout << i << ",";
+  cout << endl;
+
+  //----------------------
+  cout << "removeDuplicatesUnsortedVector" << endl;
+  vector<int> vec1{1,5,6,7,8,4,1,5,8,10,1,6};
+  removeDuplicatesUnsortedVector(vec1);
+  for (int &i:vec1)
       cout << i << ",";
   cout << endl;
 

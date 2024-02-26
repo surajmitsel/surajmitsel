@@ -17,44 +17,38 @@ Example 2:
 Input: s = "cbbd"
 Output: "bb"
 */
-string longestPalindromSubStr(string str) {
-  string result;
-  int len = str.length();
-  int max_len = 1;
-  int st = 0, end = 0;
-
-  for (int i = 0; i < len; i++) {
-    int l = i, r = i;
-    while (l >= 0 && r < len && (str[l] == str[r])) {
-      l--;
-      r++;
+int expandAroundCenter(string s, int left, int right) {
+    while (left >= 0 && right < s.length() && s[left] == s[right]) {
+        left--;
+        right++;
     }
-    int len = r - l - 1;
-    if (len > max_len) {
-      max_len = len;
-      st = i + 1;
-      end = r - 1;
-    }
-  }
-
-  for (int i = 0; i < len; i++) {
-    int l = i, r = i + 1;
-    while (l >= 0 && r < len && (str[l] == str[r])) {
-      l--;
-      r++;
-    }
-    int len = r - l - 1;
-    if (len > max_len) {
-      max_len = len;
-      st = i + 1;
-      end = r - 1;
-    }
-  }
-
-  return str.substr(st, max_len);
+    return right - left - 1;
 }
 
+string longestPalindrome(string s) {
+    if (s.empty()) {
+        return "";
+    }
+    
+    int start = 0, end = 0;
+    
+    for (int i = 0; i < s.length(); i++) {
+        int len1 = expandAroundCenter(s, i, i);
+        int len2 = expandAroundCenter(s, i, i + 1);
+        int maxLen = max(len1, len2);
+        if (maxLen > end - start) {
+            start = i - (maxLen - 1) / 2;
+            end = i + maxLen / 2;
+        }
+    }
+    
+    return s.substr(start, end - start + 1);
+}
+
+
+
 int main() {
-  string str = "babad";
-  cout << "longestPalindromSubStr:" << longestPalindromSubStr(str).c_str();
+    cout << longestPalindrome("babad") << endl; // Output: "bab" or "aba"
+    cout << longestPalindrome("cbbd") << endl;  // Output: "bb"
+    return 0;
 }

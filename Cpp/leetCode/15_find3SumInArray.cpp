@@ -54,7 +54,7 @@ vector<vector<int>> threeSum(vector<int> &nums) {
 
   // 2. traverse the array
   for (int i = 0; i < size - 2; i++) { // size -2 bcz i,j (0 to size-2)
-    if ((i == 0) || nums[i] != nums[i - 1]) {
+    if ((i == 0) || nums[i] != nums[i - 1]) { // remove duplicate for i index
       int j = i + 1;    // j is next to ith index
       int k = size - 1; // k is last element
 
@@ -62,9 +62,9 @@ vector<vector<int>> threeSum(vector<int> &nums) {
         int sum = nums[i] + nums[j] + nums[k];
         if (sum == 0) {
           result.push_back({nums[i], nums[j], nums[k]});
-          while (j < k && nums[j] == nums[j + 1]) // removing duplicate
+          while (j < k && nums[j] == nums[j + 1]) // removing duplicate for j index
             j++;
-          while (j < k && nums[k] == nums[k - 1]) // removing duplicate
+          while (j < k && nums[k] == nums[k - 1]) // removing duplicate for k index
             k--;
           j++;
           k--;

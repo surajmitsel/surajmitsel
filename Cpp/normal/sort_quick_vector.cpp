@@ -11,9 +11,8 @@ int partition(std::vector<int>& arr, int low, int high) {
         if (arr[j] < pivot) {
             ++i;
             if(i!=j) std::swap(arr[i], arr[j]);
-            cout << "i:" << i << ", j:" << j << endl; 
         }
-        
+        cout << "i:" << i << ", j:" << j << endl; 
     }
 
     std::swap(arr[i + 1], arr[high]);

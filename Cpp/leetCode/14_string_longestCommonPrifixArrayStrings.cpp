@@ -21,13 +21,13 @@ Explanation: There is no common prefix among the input strings.
 string longestCommonPrefix(vector<string> &strs) {
   string result = strs[0];
   int j = 0;
-  for (int i = 1; i < strs.size(); i++) { // t=1 start from next string
+  for (int i = 1; i < strs.size(); i++) { // i=1 start from next string
     while (j < result.length() && j < strs[i].length() &&
            result[j] == strs[i][j]) {
       j++;
     }
     result = result.substr(0, j);
-    std::cout << result.c_str() << std::endl;
+    //std::cout << result.c_str() << std::endl;
     j = 0;
   }
   return result;
@@ -35,5 +35,8 @@ string longestCommonPrefix(vector<string> &strs) {
 
 int main() {
   vector<string> strs{"flower", "flow", "flight"};
-  cout << longestCommonPrefix(strs).c_str();
+  cout << longestCommonPrefix(strs).c_str() << endl;
+
+  vector<string> strs1{"abcd", "aacd", "abc"};
+  cout << longestCommonPrefix(strs1).c_str();
 }

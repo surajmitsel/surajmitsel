@@ -25,33 +25,50 @@ Output: false
 Explanation: You will always arrive at index 3 no matter what. Its maximum jump
 length is 0, which makes it impossible to reach the last index.
 */
+
+
+// i + a[i] => denotes the jump and it is an max jump
+// METHOD1
 bool canJump_1(vector<int> &nums) {
   int max_reach = 0;
   for (int i = 0; i < nums.size(); i++) {
-    if (nums[i] + i > max_reach) {
-      max_reach = nums[i] + i;
+    if (i + nums[i] > max_reach) {
+      max_reach = i + nums[i];
     }
     // cout << "max_reach:" << max_reach << endl;
     if (max_reach == i)
-      break;
+      break; // Its an stuck condition we can not move 
   }
   return max_reach >= nums.size() - 1;
 }
-
+// METHOD2
 bool canJump_2(vector<int> &nums) {
   int last_good_index = nums.size() - 1;
   for (int i = nums.size() - 1; i >= 0; i--) {
-    if (nums[i] + i >= last_good_index) {
+    if (i + nums[i] >= last_good_index) {
       last_good_index = i;
     }
   }
   return last_good_index == 0;
 }
 
+// METHOD3
+bool canJump_3(vector<int> &nums) {
+  int max_reach = 0;
+  int n = nums.size();
+  for (int i = 0; i < n; i++) {
+    if(max_reach < i)
+      return false;
+    max_reach = max(max_reach, i + nums[i]);
+  }
+  return true;
+}
+
 int main() {
   vector<int> nums{2, 3, 1, 2, 4};
   cout << "canJump_1:" << canJump_1(nums) << endl;
   cout << "canJump_2:" << canJump_2(nums) << endl;
+  cout << "canJump_3:" << canJump_3(nums) << endl;
 
   return 0;
 }

@@ -43,11 +43,13 @@ solution 3 x 7
 
 int uniquePaths(int row, int col) {
   vector<vector<int>> paths(row, vector<int>(col));
-  for (int c = 0; c < col; c++)
-    paths[row - 1][c] = 1; // last row
+  
   for (int r = 0; r < row; r++)
     paths[r][col - 1] = 1; // last col
-
+  
+  for (int c = 0; c < col; c++)
+    paths[row - 1][c] = 1; // last row
+  
   for (int r = row - 2; r >= 0; r--)
     for (int c = col - 2; c >= 0; c--)
       paths[r][c] = paths[r][c + 1] + paths[r + 1][c];
