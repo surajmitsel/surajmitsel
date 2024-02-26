@@ -1,0 +1,255 @@
+Magesh Kuppan
+
+Schedule:
+    Commence   : 9:00 AM
+    Tea Break   : 11:00 AM (20 mins)
+    Lunch Break : 1:00 PM (1 hr)
+    Tea Break   : 3:30 PM (20 mins)
+    Wind up     : 5:00 PM
+
+Methodolgy:
+    - No powerpoints
+    - 100% Code driven class
+
+Class Repo:
+    https://github.com/tkmagesh/cisco-go-apr-2023
+
+
+Day-01
+    Language Introduction
+    Go Program Structure
+    Data Types
+    Constructs
+    Functions
+    Higher Order Functions
+    Error Handling
+
+Paradox of Choice (Barry Schwartz)
+
+Why Go?
+    1. Simplicity
+        - ONLY 25 keywords
+        - No access modifiers 
+        - No classes (only structs)
+        - No inheritance (only composition)
+        - No reference types (everything is a value)
+        - No exceptions (only errors which are values)
+        - No "try catch finally" 
+        - No pointer arithmetic
+        - No implicit type conversion
+        - No function overloading
+        - No operator overloading
+    2. Lightweight
+        - Close to hardware
+        - No VM
+        - Tooling support for cross-compilation
+        - Performance is equivalent to C++
+    3. Concurrency
+        - Lightweight Concurrency Model (Goroutines)
+            Linux OS Thread - 2MB
+            Goroutines - 4KB
+            N:M scheduler
+                Can execute N goroutines using M OS threads
+        - Concurrency features are built in the Language
+            go keyword, channel data type, channel operator (<-), range & "select case" constructs
+        - APIs
+            sync package
+            sync/atomic package
+
+Software Requirements:
+    - Go tools (https://go.dev/dl)     
+    - Any Editor (Visual Studio Code)
+    - Go extension for Visual Studio Code (https://marketplace.visualstudio.com/items?itemName=golang.Go)
+
+
+    Verification
+        > go version
+
+To execute a go program
+    go run <program.go>
+
+To compile
+    go build <program.go>
+    go build -o <binary_name> <program.go>
+    
+To get the list of environment variables of the go tools
+    go env
+
+To get the values of specific environment variables
+    go env <var_name_1> <var_name_2>
+    ex:
+        go env GOOS GOARCH
+
+To change the values of environment variables
+    go env -w <var_name_1>=<value_1> <var_name_2>=<val_2>
+    ex:
+        go env -w GOOS=window GOARCH=386
+
+To get the list of target platforms supported by the go compiler
+    go tool dist list
+
+To temporarily set the env variables for creating builds
+    GOOS=windows GOARCH=386 go build 01-hello-world.go
+
+
+Data Types
+    bool
+    string
+
+    int
+    int8
+    int16
+    int32
+    int64
+
+    uint
+    uint8
+    uint16
+    uint32
+    uint64
+
+    float32
+    float64
+
+    complex64 (real [float32] + imaginary [float32])
+    complex128 (read [float64] + imaginary [ float64])
+
+    byte (alias for uint8)
+    rune (alias for int32)(unicode code point)
+
+
+Variable Declarations
+
+    Function Scope
+        Can use := to declare & intialize
+        CANNOT have unused variables
+
+    Package Scope
+        Cannot use := 
+        CAN have unused variables
+
+Constants
+    Function Scope & Package Scope
+        CAN have unused constants
+
+Constructs
+    if else
+    switch case 
+    for 
+
+Functions
+    Functions can have more than 1 return results
+    Variadic functions
+    Anonymous functions
+    Higher Order Functions
+        - Assign functions as values to variables
+        - Pass functions as arguments to other functions
+        - Return functions as return values
+
+
+Collections
+    - Array
+        Fixed size typed collection
+
+    - Slice
+        Varying size typed collection
+
+    - Map
+        Key/Value typed collection 
+
+Modularity
+    Modules
+        Code that need to be versioned and deployed together 
+        A folder with go.mod file
+        go.mod (metadata information about the module)
+            name
+                (Note : module_name === repo path)
+            minimum go runtime version
+            dependencies
+
+    Packages
+        Internal organzation of a module
+        Folders
+
+    To create a module
+        go mod init <module_name>
+        ex:
+            go mod init github.com/tkmagesh/cisco-go-apr-2023/09-modularity-app
+
+    To execute a module
+        go run .
+
+    To create a build
+        go build .
+
+    To add 3rd party packages
+        go get <repo>
+
+    To update the mod file with updated references
+        go mod tidy
+
+    To download the dependencies
+        go mod download
+
+    To localize the dependencies
+        go mod vendor
+
+    Other useful mod commands
+        go mod graph
+        go mod why <module_name>
+
+    Reference:
+        https://go.dev/ref/mod
+
+Before go 1.13 
+    - No support for modules
+
+Application code has to be in the following folder
+    GOPATH
+        /bin
+            executables installed using the "go install" command
+        /pkg
+            source code for 3rd party modules & packages are downloaded (even today)
+        /src
+            /github.com
+                /tkmagesh
+                    /Cisco-go-apr-2023
+                        /09-modularity-app
+
+
+git clone https://github.com/tkmagesh/cisco-go-apr-2023.git
+git pull origin master 
+
+Escape (heap) Analysis
+     go run -gcflags="-m" 02-mem-alloc.go
+
+To detect data races
+    go run --race <program.go>
+    go build --race <program.go>
+
+Channels
+    Declaration
+        var ch chan int
+
+    Instantiation
+        ch = make(chan int)
+
+    Send Operation ( <- channel operator )
+        ch <- 100
+
+    Receive Operation
+        data := <- ch
+
+    Behaviors
+        The RECEIVE operation is ALWAYS a blocking a operation
+        The SEND operation is BLOCKED until a RECEIVE operation is initiated
+
+Http Services
+    - net/http package
+    - Routing libraries
+    - Frameworks
+
+
+Awesome Go
+    https://github.com/avelino/awesome-go
+
