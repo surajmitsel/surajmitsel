@@ -134,3 +134,35 @@ IPv6 offers several advantages over IPv4, addressing many limitations of the old
 - `Future-Proofing`: As the successor to IPv4, IPv6 is designed to meet the long-term addressing needs of the internet. By adopting IPv6, organizations can future-proof their networks and ensure scalability and compatibility with emerging technologies and services.
 
 Overall, IPv6 offers numerous advantages over IPv4, including a larger address space, simplified network management, enhanced security, and improved support for modern networking requirements. As the adoption of IPv6 continues to grow, it will play a crucial role in enabling the continued growth and evolution of the internet.
+
+
+#### does ipv6 uses NAT table
+
+- IPv6 (Internet Protocol version 6) does not use Network Address Translation (NAT) tables in the same way as IPv4. NAT is primarily used in IPv4 networks to map private IP addresses to public IP addresses to allow devices within a private network to communicate with devices outside the network.
+
+- IPv6, on the other hand, has a significantly larger address space than IPv4, which eliminates the need for NAT in most cases. With IPv6, every device can have a globally unique address, allowing for end-to-end connectivity without the need for address translation.
+
+- However, there are scenarios where NAT-like functionality may still be required in IPv6 networks, such as in cases where a network administrator wants to hide the internal topology of a network or to conserve address space. In such cases, techniques such as Network Prefix Translation (`NPT`) or Port Address Translation (`PAT`) can be used, but they are not as widely used as in IPv4 networks.
+
+Overall, while IPv6 does not rely on NAT tables in the same way as IPv4, there are alternative mechanisms and techniques available to achieve similar goals if necessary.
+
+
+#### what is MAC address
+- The length of a MAC (Media Access Control) address is typically 48 bits or 6 bytes. This is commonly represented as 12 hexadecimal digits, separated by colons or hyphens, such as 00:1A:2B:3C:4D:5E. Each hexadecimal digit represents 4 bits, so 12 hexadecimal digits correspond to 48 bits in total.
+
+- However, there are also other types of MAC addresses with different lengths, such as EUI-64 addresses, which are 64 bits long. These addresses are commonly used in IPv6 networks and are derived from the device's 48-bit MAC address.
+
+- In summary, while the most common length for a MAC address is 48 bits (6 bytes), there are variations with different lengths depending on the specific requirements and protocols used in the network.
+
+#### can 2 machine have same MAC address
+In general, no, two machines cannot have the same MAC (Media Access Control) address on the same network segment. MAC addresses are intended to be globally unique identifiers assigned to network interfaces by the manufacturer. The IEEE assigns blocks of MAC addresses to manufacturers, and each manufacturer is responsible for ensuring that the MAC addresses they assign are unique.
+
+However, it is technically possible for two machines to have the same MAC address if:
+
+- The manufacturer accidentally duplicates MAC addresses.
+- A user manually configures the same MAC address on multiple machines, which is against the standard practice and can lead to network issues and conflicts.
+- Having two machines with the same MAC address on the same network segment can cause network problems, as switches and routers rely on MAC addresses to forward traffic. This situation can lead to confusion and errors in network communication.
+
+
+
+

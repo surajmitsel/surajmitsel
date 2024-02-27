@@ -5,6 +5,8 @@
     - integrity, and 
     - authenticity of data transmitted over IP networks. 
 - IPsec is widely used to establish Virtual Private Networks (VPNs) and secure communication between network devices.
+- IPsec is not bound by any specific rules for secure communications. So it can easily integrate new security technologies withoud updating exsiting IPsec standards.
+
 
 ### Here are some of the key security features provided by IPsec:
 

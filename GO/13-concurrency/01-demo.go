@@ -13,8 +13,8 @@ func main() {
 
 	/* Poor man's logic of synchronizing goroutines */
 
-	// time.Sleep(5 * time.Second) // block the main function and there by giving the opportunity for the scheduler to go and look for other scheduled goroutines and execute them
-	// fmt.Scanln()
+	time.Sleep(5 * time.Second) // block the main function and there by giving the opportunity for the scheduler to go and look for other scheduled goroutines and execute them
+	fmt.Scanln()
 	fmt.Println("main completed")
 }
 
