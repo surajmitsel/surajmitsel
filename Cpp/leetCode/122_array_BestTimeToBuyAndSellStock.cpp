@@ -36,7 +36,21 @@ stock to achieve the maximum profit of 0.
 // (prices[i - 1] - buy) => previous day it would have been sold
 */
 
-int maxProfit(vector<int> &prices) {
+int maxProfit_1(vector<int>& prices) {
+    int minPrice = INT_MAX; // Initialize minimum price to maximum possible value
+    int maxProfit = 0; // Initialize maximum profit to 0
+
+    // Iterate through the prices array
+    for (int price : prices) {
+        minPrice = min(minPrice, price); // Update minimum price
+        maxProfit = max(maxProfit, price - minPrice); // Update maximum profit
+    }
+
+    return maxProfit; 
+}
+
+
+int maxProfit_2(vector<int> &prices) {
   if (prices.size() <= 1) {
     return 0;
   }
@@ -57,6 +71,7 @@ int maxProfit(vector<int> &prices) {
 
 int main() {
   vector<int> prices{7, 1, 5, 3, 6, 4};
-  std::cout << "maxProfit:" << maxProfit(prices) << endl;
+  std::cout << "maxProfit:" << maxProfit_1(prices) << endl;
+  std::cout << "maxProfit:" << maxProfit_1(prices) << endl;
   return 0;
 }

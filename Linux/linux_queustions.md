@@ -163,6 +163,40 @@ However, it is technically possible for two machines to have the same MAC addres
 - A user manually configures the same MAC address on multiple machines, which is against the standard practice and can lead to network issues and conflicts.
 - Having two machines with the same MAC address on the same network segment can cause network problems, as switches and routers rely on MAC addresses to forward traffic. This situation can lead to confusion and errors in network communication.
 
+#### Raw Socket
+- A raw socket is a type of socket that allows applications to directly access the network layer of the operating system's networking stack. Unlike other types of sockets (such as TCP or UDP sockets), which operate at the transport layer and handle data transmission using specific protocols like TCP or UDP, raw sockets operate at a lower level, typically at the network layer.
+
+- With raw sockets, applications can send and receive packets directly without the need for protocol processing by the operating system. This provides more control over the networking functionalities and allows for the implementation of custom protocols or low-level network operations.
+
+- Here are some key points about raw sockets:
+
+`Access to Network Layer`: Raw sockets provide direct access to the network layer of the networking stack, allowing applications to interact with IP packets directly.
+
+`Custom Protocols: `Applications can implement custom protocols or perform low-level network operations by using raw sockets. This is useful for tasks such as network scanning, packet sniffing, network monitoring, or protocol development.
+
+`Packet Filtering:` Raw sockets enable applications to filter incoming and outgoing packets based on specific criteria, such as source or destination IP addresses, protocol types, or packet contents.
+
+`Administrative Privileges:` Typically, raw socket operations require administrative privileges or special permissions due to their low-level nature and potential security implications. This helps prevent misuse or unauthorized access to network resources.
+
+`Security Implications:` The use of raw sockets can introduce security risks, as it allows applications to bypass certain network security mechanisms implemented by the operating system. Therefore, raw socket functionality may be restricted or disabled in some environments to mitigate potential security vulnerabilities.
+
+Overall, raw sockets provide a powerful mechanism for network programming tasks that require low-level access to network packets and protocols. However, they should be used judiciously and with caution, especially in production environments, to ensure proper network operation and security.
+
+#### Active and Passive socket
+
+- `Active Socket:`
+    - Also known as a client socket.
+    - An active socket is typically created by a client application when it initiates a connection to a server.
+    - The client socket actively attempts to establish a connection with a server socket by sending a connection request.
+    - Once the connection is established, the client socket can send data to and receive data from the server socket.
+
+- `Passive Socket:`
+    - Also known as a server socket.
+    - A passive socket is typically created by a server application to listen for incoming connection requests from clients.
+    - The server socket passively waits for incoming connection requests on a specific network address (IP address and port number).
+    - When a client socket initiates a connection request, the server socket accepts the connection and establishes a new socket for communication with the client. Once the connection is established, the server socket and the client socket can exchange data.
+
+In summary, active sockets are used by client applications to initiate connections, while passive sockets are used by server applications to listen for incoming connections. Together, they enable bidirectional communication between clients and servers in TCP-based network applications.
 
 
 

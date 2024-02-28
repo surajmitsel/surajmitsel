@@ -49,8 +49,7 @@ int climbStairs_1(int n) {
 }
 
 int climbStairs_2(int n) {
-  int a = 0, b = 1;
-  int c = 0;
+  int a = 0, b = 1, c = 0;
   for (int i = 0; i < n; i++) {
     c = a + b;
     a = b;

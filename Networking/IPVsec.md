@@ -41,3 +41,7 @@ IPsec implementations that support PFS generate new session keys for each sessio
 
 #### summary
 Overall, IPsec provides robust security mechanisms for protecting IP communications, ensuring confidentiality, integrity, and authenticity of data transmitted over IP networks. It is widely used in VPNs, remote access solutions, site-to-site connectivity, and securing critical data transmissions.
+
+
+### Interview Questions
+https://www.interviewquestionspdf.com/2023/11/24-ipsec-vpn-interview-questions-and.html 

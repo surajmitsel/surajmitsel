@@ -50,6 +50,7 @@ int32_t reverseBits_int32(int32_t val) {
   int pos = 0;
   while (pos < 32) { // pos is checked for all 32 bit
     result = result + ((val % 2) << (31 - pos));
+    printf("0x%x \n",result);
     val >>= 1;
     pos++;
   }
@@ -58,17 +59,17 @@ int32_t reverseBits_int32(int32_t val) {
 }
 
 int main() {
-  int32_t value = -25;
+  int32_t value = 10;
   bitset<32> beforReverse(value);
   bitset<32> afterReverse(reverseBits_int32(value));
   cout << "Before reverseBits_int32:" << beforReverse << endl;
   cout << "after reverseBits_int32 :" << afterReverse << endl;
 
-  uint32_t value1 = 4567;
-  bitset<32> befor(value1);
-  bitset<32> after(reverseBits_uint32(value1));
-  cout << "Before reverseBits_uint32:" << befor << endl;
-  cout << "after reverseBits_uint32 :" << after << endl;
+  // uint32_t value1 = 4567;
+  // bitset<32> befor(value1);
+  // bitset<32> after(reverseBits_uint32(value1));
+  // cout << "Before reverseBits_uint32:" << befor << endl;
+  // cout << "after reverseBits_uint32 :" << after << endl;
 
   return 0;
 }

@@ -15,50 +15,56 @@ eg.
 Output = 3
 */
 
-void dfs(vector<vector<int>> &grid, int r, int c) {
-  grid[r][c] = 0; // reset
+void dfs(vector<vector<char>>& grid, int i, int j) {
+    int rows = grid.size();
+    int cols = grid[0].size();
 
-  if (r + 1 < grid.size() && grid[r + 1][c] == 1) // down
-    dfs(grid, r + 1, c);
+    if (i < 0 || i >= rows || j < 0 || j >= cols || grid[i][j] != '1') {
+        return;
+    }
 
-  if (r - 1 >= 0 && grid[r - 1][c] == 1) // up
-    dfs(grid, r - 1, c);
+    // Mark the current cell as visited
+    grid[i][j] = '0';
 
-  if (c + 1 < grid[r].size() && grid[r][c + 1] == 1) // right
-    dfs(grid, r, c + 1);
-
-  if (c - 1 >= 0 && grid[r][c - 1] == 1) // left
-    dfs(grid, r, c - 1);
+    // Explore 4-directionally
+    dfs(grid, i + 1, j);
+    dfs(grid, i - 1, j);
+    dfs(grid, i, j + 1);
+    dfs(grid, i, j - 1);
 }
 
-int noOfIsland(vector<vector<int>> &grid) {
-  int count = 0;
-
-  int rows = grid.size(); // No of Rows
-  if (!rows)              // no rows
-    return 0;
-  int colms = grid[0].size(); // no columns
-  if (!colms)
-    return 0;
-
-  for (int i = 0; i < rows; i++) {
-    for (int j = 0; j < colms; j++) {
-      if (grid[i][j] == 1) {
-        count++;
-        dfs(grid, i, j); // reset all up,down,left,right 1 values to 0
-      }
+int numIslands(vector<vector<char>>& grid) {
+    if (grid.empty()) {
+        return 0;
     }
-  }
-  return count;
+
+    int rows = grid.size();
+    int cols = grid[0].size();
+    int numIslands = 0;
+
+    // Traverse the grid
+    for (int i = 0; i < rows; ++i) {
+        for (int j = 0; j < cols; ++j) {
+            if (grid[i][j] == '1') {
+                // Found land cell, perform DFS to mark connected land cells
+                dfs(grid, i, j);
+                numIslands++;
+            }
+        }
+    }
+
+    return numIslands;
 }
 
 int main() {
-  vector<vector<int>> grid({{1, 1, 0, 0, 0},
-                            {1, 1, 0, 0, 0},
-                            {0, 0, 1, 0, 0},
-                            {0, 0, 0, 0, 0},
-                            {0, 0, 0, 1, 1}});
+    vector<vector<char>> grid = {
+        {'1', '1', '0', '0', '0'},
+        {'1', '1', '0', '0', '0'},
+        {'0', '0', '1', '0', '0'},
+        {'0', '0', '0', '1', '1'}
+    };
 
-  std::cout << "noOfIsland:" << noOfIsland(grid) << endl;
-  return 0;
+    cout << "Number of islands: " << numIslands(grid) << endl;
+
+    return 0;
 }
