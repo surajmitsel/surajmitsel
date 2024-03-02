@@ -46,26 +46,25 @@ void inorder(struct node *root) {
   inorder(root->right);
 }
 
-int maxDiameter(NODE root, int &height) {
-  if (!root) {
-    height = 0;
-    return 0;
-  }
-
-  int h1 = 0, h2 = 0;
-  int d1 = maxDiameter(root->left, h1);
-  int d2 = maxDiameter(root->right, h2);
-
-  // calcualte max hight of let sub tree and right subtree
-  height = max(h1, h2) + 1;
-
-  return max({d1, d2, h1 + h2}); // need to give initializer list {}
+int maxDepth(NODE root, int& diameter) {
+    if (root == nullptr) {
+        return 0;
+    }
+    int leftHeight = maxDepth(root->left, diameter);
+    int rightHeight = maxDepth(root->right, diameter);
+    diameter = max(diameter, leftHeight + rightHeight); // Update diameter
+    return 1 + max(leftHeight, rightHeight); // Return height of subtree rooted at current node
 }
 
-int maxDiameter(NODE root) {
-  int diam = 0;
-  return maxDiameter(root, diam);
+int diameterOfBinaryTree(NODE root) {
+    if (root == nullptr) {
+        return 0;
+    }
+    int diameter = 0;
+    maxDepth(root, diameter);
+    return diameter;
 }
+
 
 int main(void) {
   /*
@@ -89,6 +88,6 @@ int main(void) {
 
   // 20 10 4 2 1 3 7 30 => op/7
 
-  cout << "maxDiameter:" << maxDiameter(root) << endl;
+  cout << "maxDiameter:" << diameterOfBinaryTree(root) << endl;
   return 0;
 }

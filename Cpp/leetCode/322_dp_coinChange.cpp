@@ -49,31 +49,25 @@ int coinChange(vector<int> &coins, int amount) {
       if (sub_ans != INT_MAX && sub_ans + 1 < ans) {
         ans = sub_ans + 1;
       }
+      //cout << sub_ans << "," << ans << endl;
     }
   }
   return ans;
 }
 
-int coinChange_dp_1(vector<int> &coins, int amount) {
-  // since max amount is 104 we can create memory till that size
+int coinChange_dp_1(vector<int>& coins, int amount) {
+    vector<int> dp(amount + 1, INT_MAX);
+    dp[0] = 0;
 
-  vector<int> dp(amount + 1, 0); // initialized to 0
-  dp[0] = 0;
-
-  for (int i = 1; i <= amount; i++) {
-    dp[i] = INT_MAX; // fill with max or min
-    for (int c : coins) {
-      if (i - c >= 0 && dp[i - c] != INT_MAX) { // if dp already calc
-        dp[i] = std::min(dp[i], dp[i - c] + 1);
-      }
+    for (int coin : coins) {
+        for (int i = coin; i <= amount; ++i) {
+            if (dp[i - coin] != INT_MAX) {
+                dp[i] = min(dp[i], dp[i - coin] + 1);
+            }
+        }
     }
-  }
 
-  if (dp[amount] == INT_MAX) {
-    return -1;
-  }
-
-  return dp[amount];
+    return dp[amount] == INT_MAX ? -1 : dp[amount];
 }
 
 int coinChange_dp_2(vector<int> &coins, int amount) {

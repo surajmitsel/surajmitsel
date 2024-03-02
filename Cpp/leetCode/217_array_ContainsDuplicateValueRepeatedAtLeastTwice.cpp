@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <unordered_set>
 using namespace std;
 /*
 217. Contains Duplicate
@@ -27,14 +28,19 @@ Output: true
 
 // METHOD1: with extra space of L,R
 bool containsDuplicate(vector<int> &nums) {
-  bool result;
-
-  return result;
+  unordered_set<int> mySet;
+  for(auto x:nums){
+    if(mySet.find(x) != mySet.end()){
+      return true;
+    }
+    mySet.insert(x);
+  }
+  return false;
 }
 
 int main() {
-  vector<int> vec{1, 2, 3, 1};
-  // vector<int> vec{1,1,1,3,3,4,3,2,4,2};
+  //vector<int> vec{1, 2, 3, 1};
+  vector<int> vec{1,1,1,3,3,4,3,2,4,2};
 
   cout << "containsDuplicate:" << containsDuplicate(vec);
 }

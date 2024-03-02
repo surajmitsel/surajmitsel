@@ -41,19 +41,23 @@ ans =1,
           dp[i] = max[dp[i], dp[j]+1]
           ans= max(ans,dp[i])
 */
-int lengthOfLIS_1(vector<int> &nums) {
-  int size = nums.size();
-  int ans = 1;
-  vector<int> dp(size, 1);
-  for (int i = 1; i < size; i++) {
-    for (int j = i; j >= 0; j--) {
-      if (nums[j] < nums[i]) {
-        dp[i] = max(dp[i], dp[j] + 1);
-        ans = max(ans, dp[i]);
-      }
+int lengthOfLIS_1(vector<int>& nums) {
+    int n = nums.size();
+    if (n == 0) return 0;
+
+    vector<int> dp(n, 1); // Initialize dp array with 1s
+
+    int maxLength = 1;
+    for (int i = 1; i < n; ++i) {
+        for (int j = 0; j < i; ++j) {
+            if (nums[i] > nums[j]) {
+                dp[i] = max(dp[i], dp[j] + 1);
+                maxLength = max(maxLength, dp[i]);
+            }
+        }
     }
-  }
-  return ans;
+
+    return maxLength;
 }
 
 // METHOD2:
@@ -82,8 +86,8 @@ int lengthOfLIS_2(vector<int> &nums) {
 
 int main() {
   // vector<int> nums{2, 3, 1, 2, 4};          // 234 124 op = 3
-  // vector<int> nums{1, 2, 7, 8, 3, 4, 5, 9}; // 123459 op = 6
-  vector<int> nums{7, 7, 7, 7, 7, 7, 7}; // 7 op = 1
+  vector<int> nums{1, 2, 7, 8, 3, 4, 5, 9}; // 123459 op = 6
+  //vector<int> nums{7, 7, 7, 7, 7, 7, 7}; // 7 op = 1
   // vector<int> nums{0, 1, 0, 3, 2, 3}; // 0123  op = 4
   cout << "lengthOfLIS_1:" << lengthOfLIS_1(nums) << endl;
   cout << "lengthOfLIS_2:" << lengthOfLIS_2(nums) << endl;

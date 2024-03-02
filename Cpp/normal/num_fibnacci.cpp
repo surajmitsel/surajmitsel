@@ -14,6 +14,7 @@ void fibnacci(int num){
 
 // METHOD2
 int fib(int x) {
+   //cout << x << "|" <<endl;
    if((x==1)||(x==0)) {
       return(x);
    }else {
@@ -26,11 +27,10 @@ int main(){
     // method1: it will print next number after 20
     fibnacci(20);
     
-
     // method2: it will print next 20 iteration 
     int i = 0; 
     int x = 20;
-    while(i < x){
+    for(int i = 0; i < x; i++){
         std::cout << fib(i) << ",";
         i++;
     }
