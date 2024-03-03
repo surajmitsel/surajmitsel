@@ -29,7 +29,7 @@ void moveZeroEndOfArray(vector<int>& nums) {
 }
 
 int main() {
-  vector<int> nums{0, 1, 0, 3, 12, 0, 15, 18, 0, 75, 0};
+  vector<int> nums{1, 2, 0, 3, 12, 0, 15, 18, 0, 75, 0};
   std::cout << "moveZeroEndOfArray:";
   moveZeroEndOfArray(nums);
   for (auto x : nums)

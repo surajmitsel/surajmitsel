@@ -55,22 +55,9 @@ int coinChange(vector<int> &coins, int amount) {
   return ans;
 }
 
-int coinChange_dp_1(vector<int>& coins, int amount) {
-    vector<int> dp(amount + 1, INT_MAX);
-    dp[0] = 0;
 
-    for (int coin : coins) {
-        for (int i = coin; i <= amount; ++i) {
-            if (dp[i - coin] != INT_MAX) {
-                dp[i] = min(dp[i], dp[i - coin] + 1);
-            }
-        }
-    }
 
-    return dp[amount] == INT_MAX ? -1 : dp[amount];
-}
-
-int coinChange_dp_2(vector<int> &coins, int amount) {
+int coinChange_dp_1(vector<int> &coins, int amount) {
   // creating the base dp array, with first value set to 0
   if (amount < 1)
     return 0;
@@ -93,13 +80,47 @@ int coinChange_dp_2(vector<int> &coins, int amount) {
   return dp[--amount] == INT_MAX ? -1 : dp[amount];
 }
 
+int coinChange_dp_2(vector<int>& coins, int amount) {
+    vector<int> dp(amount + 1, INT_MAX);
+    dp[0] = 0;
+
+    for (int coin : coins) {
+      cout << coin << "--------------" << endl;
+        for (int i = coin; i <= amount; ++i) {
+            cout << "dp[i]:" << dp[i] << endl;
+            cout << "dp[i - coin]:" << dp[i - coin] << endl;
+            if (dp[i - coin] != INT_MAX) {
+                dp[i] = min(dp[i], dp[i - coin] + 1);
+            }
+        }
+    }
+
+    return dp[amount] == INT_MAX ? -1 : dp[amount];
+}
+
+int coinChange_dp_3(vector<int> &coins, int amount) {
+  vector<int> dp(amount + 1, INT_MAX);
+    dp[0] = 0;
+    
+    for (int i = 1; i <= amount; ++i) {
+        for (int coin : coins) {
+            if (i - coin >= 0 && dp[i - coin] != INT_MAX) {
+                dp[i] = min(dp[i], dp[i - coin] + 1);
+            }
+        }
+    }
+    
+    return dp[amount] == INT_MAX ? -1 : dp[amount];
+}
+
 int main() {
   // vector<int> coins{1, 2, 5};
-  vector<int> coins{7, 5, 1};
-  int amount = 4;
-  cout << "coinChange:" << coinChange(coins, amount) << endl;
-  cout << "coinChange_dp_1:" << coinChange_dp_1(coins, amount) << endl;
+  vector<int> coins{1,2,5};
+  int amount = 30;
+  //cout << "coinChange:" << coinChange(coins, amount) << endl;
+  //cout << "coinChange_dp_1:" << coinChange_dp_1(coins, amount) << endl;
   cout << "coinChange_dp_2:" << coinChange_dp_2(coins, amount) << endl;
+  //cout << "coinChange_dp_3:" << coinChange_dp_3(coins, amount) << endl;
 
   return 0;
 }

@@ -80,5 +80,6 @@ int main() {
   cout << "missingNumber_1:" << missingNumber_1(nums) << endl;
   cout << "missingNumber_2:" << missingNumber_2(nums) << endl;
   cout << "missingNumber_3:" << missingNumber_3(nums) << endl;
+  
   return 0;
 }

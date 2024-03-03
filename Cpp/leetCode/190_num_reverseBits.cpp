@@ -38,8 +38,8 @@ uint32_t reverseBits_uint32(uint32_t val) {
   uint32_t result = 0;
   int pos = 0;
   while (val > 0) { // value is checked
-    result = result + ((val % 2) << (31 - pos));
-    val >>= 1;
+    result = result + ((val & 0x01) << (31 - pos));
+    val = val >> 1;
     pos++;
   }
   return result;
@@ -49,7 +49,7 @@ int32_t reverseBits_int32(int32_t val) {
   int32_t result = 0;
   int pos = 0;
   while (pos < 32) { // pos is checked for all 32 bit
-    result = result + ((val % 2) << (31 - pos));
+    result = result + ((val % 2) << (31 - pos));  // (val & 0x01) And (val %2) both are same
     printf("0x%x \n",result);
     val >>= 1;
     pos++;

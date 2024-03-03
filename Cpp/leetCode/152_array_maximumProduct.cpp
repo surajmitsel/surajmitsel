@@ -33,7 +33,7 @@ S: O(1)
 int maxProductOfSubArray(vector<int> &nums) {
   if (nums.size() == 0)
     return 0;
-  int max_overall = nums[0];
+  int max_so_far = nums[0];
   int max_end_here = nums[0];
   int min_end_here = nums[0];
   for (int i = 1; i < nums.size(); i++) { // start from 1
@@ -41,9 +41,9 @@ int maxProductOfSubArray(vector<int> &nums) {
     max_end_here = max({nums[i], nums[i] * max_end_here, nums[i] * min_end_here});
     min_end_here = min({nums[i], nums[i] * temp, nums[i] * min_end_here}); // since max ending here already updated so 
                                                                             //taken previous value of max_end_here
-    max_overall = max(max_overall, max_end_here);
+    max_so_far = max(max_so_far, max_end_here);
   }
-  return max_overall;
+  return max_so_far;
 }
 int main() {
   vector<int> nums{2, 3, -2, 4};

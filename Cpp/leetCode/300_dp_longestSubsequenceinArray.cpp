@@ -76,10 +76,20 @@ int lengthOfLIS_2(vector<int> &nums) {
   for (int i = 0; i < nums.size(); i++) {
     // get the it of lower value index then current value
     auto it = std::lower_bound(res.begin(), res.end(), nums[i]);
-    if (it != res.end())
+    
+    if (it != res.end()){
+      //cout <<"*it" << *it << "," << nums[i] << endl;
       *it = nums[i]; // replace the value if found
-    else
+      // for(int x:res)
+      //   cout << x << ",";
+      // cout <<endl;
+    }
+    else{
       res.push_back(nums[i]); // append it end if not found
+      // for(int x:res)
+      //   cout << x << ",";
+      // cout <<endl;
+    }
   }
   return res.size();
 }

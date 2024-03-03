@@ -62,8 +62,22 @@ int sum_itr(int a, int b) {
   }
   return a;
 }
+
+int sum_itr_1(int a, int b) {
+  while (b != 0) {
+    int Xor = (a ^ b);
+    int And = a & b;
+    int Carry = And << 1;
+    
+    a = Xor;
+    b = Carry;
+  }
+  return a;
+}
+
 int main() {
   cout << "sum_rec:" << sum_rec(12, 15) << endl;
   cout << "sum_itr:" << sum_itr(12, 15) << endl;
+  cout << "sum_itr:" << sum_itr_1(12, 15) << endl;
   return 0;
 }
