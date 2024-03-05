@@ -22,8 +22,7 @@ string longestCommonPrefix(vector<string> &strs) {
   string result = strs[0];
   int j = 0;
   for (int i = 1; i < strs.size(); i++) { // i=1 start from next string
-    while (j < result.length() && j < strs[i].length() &&
-           result[j] == strs[i][j]) {
+    while (j < result.length() && j < strs[i].length() && result[j] == strs[i][j]) {
       j++;
     }
     result = result.substr(0, j);

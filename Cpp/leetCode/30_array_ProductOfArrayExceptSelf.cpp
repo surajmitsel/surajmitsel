@@ -41,11 +41,17 @@ vector<int> productArrayExceptSelf(vector<int> &nums) {
   vector<int> R(size, 1); // right product with size and initialize with 1
   vector<int> result(size, 1);
 
-  for (int i = 1; i < size; i++)
+  for (int i = 1; i < size; i++){
     L[i] = L[i - 1] * nums[i - 1];
+    cout << L[i] << "," ;
+  }
+  cout << endl;
 
-  for (int i = size - 2; i >= 0; i--)
+  for (int i = size - 2; i >= 0; i--){
     R[i] = R[i + 1] * nums[i + 1];
+    cout << R[i] << "," ;
+  }
+  cout << endl;
 
   for (int i = 0; i < size; i++)
     result[i] = L[i] * R[i];

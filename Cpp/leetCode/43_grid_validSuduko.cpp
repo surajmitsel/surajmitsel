@@ -66,9 +66,9 @@ bool isValidSudoku(vector<vector<char>>& board) {
             char current = board[i][j];
             if (current != '.') {
                 // Check row, column, and subgrid
-                string rowStr = "r" + to_string(i) + current;
-                string colStr = "c" + to_string(j) + current;
-                string subgridStr = "s" + to_string(i / 3) + to_string(j / 3) + current;
+                string rowStr = "r" + std::to_string(i) + current;
+                string colStr = "c" + std::to_string(j) + current;
+                string subgridStr = "s" + std::to_string(i / 3) + to_string(j / 3) + current;
 
                 if (seen.find(rowStr) != seen.end() ||  // found
                     seen.find(colStr) != seen.end() ||
