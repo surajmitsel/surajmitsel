@@ -35,6 +35,7 @@ void insert_back(NODE *head, int data) {
 bool findloop(NODE head) {
   NODE slow, fast;
   slow = fast = head;
+  
   while (slow && fast && fast->next) {
     slow = slow->next;
     fast = fast->next->next;
@@ -47,6 +48,7 @@ bool findloop(NODE head) {
 // Method2: find loop in list in hash
 bool findLoop_usingHash(NODE head){
     unordered_set<NODE> mySet;
+    
     while (head != nullptr) {
         if (mySet.find(head) != mySet.end())
             return true;
@@ -66,6 +68,7 @@ NODE findloopNode(NODE head) {
     if (slow == fast)
       break;
   }
+  // move step by step
   slow = head;
   while (slow != fast) {
     slow = slow->next;
@@ -77,14 +80,17 @@ NODE findloopNode(NODE head) {
 // remove loop from a list
 void removeLoop(NODE head) {
   cout << "remove loop" << endl;
+  
   NODE slow, fast;
   slow = fast = head;
+  
   while (slow && fast && fast->next) {
     slow = slow->next;
     fast = fast->next->next;
     if (slow == fast)
       break;
   }
+  
   if (slow == fast) { // found loop
     slow = head;      // again start from begining
     while (slow->next != fast->next) {

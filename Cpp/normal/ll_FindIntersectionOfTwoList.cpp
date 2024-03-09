@@ -53,11 +53,11 @@ int getListCount(NODE head) {
   return 1 + getListCount(head->next);
 }
 NODE _intersecion(int diff, NODE head1, NODE head2) {
-  for (int i = 0; i < diff; i++) {
-    if (head1 == nullptr)
-      return nullptr;
+  while(diff){
     head1 = head1->next;
+    diff--;
   }
+  
   while (head1 && head2) {
     if (head1 == head2)
       return head1;
@@ -67,12 +67,52 @@ NODE _intersecion(int diff, NODE head1, NODE head2) {
   return nullptr;
 }
 NODE findIntersection_diff(NODE head1, NODE head2) {
-  int count1 = getListCount(head1);
-  int count2 = getListCount(head2);
-  if (count1 > count2) {
-    return _intersecion(count1 - count2, head1, head2);
+  if (!head1 || !head2) return nullptr;
+
+  int length1 = getListCount(head1);
+  int length2 = getListCount(head2);
+  if (length1 > length2) {
+    return _intersecion(length1 - length2, head1, head2);
   }
-  return _intersecion(count2 - count1, head2, head1);
+  return _intersecion(length2 - length1, head2, head1);
+}
+
+// METHOD3: using without diff ---------
+NODE findIntersection_withoutDiff(NODE head1, NODE head2) {
+    if (!head1 || !head2) return nullptr;
+    
+    int len1 = 0, len2 = 0;
+    NODE tempA = head1;
+    NODE tempB = head2;
+
+    // Calculate the lengths of both lists
+    len1 = getListCount(head1);
+    len2 = getListCount(head2);
+
+    // Reset the pointers
+    tempA = head1;
+    tempB = head2;
+
+    // Traverse the longer list to align starting points
+    while (len1 > len2) {
+        tempA = tempA->next;
+        len1--;
+    }
+    while (len2 > len1) {
+        tempB = tempB->next;
+        len2--;
+    }
+
+    // Traverse both lists together until an intersection is found
+    while (tempA && tempB) {
+        if (tempA == tempB) 
+            return tempA;
+        tempA = tempA->next;
+        tempB = tempB->next;
+    }
+
+    // If no intersection is found
+    return nullptr;
 }
 
 int main() {
@@ -110,6 +150,13 @@ int main() {
     std::cout << "findIntersection_diff:" << find->data << endl;
   } else {
     cout << "findIntersection_diff:not found" << endl;
+  }
+
+
+  if ((find = findIntersection_withoutDiff(head1, head2)) != nullptr) {
+    std::cout << "findIntersection_withoutDiff:" << find->data << endl;
+  } else {
+    cout << "findIntersection_withoutDiff:not found" << endl;
   }
 
   return 0;

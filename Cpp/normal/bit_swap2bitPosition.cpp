@@ -22,9 +22,9 @@ unsigned int swapBits_2(unsigned int n, unsigned int pos1, unsigned int pos2) {
     unsigned int bit2 = (n >> pos2) & 1;
 
     // XOR the bits to swap them (0 ^ 1 = 1, 1 ^ 0 = 1, 0 ^ 0 = 0, 1 ^ 1 = 0)
-    if(bit1 != bit2){
-        n ^= (bit1 << pos2) | (bit2 << pos1);
-    }
+    //if(bit1 != bit2){
+    n ^= (bit1 << pos2) | (bit2 << pos1);
+    //}
     return n;
 }
 

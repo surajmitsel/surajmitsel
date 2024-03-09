@@ -5,13 +5,11 @@ int largest(int arr[], int n)
     int i;
     int max = arr[0];
  
-// Traverse array elements from second and compare every element with current max
-    for (i = 1; i < n; i++)
-    {
+   // Traverse array elements from second and compare every element with current max
+    for (i = 1; i < n; i++) {
         if (arr[i] > max)
             max = arr[i];
     }
- 
     return max;
 }
  

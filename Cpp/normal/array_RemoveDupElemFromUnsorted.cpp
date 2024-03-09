@@ -11,6 +11,7 @@ struct node {
   struct node *left{nullptr}, *right{nullptr};
   node(int data) : data(data) {}
 };
+
 struct node *bst_insert(struct node *root, int data) {
   if (!root)
     return new node(data);
