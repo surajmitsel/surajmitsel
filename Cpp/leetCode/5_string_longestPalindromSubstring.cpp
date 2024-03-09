@@ -31,6 +31,7 @@ string longestPalindrome(string s) {
     }
     
     int start = 0, end = 0;
+    int finalMax = 0;
     
     for (int i = 0; i < s.length(); i++) {
         int len1 = expandAroundCenter(s, i, i);
@@ -40,9 +41,11 @@ string longestPalindrome(string s) {
             start = i - (maxLen - 1) / 2;
             end = i + maxLen / 2;
         }
+        finalMax = max(finalMax,maxLen);
     }
     
-    return s.substr(start, end - start + 1);
+    //return s.substr(start, end - start + 1);
+    return s.substr(start, finalMax);
 }
 
 

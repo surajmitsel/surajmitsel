@@ -45,3 +45,4 @@ Overall, IPsec provides robust security mechanisms for protecting IP communicati
 
 ### Interview Questions
 https://www.interviewquestionspdf.com/2023/11/24-ipsec-vpn-interview-questions-and.html 
+http://networkerinterview.net/entries/vpn/vpn-interview-questions-and-answers

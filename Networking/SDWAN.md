@@ -40,3 +40,4 @@ Within the SD-WAN overlay network, OSPF can be used to establish dynamic routing
 - BGP can also be used to provide redundancy and failover capabilities in SD-WAN deployments, allowing SD-WAN edges to dynamically reroute traffic in case of link failures or network outages.
 
 In summary, SD-WAN solutions can leverage both OSPF and BGP protocols to achieve dynamic routing, optimize traffic flow, and ensure connectivity between SD-WAN edges and external networks. The choice between OSPF and BGP, as well as their specific configurations, will depend on the requirements of the SD-WAN deployment, the underlying network infrastructure, and the desired network policies and objectives.
+

@@ -20,7 +20,7 @@ public:
   bool IsFull() { return (cnt >= length); }
   int count() { return cnt; }
 
-  void dequeue(void) // only remove the element
+  void dequeue(void) // remove from front
   {
     if (IsEmpty()) {
       cout << "Queue underflow!";
@@ -31,7 +31,7 @@ public:
     cnt--;
   }
 
-  void enqueue(T data) {
+  void enqueue(T data) { // put from rear
     if (IsFull()) {
       cout << "Queue overflow!" << endl;
       return;
@@ -42,7 +42,7 @@ public:
     cnt++;
   }
 
-  T Front() {
+  T Front() { // Only read element
     if (IsEmpty()) {
       cout << "Queue underflow!" << endl;
       return -1;

@@ -19,33 +19,23 @@ void inorder(struct node *root) {
   inorder(root->right);
 }
 
-bool HasPathSum(NODE root, int target) {
-
-  if (root == nullptr) // No node
-    return 0;          // return value = 0;
-
-  // only one node || last node in recursive call
-  if (root->left == nullptr && root->right == nullptr)
-    return (target == root->data); // return result
-
-  bool result = false;
-  // seperate if not if-else
-  if (root->left)
-    result = HasPathSum(root->left, (target - root->data));
-
-  if (root->right)
-    result = result || HasPathSum(root->right, (target - root->data));
-
-  return result;
+bool HasPathSum(struct node* root, int targetSum) {
+    if (!root)
+        return false;
+    
+    targetSum = targetSum - root->data;
+    if (root->left == nullptr && root->right == nullptr) // Check if leaf node
+        return targetSum == 0;           // return true if tagetSum is reach to 0
+    
+    return HasPathSum(root->left, targetSum) || HasPathSum(root->right, targetSum);
 }
 
 int main(void) {
   /*
-                   1
-              2         3
-            4   5     6    7
+                  1
+              2        3
+            4   5    6    7
   */
-
   struct node *root = new node(1);
   root->left = new node(2);
   root->right = new node(3);
@@ -54,6 +44,6 @@ int main(void) {
   root->right->left = new node(6);
   root->right->right = new node(7);
 
-  cout << "HasPathSum:" << HasPathSum(root, 8) << endl;
+  cout << "HasPathSum:" << HasPathSum(root, 7) << endl;
   return 0;
 }

@@ -91,13 +91,13 @@ vector<vector<int>> levelOrder(NODE root) {
 
 int main(void) {
   /*
-                   1
+                  1
               2       3
             4   5   6    7
           10               30
         20
   */
-  // level traversal: 1,2,3,4,5,6,7,10,20
+  // level traversal: 1,2,3,4,5,6,7,10,30,20
   struct node *root = new node(1);
   root->left = new node(2);
   root->right = new node(3);

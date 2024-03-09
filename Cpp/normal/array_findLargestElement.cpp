@@ -7,8 +7,10 @@ int largest(int arr[], int n)
  
 // Traverse array elements from second and compare every element with current max
     for (i = 1; i < n; i++)
+    {
         if (arr[i] > max)
             max = arr[i];
+    }
  
     return max;
 }

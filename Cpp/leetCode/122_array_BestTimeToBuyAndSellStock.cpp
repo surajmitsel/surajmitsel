@@ -36,7 +36,7 @@ stock to achieve the maximum profit of 0.
 // (prices[i - 1] - buy) => previous day it would have been sold
 */
 
-int maxProfit_1(vector<int>& prices) {
+int maxProfit_on_one_prticular_day(vector<int>& prices) {
     int minPrice = INT_MAX; // Initialize minimum price to maximum possible value
     int maxProfit = 0; // Initialize maximum profit to 0
 
@@ -50,28 +50,22 @@ int maxProfit_1(vector<int>& prices) {
 }
 
 
-int maxProfit_2(vector<int> &prices) {
-  if (prices.size() <= 1) {
-    return 0;
+int maxProfit_Overall(vector<int> &prices) 
+{
+  int maxProfit = 0;
+  for (int i = 1; i < prices.size(); ++i) { // start from 1
+      // If the price of the current day is higher than the previous day, 
+      // we buy on the previous day and sell on the current day.
+      if (prices[i] > prices[i - 1]) {
+          maxProfit = maxProfit + (prices[i] - prices[i - 1]);
+      }
   }
-  int buy = prices[0];
-  int profit = 0;
-
-  for (int i = 1; i < prices.size(); i++) {
-    // current day price < previous day price then buy
-    if (prices[i] < prices[i - 1]) { // drop price
-      profit = profit + (prices[i - 1] - buy);
-      buy = prices[i];
-    }
-  }
-  // for last day any way you need to sell to get the profit/loss
-  profit = profit + prices[prices.size() - 1] - buy;
-  return profit;
+  return maxProfit;
 }
 
 int main() {
   vector<int> prices{7, 1, 5, 3, 6, 4};
-  std::cout << "maxProfit:" << maxProfit_1(prices) << endl;
-  std::cout << "maxProfit:" << maxProfit_1(prices) << endl;
+  std::cout << "maxProfit_on_one_prticular_day:" << maxProfit_on_one_prticular_day(prices) << endl;
+  std::cout << "maxProfit_Overall:" << maxProfit_Overall(prices) << endl;
   return 0;
 }

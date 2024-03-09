@@ -26,6 +26,7 @@ void findPaths(NODE root, int targetSum, vector<int>& path, vector<vector<int>>&
     // Recursively explore left and right subtrees
     findPaths(root->left, targetSum - root->val, path, result);
     findPaths(root->right, targetSum - root->val, path, result);
+    
     // Backtrack: Remove current node's value from the path
     path.pop_back();
 }

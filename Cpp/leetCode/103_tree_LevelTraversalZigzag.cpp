@@ -75,7 +75,7 @@ vector<vector<int>> levelOrder(NODE root) {
   bool reverse = true; // This needs to be toggle
   while (!myQueue.empty()) {
     vector<int> level_vec;
-    deque<NODE> myRevQue;       // this is for reverse queue
+    deque<NODE> myRevQue;       // dqueue this is for reverse queue
     int q_cnt = myQueue.size(); // current level queue size
 
     for (int i = 0; i < q_cnt; i++) {
@@ -98,14 +98,14 @@ vector<vector<int>> levelOrder(NODE root) {
 
     myQueue.insert(myQueue.begin(), myRevQue.begin(), myRevQue.end());
     result.push_back(level_vec); // 3.push each level_vector into result list
-    reverse = !reverse;
+    reverse = !reverse; //toggle bool
   }
   return result;
 }
 
 int main(void) {
   /*
-                   1
+                  1
               2       3
             4   5   6    7
           10               30
@@ -123,7 +123,7 @@ int main(void) {
   root->left->left->left = new node(10);
   root->left->left->left->left = new node(20);
 
-  // op=> 1,2,3,4,5,6,7,10,30,20,
+  // op=> 1,3,2,4,5,6,7,30,10,20,
 
   cout << "levelOrder:";
   vector<vector<int>> res = levelOrder(root);
