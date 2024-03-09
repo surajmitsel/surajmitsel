@@ -8,7 +8,7 @@ struct node {
 };
 typedef struct node *NODE;
 
-// Method1
+// Method1: using one pointer
 NODE deleteDuplicates(NODE head) {
   NODE current = head;
   while (current && current->next) {
@@ -23,7 +23,7 @@ NODE deleteDuplicates(NODE head) {
   return head;
 }
 
-// Method2
+// Method2: using 2 pointer
 void removeDuplicate(NODE root) {
   std::cout << "removeDuplicate:" << endl;
   if (root == nullptr || root->next == nullptr) {
