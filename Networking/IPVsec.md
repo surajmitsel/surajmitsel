@@ -42,6 +42,32 @@ IPsec implementations that support PFS generate new session keys for each sessio
 #### summary
 Overall, IPsec provides robust security mechanisms for protecting IP communications, ensuring confidentiality, integrity, and authenticity of data transmitted over IP networks. It is widely used in VPNs, remote access solutions, site-to-site connectivity, and securing critical data transmissions.
 
+### what is main mode, agrressive and quick mode in IPsec
+
+In IPsec (Internet Protocol Security), the main mode, aggressive mode, and quick mode are different negotiation modes used during the establishment of a secure VPN (Virtual Private Network) tunnel between two devices. Here's a brief explanation of each:
+Main Mode:
+
+- `Main mode`: is a negotiation mode used during the initial setup of an IPsec VPN tunnel.
+It provides a secure and authenticated way for two devices to establish a secure connection.
+Main mode uses six messages (three pairs of messages) exchanged between the two peers to negotiate the parameters of the IPsec tunnel, including encryption and authentication methods, and to establish the secure tunnel.
+
+- `Aggressive Mode`:Aggressive mode is another negotiation mode used during the initial setup of an IPsec VPN tunnel. It is faster than main mode because it requires fewer messages to establish the tunnel.
+Aggressive mode uses only three messages exchanged between the two peers to negotiate the parameters of the IPsec tunnel and to establish the secure tunnel.
+However, aggressive mode sacrifices some security compared to main mode because it sends more information in clear text during the negotiation phase.
+
+- `Quick Mode (also known as Phase 2)`:
+Quick mode is used after the initial setup of the IPsec VPN tunnel (which can be established using either main mode or aggressive mode).
+It is used to negotiate the security associations (SAs) for data transmission within the established tunnel.
+Quick mode typically involves fewer messages than the initial negotiation phase and focuses on establishing the parameters for encrypting and authenticating data traffic.
+Quick mode helps to re-establish SAs after they expire or are deleted, ensuring continuous secure communication between the two peers.
+
+Overall, main mode and aggressive mode are used during the initial setup of the IPsec VPN tunnel, while quick mode is used for negotiating security associations for data transmission within the established tunnel. Each mode has its trade-offs in terms of security, speed, and efficiency.
+
+
+
+
+
+
 
 ### Interview Questions
 https://www.interviewquestionspdf.com/2023/11/24-ipsec-vpn-interview-questions-and.html 
