@@ -11,7 +11,7 @@ void printQueue(queue<int> &que) {
   while (!que.empty()) {
     int data = que.front();
     cout << "data: " << data << endl;
-    que.pop();
+    que.pop(); //remove element from queue
   }
 }
 void reverse(queue<int> &que) {

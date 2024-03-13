@@ -20,7 +20,7 @@ bool findElement(NODE head, int data) {
   return findElement(head->link, data);
 }
 
-// recursive print
+// recursive forword print of LL
 void printlist(NODE head) {
   if (!head)
     return;

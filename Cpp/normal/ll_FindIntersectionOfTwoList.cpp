@@ -45,7 +45,7 @@ NODE findIntersection_hash(NODE head1, NODE head2) {
   return nullptr;
 }
 
-// METHOD2: using Diffrance --------------------------
+// METHOD2: using Difference --------------------------
 int getListCount(NODE head) {
   if (!head) {
     return 0;
@@ -82,16 +82,13 @@ NODE findIntersection_withoutDiff(NODE head1, NODE head2) {
     if (!head1 || !head2) return nullptr;
     
     int len1 = 0, len2 = 0;
-    NODE tempA = head1;
-    NODE tempB = head2;
-
     // Calculate the lengths of both lists
     len1 = getListCount(head1);
     len2 = getListCount(head2);
 
     // Reset the pointers
-    tempA = head1;
-    tempB = head2;
+    NODE tempA = head1;
+    NODE tempB = head2;
 
     // Traverse the longer list to align starting points
     while (len1 > len2) {

@@ -28,7 +28,8 @@ void deletelist(NODE head) {
 }
 
 int CountCommonInTwoList(NODE head1, NODE head2) {
-  int count = 0;
+  int common = 0;
+  int notCommon = 0;
   unordered_set<int> mySet{0};
   while (head1) {
     mySet.insert(head1->data);
@@ -36,11 +37,13 @@ int CountCommonInTwoList(NODE head1, NODE head2) {
   }
   while (head2) {
     if (mySet.find(head2->data) != mySet.end()) {
-      count++;
+      common++;
+    }else{
+      notCommon++;
     }
     head2 = head2->link;
   }
-  return count;
+  return common;
 }
 
 int main() {

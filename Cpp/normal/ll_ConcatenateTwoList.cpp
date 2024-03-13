@@ -27,7 +27,7 @@ void deletelist(NODE head) {
   delete (head);
 }
 
-// METHOD1: interactive
+// METHOD1: interative
 void ConcatenateList_itr(NODE head1, NODE head2) {
   if (head1 && head2) { // both are not null
     while (head1->next) {

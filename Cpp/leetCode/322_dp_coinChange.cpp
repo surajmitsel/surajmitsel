@@ -36,27 +36,6 @@ Constraints:
 0 <= amount <= 104
 */
 
-int coinChange(vector<int> &coins, int amount) {
-  if (amount == 0)
-    return 0;
-  int size = coins.size();
-  if (size == 0)
-    return 0;
-  int ans = INT_MAX;
-  for (int i = 0; i < size; i++) {
-    if (amount - coins[i] >= 0) {
-      int sub_ans = coinChange(coins, amount - coins[i]);
-      if (sub_ans != INT_MAX && sub_ans + 1 < ans) {
-        ans = sub_ans + 1;
-      }
-      //cout << sub_ans << "," << ans << endl;
-    }
-  }
-  return ans;
-}
-
-
-
 int coinChange_dp_1(vector<int> &coins, int amount) {
   // creating the base dp array, with first value set to 0
   if (amount < 1)
@@ -85,10 +64,7 @@ int coinChange_dp_2(vector<int>& coins, int amount) {
     dp[0] = 0;
 
     for (int coin : coins) {
-      cout << coin << "--------------" << endl;
         for (int i = coin; i <= amount; ++i) {
-            cout << "dp[i]:" << dp[i] << endl;
-            cout << "dp[i - coin]:" << dp[i - coin] << endl;
             if (dp[i - coin] != INT_MAX) {
                 dp[i] = min(dp[i], dp[i - coin] + 1);
             }
@@ -115,12 +91,11 @@ int coinChange_dp_3(vector<int> &coins, int amount) {
 
 int main() {
   // vector<int> coins{1, 2, 5};
-  vector<int> coins{1,2,5};
-  int amount = 30;
-  //cout << "coinChange:" << coinChange(coins, amount) << endl;
+  vector<int> coins{1,2,4,5};
+  int amount = 23;
   //cout << "coinChange_dp_1:" << coinChange_dp_1(coins, amount) << endl;
-  cout << "coinChange_dp_2:" << coinChange_dp_2(coins, amount) << endl;
-  //cout << "coinChange_dp_3:" << coinChange_dp_3(coins, amount) << endl;
+  //cout << "coinChange_dp_2:" << coinChange_dp_2(coins, amount) << endl;
+  cout << "coinChange_dp_3:" << coinChange_dp_3(coins, amount) << endl;
 
   return 0;
 }

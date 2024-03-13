@@ -11,7 +11,7 @@ struct node {
 int hight(struct node * root) {
   if (!root)
     return 0;
-  return 1 + std::fmax(hight(root->left), hight(root->right));
+  return 1 + std::max(hight(root->left), hight(root->right));
 }
 //method2
 int hightOfTree(struct node *root) {
