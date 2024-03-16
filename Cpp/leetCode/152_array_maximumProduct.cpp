@@ -40,8 +40,11 @@ int maxProductOfSubArray(vector<int> &nums) {
     int temp = max_end_here;
     max_end_here = max({nums[i], nums[i] * max_end_here, nums[i] * min_end_here});
     min_end_here = min({nums[i], nums[i] * temp, nums[i] * min_end_here}); // since max ending here already updated so 
-                                                                            //taken previous value of max_end_here
+             
+                                                                           //taken previous value of max_end_here
     max_so_far = max(max_so_far, max_end_here);
+    std::cout << max_end_here << "," << min_end_here << "," << max_so_far << std::endl; 
+
   }
   return max_so_far;
 }

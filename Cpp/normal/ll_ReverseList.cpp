@@ -39,6 +39,36 @@ NODE reverse(NODE root) {
   return new_root;
 }
 
+// Method 3
+NODE reverseList_usingStack(NODE head) {
+    if (head == nullptr || head->next == nullptr)
+        return head;
+
+    stack<NODE> s;
+    NODE temp = head;
+
+    // Push all elements onto the stack
+    while (temp != nullptr) {
+        s.push(temp);
+        temp = temp->next;
+    }
+
+    // Create a new list by popping elements from the stack
+    NODE newHead = s.top();
+    s.pop();
+    temp = newHead;
+
+    while (!s.empty()) {
+        temp->next = s.top();
+        s.pop();
+        temp = temp->next;
+    }
+
+    temp->next = nullptr; // Set the next of last node to nullptr
+
+    return newHead;
+}
+
 void printlist(struct node *root) {
   if (!root)
     return;
