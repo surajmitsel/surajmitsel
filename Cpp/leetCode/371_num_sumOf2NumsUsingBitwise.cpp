@@ -63,6 +63,7 @@ int sum_itr(int a, int b) {
   return a;
 }
 
+//Prefered
 int sum_itr_1(int a, int b) {
   while (b != 0) {
     int Xor = (a ^ b);

@@ -199,4 +199,12 @@ Overall, raw sockets provide a powerful mechanism for network programming tasks 
 In summary, active sockets are used by client applications to initiate connections, while passive sockets are used by server applications to listen for incoming connections. Together, they enable bidirectional communication between clients and servers in TCP-based network applications.
 
 
+#### IPTable vs ACLs
+- `iptables` is a user-space utility program that allows a system administrator to configure the IP packet filter rules of the Linux kernel firewall, implemented as different Netfilter modules. It is commonly used to set up and manage firewall rules and network address translation (NAT) configurations in Linux-based systems.
+
+- `Access Control Lists (ACLs)`, on the other hand, are a set of rules that control which network traffic is allowed to enter or exit a network interface. ACLs can be implemented at various levels in a network, such as on routers, switches, or firewalls, and they specify which types of traffic are permitted or denied based on criteria like source and destination IP addresses, port numbers, or protocols.
+
+While both iptables and ACLs are used for controlling network traffic, they operate at different layers of the networking stack and serve slightly different purposes. `iptables is primarily used for configuring firewall rules within the Linux kernel, while ACLs are more generic and can be applied at different points in a network to control traffic flow.`
+
+
 

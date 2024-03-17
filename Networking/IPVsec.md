@@ -64,12 +64,3 @@ Quick mode helps to re-establish SAs after they expire or are deleted, ensuring 
 
 Overall, main mode and aggressive mode are used during the initial setup of the IPsec VPN tunnel, while quick mode is used for negotiating security associations for data transmission within the established tunnel. Each mode has its trade-offs in terms of security, speed, and efficiency.
 
-
-
-
-
-
-
-### Interview Questions
-https://www.interviewquestionspdf.com/2023/11/24-ipsec-vpn-interview-questions-and.html 
-http://networkerinterview.net/entries/vpn/vpn-interview-questions-and-answers

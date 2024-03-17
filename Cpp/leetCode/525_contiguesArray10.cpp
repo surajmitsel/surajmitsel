@@ -29,7 +29,7 @@ public:
         if(nums.size() <= 1){
             return 0;
         }
-        std::unordered_map<int, int> countMap; // Stores the count of 0s and 1s encountered
+        std::unordered_map<int, int> countMap; // Map to store running sum and its index
         int maxLength = 0;
         int count = 0; // Tracks the difference between count of 0s and 1s
 
@@ -41,7 +41,7 @@ public:
             count = (nums[i] == 1) ? count + 1 : count - 1;
 
             // If count is already present in the map, update max length
-            if (countMap.find(count) != countMap.end()) {
+            if (countMap.find(count) != countMap.end()) { // found
                 maxLength = std::max(maxLength, i - countMap[count]);
             } else {
                 // Otherwise, store the current index for this count

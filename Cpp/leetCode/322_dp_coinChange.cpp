@@ -74,6 +74,7 @@ int coinChange_dp_2(vector<int>& coins, int amount) {
     return dp[amount] == INT_MAX ? -1 : dp[amount];
 }
 
+// Prefered
 int coinChange_dp_3(vector<int> &coins, int amount) {
   vector<int> dp(amount + 1, INT_MAX);
     dp[0] = 0;

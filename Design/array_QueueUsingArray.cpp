@@ -3,7 +3,6 @@ using namespace std;
 
 template <typename T, int size> 
 class Queue {
-  T *data{nullptr};
   T *array{nullptr};
   int length{0}; // Total length
   int front{0}; // remove from front
