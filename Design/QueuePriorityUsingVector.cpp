@@ -13,7 +13,7 @@ public:
         pq.push_back(val);
         
         // Sort the vector after each insertion
-        //1. sort(pq.begin(), pq.end(), greater<int>()); // this also can be used
+        //1. sort(pq.begin(), pq.end(), greater<int>()); // this also can be used for min heap
 
         sort(pq.begin(), pq.end(), [](int a, int b) {
                                             return a > b; // Change to a < b for Increasing order

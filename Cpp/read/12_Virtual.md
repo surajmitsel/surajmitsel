@@ -266,6 +266,51 @@ int main(){
 // only one copy of A will be inherited
 ```
 
+```cpp
+#include <iostream>
+using namespace std;
+// This compiles fine
+class A {
+private:
+    int a[10];
+public:
+    //void foo() { cout << "A::foo()" << endl; }
+};
+
+class B : public A {};
+class C : public A {};
+class D : public B, public C {};
+
+int main() {
+    D d;
+    cout << sizeof(d); // 80
+    return 0;
+}
+
+```
+
+```cpp
+#include <iostream>
+using namespace std;
+// This compiles fine
+class A {
+int a[10];
+public:
+    //void foo() { cout << "A::foo()" << endl; }
+};
+
+class B : virtual public A {};
+class C : virtual public A {};
+class D : public B, public C {};
+
+int main() {
+    D d;
+    cout << sizeof(d); // 40 + 8(vptrB) + 8(vptrC) = 56
+
+    return 0;
+}
+```
+
 ## `override` keyword c++11 ##
 - There may be mistake when a programmer override a function in the derived class. So to overcome that c++11 has come up with keyword `override` it will make the compiler to check if there is a same signature function available in the base class.
 ```cpp
