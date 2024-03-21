@@ -38,15 +38,15 @@ int main(void) {
   root->left->right = new node(5);
 
 
-  /*        1
-          2   3
-        4  5
+  /*        1                1
+          2   3   =>      3     2
+        4  5                  5   4
   */
 
 
-  inorder(root);
+  inorder(root);  // 4,2,5,1,3,
   mirror(root);
   cout << std::endl;
-  inorder(root);
+  inorder(root);  // 3,1,5,2,4,
   return 0;
 }

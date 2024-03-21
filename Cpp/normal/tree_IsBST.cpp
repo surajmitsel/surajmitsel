@@ -3,6 +3,7 @@
 #include <iterator>
 #include <string>
 #include <vector>
+#include <climits>
 
 using namespace std;
 struct node {
@@ -55,6 +56,24 @@ bool isBst_usingPrevNode(NODE root) {
   return inorder_prevNode(root, prev);
 }
 
+//---------------------METHOD3------------------------
+bool isValidBST(NODE root, long long minValue, long long maxValue) {
+    if (root == nullptr) 
+        return true;
+
+    if (root->data <= minValue || root->data >= maxValue) {
+        return false;
+    }
+
+    return isValidBST(root->left, minValue, root->data) &&
+           isValidBST(root->right, root->data, maxValue);
+}
+
+bool isValidBST(NODE root) {
+    return isValidBST(root, LLONG_MIN, LLONG_MAX);
+}
+
+
 int main() {
 
   //            4
@@ -69,16 +88,23 @@ int main() {
   cout << endl;
   // Method1
   if (isBst_usingVec(root)) {
-    cout << endl << "its BST" << std ::endl;
+    cout << endl << "Method1: its BST" << std ::endl;
   } else {
-    cout << endl << "not bst" << std ::endl;
+    cout << endl << "Method1: not bst" << std ::endl;
   }
 
   // Method2
   if (isBst_usingPrevNode(root)) {
-    cout << endl << "its BST" << std ::endl;
+    cout << endl << "Method2: its BST" << std ::endl;
   } else {
-    cout << endl << "not bst" << std ::endl;
+    cout << endl << "Method2: not bst" << std ::endl;
+  }
+
+  // Method3
+  if(isValidBST(root)){
+    cout << "Method3: its BST" << endl;
+  }else{
+    cout << "Method3: Not BST" << endl;
   }
   return 0;
 }

@@ -21,7 +21,7 @@ namespace TIME_CALC
     const int valid_gap = 1500;
 
     std::chrono::milliseconds getMillSecValFromString(const std::string& timeStr) {
-        // time in format s14:55:06.756
+        // time in format 14:55:06.756
         std::istringstream ss(timeStr);
         int hours, minutes, seconds, milliseconds;
         char ignoreColon;
