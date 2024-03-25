@@ -100,3 +100,6 @@ Connection: Closed
 
 Difference between Persistent and Non-Persistent Connections
 ![](image/http_persist_nonPersist.png)
+
+### API security
+![](image/HTTP_ApiSecure.png)

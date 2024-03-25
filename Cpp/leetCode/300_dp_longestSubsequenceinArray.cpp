@@ -2,6 +2,7 @@
 #include <iostream>
 #include <type_traits>
 #include <vector>
+#include <stack>
 
 using namespace std;
 /*
@@ -94,6 +95,22 @@ int lengthOfLIS_2(vector<int> &nums) {
   return res.size();
 }
 
+
+int lengthOfLIS_usingStack(std::vector<int>& nums) {
+    std::stack<int> stk;
+    for (int num : nums) {
+        if (stk.empty() || num > stk.top()) {
+            stk.push(num);
+        } else {
+            while (!stk.empty() && num <= stk.top()) {
+                stk.pop();
+            }
+            stk.push(num);
+        }
+    }
+    return stk.size();
+}
+
 int main() {
   // vector<int> nums{2, 3, 1, 2, 4};          // 234 124 op = 3
   vector<int> nums{1, 2, 7, 8, 3, 4, 5, 9}; // 123459 op = 6
@@ -101,6 +118,7 @@ int main() {
   // vector<int> nums{0, 1, 0, 3, 2, 3}; // 0123  op = 4
   cout << "lengthOfLIS_1:" << lengthOfLIS_1(nums) << endl;
   cout << "lengthOfLIS_2:" << lengthOfLIS_2(nums) << endl;
+  cout << "lengthOfLIS_3:" << lengthOfLIS_usingStack(nums) << endl;
 
   return 0;
 }

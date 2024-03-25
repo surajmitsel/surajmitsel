@@ -27,7 +27,7 @@ length is 0, which makes it impossible to reach the last index.
 */
 
 
-// i + a[i] => denotes the jump and it is an max jump
+// i + a[i] => denotes the jump and it is an max jump from index 0 
 // METHOD1
 bool canJump_1(vector<int> &nums) {
   int max_reach = 0;

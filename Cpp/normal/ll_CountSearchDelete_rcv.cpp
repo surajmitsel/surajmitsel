@@ -24,8 +24,17 @@ bool findElement(NODE head, int data) {
 void printlist(NODE head) {
   if (!head)
     return;
-  cout << "list data:" << head->data << endl;
+  
+  cout << head->data <<" ";
   printlist(head->link);
+}
+// recursive reverse print of LL
+void printlist_rv(NODE head) {
+  if (!head)
+    return;
+  
+  printlist_rv(head->link);
+  cout << head->data <<" ";
 }
 
 // recursive count
@@ -52,9 +61,18 @@ int main() {
   head->link->link->link->link = new node(7);
   head->link->link->link->link->link = new node(20);
   std::cout << "list count:" << count(head) << endl;
+  
+  std::cout << "Forward Print------" << endl;
   printlist(head);
+  std::cout  << endl;
+
+  std::cout << "Reverse Print------" << endl;
+  printlist_rv(head);
+  std::cout  << endl;
+  
   std::cout << "findElement:" << findElement(head, 6) << endl;
   std::cout << "findElement:" << findElement(head, 10) << endl;
+  
   deletelist(head);
 
   return 0;

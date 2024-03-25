@@ -25,10 +25,12 @@ ListNode* swapPairs_1(ListNode* head)
         ListNode* swap1 =  point->next;
         ListNode* swap2 =  point->next->next;
 
+        // Swapping nodes
+        point->next = swap2;
         swap1->next = swap2->next;
         swap2->next = swap1;
 
-        point->next = swap2;
+        // Move to the next pair
         point = swap1;
     }
     return dummy->next;  

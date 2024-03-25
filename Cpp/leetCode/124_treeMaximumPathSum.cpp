@@ -58,17 +58,19 @@ struct TreeNode {
 };
 typedef TreeNode* NODE;
 
+int context = 0;
 // METHOD1
 int maxPathDown_1(NODE root, int& maxSum) {
+    cout << " context:----->" << context++ << endl;; 
     if (!root) 
         return 0;
     
     int left = std::max(0, maxPathDown_1(root->left, maxSum));
     int right = std::max(0, maxPathDown_1(root->right, maxSum));
+
+    maxSum = std::max(maxSum, left + right + root->val); // updating always max sum (left + right + root)
     
-    maxSum = std::max(maxSum, left + right + root->val);
-    
-    return std::max(left, right) + root->val;
+    return std::max(left, right) + root->val; // returing max(left,right) + root
 }
 int maxPathSum_1(NODE root) {
     int maxSum = INT_MIN;
@@ -103,7 +105,7 @@ int main() {
     root->right = new TreeNode(3);
 
     std::cout << maxPathSum_1(root) << std::endl; // Output: 6
-    std::cout << maxPathSum_2(root) << std::endl; // Output: 6
+    //std::cout << maxPathSum_2(root) << std::endl; // Output: 6
 
     delete root->left;
     delete root->right;

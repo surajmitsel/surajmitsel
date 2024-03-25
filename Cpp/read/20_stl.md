@@ -62,7 +62,7 @@ The STL includes classes that overload the function call operator. Instances of 
 
 ### Data Structure and API calls
 ```cpp 
-Vector	
+vector	
     push_back	vec.push_back(10);
 	pop_back	vec.pop_back();
 	size	    int size = vec.size();
@@ -70,7 +70,7 @@ Vector
 	clear	    vec.clear();
 	operator[]	int element = vec[index];
 
-List	
+list	
     push_back	lst.push_back(10);
 	push_front	lst.push_front(20);
 	pop_back	lst.pop_back();
@@ -79,7 +79,7 @@ List
 	empty	    bool isEmpty = lst.empty();
 	begin	    auto it = lst.begin();
     
-Set	
+set	
     insert	s.insert(10);
 	erase	s.erase(10);
 	find	auto it = s.find(10);
@@ -87,7 +87,7 @@ Set
 	empty	bool isEmpty = s.empty();
 	clear	s.clear();
 
-Map	
+map	
     operator[]	m["key"] = 10;
 	insert	m.insert(make_pair("key", 10));
 	erase	m.erase("key");
@@ -96,7 +96,7 @@ Map
 	empty	bool isEmpty = m.empty();
 	clear	m.clear();
 
-Queue	
+queue	
     push	q.push(10);
 	pop	    q.pop();
 	front	int frontElement = q.front();
@@ -104,7 +104,7 @@ Queue
 	size	int size = q.size();
 	empty	bool isEmpty = q.empty();
 
-Deque	
+deque	
     push_back	dq.push_back(10);
 	push_front	dq.push_front(20);
 	pop_back	dq.pop_back();
@@ -113,6 +113,16 @@ Deque
 	empty	    bool isEmpty = dq.empty();
 	front	    int frontElement = dq.front();
 	back	    int backElement = dq.back();
+
+priority_queue	
+    push		q.push(10);
+	pop	    	q.pop();
+	front   	No front
+	top			int frontElement = q.top(); // No front calls
+	back		no back
+	size		int size = q.size();
+	empty		bool isEmpty = q.empty();
+	push_range  q.push_range({1,2,3});
 
 Stack	
     push	stk.push(10);

@@ -87,4 +87,11 @@ int main() {
 
     return 0;
 }
+/*
+Integer value: 42
+Double value: 3.14
+String value: Hello, variant!
+*/
 ```
+
+

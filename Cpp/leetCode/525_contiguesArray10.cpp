@@ -54,7 +54,9 @@ public:
 
 int main() {
     Solution sol;
-    std::vector<int> nums = {0, 1, 0, 1, 0, 0, 1, 1, 0, 0, 1};
+    //std::vector<int> nums = {0, 1, 0, 1, 0, 0, 1, 1, 0, 0, 1};
+    std::vector<int> nums = {0, 1, 0, 1};
+
     std::cout << "Maximum length: " << sol.findMaxLength(nums) << std::endl;
     return 0;
 }

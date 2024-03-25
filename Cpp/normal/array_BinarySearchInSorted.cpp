@@ -18,7 +18,7 @@ int binarySearchIndex_rec(int array[], int low, int high, int value) {
 
 // METHOD2: interative
 int binarySearchIndex_itr(int array[], int low, int high, int value) {
-  while (low < low) {
+  while (low < high) {
     int mid = low + (high - low) / 2;
     if (array[mid] == value)
       return mid;

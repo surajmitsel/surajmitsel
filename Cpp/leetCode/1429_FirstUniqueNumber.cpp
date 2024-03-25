@@ -1,13 +1,23 @@
+#include <iostream>
 #include <list>
 #include <unordered_map>
+#include <unordered_set>
+
+
+/*
+We use unordered_map to store the frequency of each number, unordered_set to store unique numbers, 
+and list to maintain the order of appearance of each number.
+
+In the constructor FirstUnique, we initialize the data structures and 
+populate them with the given list of numbers.
+*/
 
 // It should maintain always unique number on top
-
 class FirstUnique {
 private:
-    std::list<int> uniqueList; // value inseted from back
-    //<value, list position>
-    std::unordered_map<int, std::list<int>::iterator> freqMap;
+    std::unordered_map<int, int> frequency;
+    std::unordered_set<int> unique;
+    std::list<int> doublyLinkedList;
 
 public:
     FirstUnique(std::vector<int>& nums) {
@@ -15,41 +25,39 @@ public:
             add(num);
         }
     }
-
-    void add(int value) {
-        if (freqMap.find(value) == freqMap.end()) { //not found
-            uniqueList.push_back(value);
-            freqMap[value] = std::prev(uniqueList.end());
-        } else {
-            auto it = freqMap[value];
-            if (it != uniqueList.end()) { // found
-                uniqueList.erase(it);
-                freqMap[value] = uniqueList.end();
-            }
-        }
-    }
-
-    int showFirstUnique() {
-        if (uniqueList.empty()) {
-            return -1;
-        }
-        return uniqueList.front();
-    }
-
     
+    int showFirstUnique() {
+        if (!doublyLinkedList.empty()) {
+            return doublyLinkedList.front();
+        }
+        return -1;
+    }
+    
+    void add(int value) {
+        if (frequency.find(value) != frequency.end()) {
+            if (unique.find(value) != unique.end()) {
+                unique.erase(value);
+                doublyLinkedList.remove(value);
+            }
+        } else {
+            frequency[value] = 1;
+            unique.insert(value);
+            doublyLinkedList.push_back(value);
+        }
+    }
 };
 
 // Example usage:
 int main() {
     std::vector<int> nums = {2, 3, 5};
-    FirstUnique* obj = new FirstUnique(nums);
-    std::cout << obj->showFirstUnique() << std::endl; // Output: 2
-    obj->add(5);
-    std::cout << obj->showFirstUnique() << std::endl; // Output: 2
-    obj->add(2);
-    std::cout << obj->showFirstUnique() << std::endl; // Output: 3
-    obj->add(3);
-    std::cout << obj->showFirstUnique() << std::endl; // Output: -1
-    delete obj;
+    FirstUnique obj(nums);
+    std::cout << obj.showFirstUnique() << std::endl; // Output: 2
+    obj.add(5);
+    std::cout << obj.showFirstUnique() << std::endl; // Output: 2
+    obj.add(2);
+    std::cout << obj.showFirstUnique() << std::endl; // Output: 3
+    obj.add(3);
+    std::cout << obj.showFirstUnique() << std::endl; // Output: -1
+    
     return 0;
 }
