@@ -5,7 +5,7 @@ std::mutex mutx;
 class Singleton{
     static Singleton* instance;
     Singleton(){}
-    ~Singleton(){delete instance;}
+    ~Singleton(){}
     int data{6};
     
 public:
@@ -19,7 +19,16 @@ public:
         }
         return instance;
     }
+
+    static void destroyInstance() {
+        if (instance) {
+            delete instance;
+            instance = nullptr;
+        }
+    }
+    
     int getdata() { return data; }
+    
 };
 Singleton* Singleton::instance{nullptr};
 
@@ -28,5 +37,6 @@ int main(){
     cout << Singleton::getInstance() << endl; // address
     cout << Singleton::getInstance() << endl; // address
     cout << Singleton::getInstance()->getdata(); //6
-
+    Singleton::destroyInstance();
+    return 0;
 }

@@ -24,9 +24,19 @@ bool is_prime(int num) {
   }
   return true;
 }
+
+void print_prime_up_to_num(int num){
+    int i = 1;
+    while(num > 1){
+        if(is_prime(num))
+            cout << num << " ";
+        num--;
+    }
+}
 int main() {
   int val = 53;
   cout << "is_prime:" << is_prime(val) << endl;
   cout << "is_prime_rec:" << is_prime_rec(val, val / 2) << endl;
+  print_prime_up_to_num(10);
   return 0;
 }

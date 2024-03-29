@@ -4,6 +4,7 @@
 - It is a ability to have a single class that can handle several different datatype means the code is easier to handle and it makes class more usable.
 - C++ adds two keyword to support templates `template` and `typename`. The second keyword can always be replaced by keyword `class`.
 - Templates are expended at compile time this is like macros, the difference is compiler does type checking before expansion.
+- Templates in C++ are resolved at compile time. When you use templates to define generic code, the compiler generates specific code for each instantiation of the template with different template arguments. This process is known as template instantiation, and it occurs during the compilation process. The compiler verifies the correctness of template code, including syntax and type checking, and generates the appropriate code for each template instantiation. The resulting compiled code contains the specific implementations for each template instantiation, and there is no runtime overhead associated with template instantiation.
 - The basic syntax for declaring a template class is follow as
 ```cpp
     // Definition
