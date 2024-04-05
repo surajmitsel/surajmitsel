@@ -14,7 +14,7 @@ main thread does not proceed until the child thread has completed its execution.
  which can lead to unexpected behavior or program termination.
 */
 
-std::binary_semaphore sem(0); // Semaphore with initial count 0
+std::binary_semaphore sem(0); // Semaphore with initial count 0 // already not available
 
 void threadA() {
     std::cout << "Thread A is waiting for Thread B to signal\n";
@@ -37,3 +37,8 @@ int main() {
 
     return 0;
 }
+/*
+Thread A is waiting for Thread B to signal
+Thread B is signaling Thread A
+Thread A received signal from Thread B
+*/

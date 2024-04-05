@@ -20,13 +20,13 @@ ListNode* removeNthFromEnd(ListNode* head, int n)
     int count = 0;
 
     while(nth->next){
-        count ++;
+        count++;
         if(count == n){
             break;
         }
         nth = nth->next;
     }
-    cout << count;
+    cout << count << endl;
     if(count != n || nth->next == nullptr){
         return nullptr;
     }

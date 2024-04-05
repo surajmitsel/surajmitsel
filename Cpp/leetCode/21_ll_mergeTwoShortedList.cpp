@@ -77,14 +77,16 @@ ListNode* mergeTwoLists_2(ListNode* l1, ListNode* l2) {
 
     tail->next = (l1) ? l1 : l2;
 
-    return dummy->next;
+    ListNode* head = dummy->next;
+    delete dummy; // Prevent memory leak
+    return head;
 }
 
 int main() {
   ListNode *list1 = new ListNode(3);
   list1->next = new ListNode(4);
   list1->next->next = new ListNode(7);
-  list1->next->next = new ListNode(9);
+  list1->next->next->next = new ListNode(9);
 
   ListNode *list2 = new ListNode(1);
   list2->next = new ListNode(2);
@@ -101,4 +103,7 @@ int main() {
     std::cout << list_m2->val << ",";
     list_m2 = list_m2->next;
   }
+
+
+
 }

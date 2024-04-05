@@ -27,7 +27,7 @@ bool is_prime(int num) {
 
 void print_prime_up_to_num(int num){
     int i = 1;
-    while(num > 1){
+    while(num > 1) {
         if(is_prime(num))
             cout << num << " ";
         num--;

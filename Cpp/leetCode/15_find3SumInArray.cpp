@@ -80,8 +80,8 @@ vector<vector<int>> threeSum(vector<int> &nums) {
 
 int main() {
   // vector<int> nums{-1, 0, 1, 2, -1, -4};
-  vector<int> nums{-1, -1, 2};
-  //vector<int> nums{-5, 4, 1, 1, -1, 0, 8, -3, -5, -6 - 2, 8, -1, -2, -3};
+  //vector<int> nums{-1, -1, 2};
+  vector<int> nums{-5, 4, 1, 1, -1, 0, 8, -3, -5, -6 - 2, 8, -1, -2, -3};
 
   vector<vector<int>> result = threeSum(nums);
   cout << "threeSum:" << endl;

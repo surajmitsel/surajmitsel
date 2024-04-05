@@ -1,7 +1,7 @@
 #include <iostream>
 #include <type_traits>
 using namespace std;
-
+// r = 10r + pop
 void reverse(int num) {
   int rev = 0;
   while (num) {

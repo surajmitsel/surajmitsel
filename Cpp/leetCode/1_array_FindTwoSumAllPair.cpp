@@ -2,23 +2,28 @@
 #include <vector>
 #include <unordered_map>
 #include <utility> // For std::pair
+using namespace std;
+vector<pair<int, int>> findPairsWithGivenSum(const std::vector<int>& nums, int target) {
+    vector<pair<int,int>> vec_result;
+    if (nums.size() < 2)
+        return vec_result;
 
-std::vector<std::pair<int, int>> findPairsWithGivenSum(const std::vector<int>& nums, int target) {
-    std::vector<std::pair<int, int>> result;
-    std::unordered_map<int, int> hash; // Value -> Index
-
-    for (int i = 0; i < nums.size(); ++i) {
-        int complement = target - nums[i];
-
-        if (hash.find(complement) != hash.end()) { // found
-            result.push_back({complement, nums[i]});
-        }
-
-        // Add current number to the hash map
-        hash[nums[i]] = i;
+    unordered_map<int,int> myMap; // <Value, index>
+    
+    for(int i = 0; i < nums.size(); i++){
+       int val =  nums[i];
+       int comp = target - val;
+       
+       auto it = myMap.find(comp);
+       if(it != myMap.end()) { // found
+            vec_result.push_back({it->second, i});
+            myMap.clear();
+       }
+       else{
+        myMap[val] = i;
+       }
     }
-
-    return result;
+    return vec_result;
 }
 
 int main() {

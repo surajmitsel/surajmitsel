@@ -19,3 +19,7 @@ int main() {
 
     return 0;
 }
+/*
+Thread 1: Hello from thread 1
+Thread 2: Hello from thread 2
+*/
