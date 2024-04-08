@@ -87,10 +87,12 @@ int numDecodings_2(string s) {
         int d1 = s[i] - '0';
         int d2 = (s[i-1] - '0') * 10 + d1;
         int val = 0;
-        if(d1>=1)
-            val += val1;
-        if(d2 >= 10 && d2 <=26){
-            val += val2;
+        
+        if(d1 >= 1)
+            val = val + val1;
+
+        if(d2 >= 10 && d2 <= 26){
+            val = val + val2;
         
         val1 = val2;
         val2 = val;
@@ -105,7 +107,7 @@ int main() {
     cout << "Number of ways to decode '" << s << "': " << numDecodings_2(s) << endl; // 3
 
     string s1 = "10";
-    cout << "Number of ways to decode '" << s << "': " << numDecodings_1(s1) << endl;
-    cout << "Number of ways to decode '" << s << "': " << numDecodings_2(s1) << endl; //1
+    cout << "Number of ways to decode '" << s1 << "': " << numDecodings_1(s1) << endl;
+    cout << "Number of ways to decode '" << s1 << "': " << numDecodings_2(s1) << endl; //1
     return 0;
 }

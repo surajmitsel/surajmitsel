@@ -9,11 +9,15 @@ find the largest square containing only 1's and return its area.
  
 
 Example 1:
-Input: matrix = [["1","0","1","0","0"],["1","0","1","1","1"],["1","1","1","1","1"],["1","0","0","1","0"]]
+Input: matrix = [["1","0","1","0","0"],
+                 ["1","0","1","1","1"],
+                 ["1","1","1","1","1"],
+                 ["1","0","0","1","0"]]
 Output: 4
 
 Example 2:
-Input: matrix = [["0","1"],["1","0"]]
+Input: matrix = [["0","1"],
+                 ["1","0"]]
 Output: 1
 
 Example 3:
@@ -42,11 +46,11 @@ int maximalSquare(std::vector<std::vector<char>>& matrix)
     int maxSide = 0;
     std::vector<std::vector<int>> dp(rows + 1, std::vector<int>(cols + 1, 0));
 
-    for (int i = 1; i <= rows; ++i) {
-        for (int j = 1; j <= cols; ++j) {
-            if (matrix[i - 1][j - 1] == '1') {
-                dp[i][j] = std::min({dp[i - 1][j], dp[i][j - 1], dp[i - 1][j - 1]}) + 1;
-                maxSide = std::max(maxSide, dp[i][j]);
+    for (int r = 1; r <= rows; ++r) {
+        for (int c = 1; c <= cols; ++c) {
+            if (matrix[r - 1][c - 1] == '1') {
+                dp[r][c] = std::min({dp[r - 1][c], dp[r][c - 1], dp[r - 1][c - 1]}) + 1;
+                maxSide = std::max(maxSide, dp[r][c]);
             }
         }
     }

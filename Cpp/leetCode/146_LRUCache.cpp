@@ -32,15 +32,19 @@ public:
     if (myMap.find(key) != myMap.end()) { // found the key
       key_list.erase(myMap[key].second);
       key_list.push_front(key); //*******push Front
-      myMap[key] = {value, key_list.begin()};
-    } else { // Not found need to push and update position
+      myMap[key].second =  key_list.begin();
+      myMap[key].first = value;
+    } 
+    else 
+    { // Not found need to push and update position
       // reached to maximum capacity then errage last
       if (key_list.size() >= capacity) { // or ==
         myMap.erase(key_list.back());
         key_list.pop_back();
       }
       key_list.push_front(key); //*******push Front
-      myMap[key] = {value, key_list.begin()};
+      myMap[key].second =  key_list.begin();
+      myMap[key].first = value;
     }
   }
 

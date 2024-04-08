@@ -36,6 +36,33 @@ ListNode* swapPairs_1(ListNode* head)
     return dummy->next;  
 }
 
+ListNode* swapPairs_2(ListNode* head) {
+    // Create a dummy node to handle edge cases
+    ListNode* dummy = new Node(0);
+    dummy->next = head;
+
+    ListNode* prev = dummy;
+    ListNode* curr = head;
+
+    while (curr != nullptr && curr->next != nullptr) {
+        ListNode* first = curr;
+        ListNode* second = curr->next;
+
+        // Swap positions of the two nodes
+        prev->next = second;
+        first->next = second->next;
+        second->next = first;
+
+        // Move pointers forward for the next pair
+        prev = first;
+        curr = first->next;
+    }
+
+    head = dummy->next;
+    delete dummy;
+    return head;
+}
+
 ListNode* swapPairs_rec(ListNode* head) {
     // Base case: If the list is empty or has only one node, return head
     if (!head || !head->next) {

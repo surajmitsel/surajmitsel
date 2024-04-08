@@ -77,7 +77,7 @@ vector<int> searchRange(vector<int>& nums, int target)
 }
 int main() {
     std::vector<int> nums = {5, 7, 7, 8, 8, 8, 9, 9, 10, 11};
-    int target = 8;
+    int target = 10;
     
     std::vector<int> result = searchRange(nums, target);
     std::cout << "Start: " << result[0] << ", End: " << result[1] << std::endl;

@@ -49,7 +49,7 @@ int searchElemInRottedArray(vector<int> &nums, int target) {
   int size = nums.size();
   if (size == 0)
     return -1;
-  int l = 0;
+  int l = 0; // l we need to adjusted to the index of lower element
   int r = size - 1;
 
   while (l < r) {
