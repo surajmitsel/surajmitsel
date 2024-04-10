@@ -4,6 +4,7 @@
 #include <vector>
 #include <bitset>
 
+using namespace std;
 struct IPAddress {
     unsigned int ip;
     unsigned int subnetMask;
@@ -14,6 +15,10 @@ struct IPAddress {
     IPAddress(const std::string& ipStr, const std::string& subnetStr) {
         ip = ipToInt(ipStr);
         subnetMask = ipToInt(subnetStr);
+
+        cout << "ip:" << ip << endl;
+        cout << "subnetMask:" << ip << endl;
+        
         networkAddress = ip & subnetMask;
         hostAddress = ip & ~subnetMask;
     }
