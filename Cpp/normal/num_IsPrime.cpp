@@ -14,7 +14,7 @@ bool is_prime_rec(int num, int div) {
     return is_prime_rec(num, div - 1);
 }
 bool is_prime(int num) {
-  if ((num & 0x01) == 0) {
+  if ((num & 0x01) == 0) { // remove even
     return false;
   }
   for (int i = 2; i <= sqrt(num); i++) {

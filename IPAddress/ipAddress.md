@@ -22,3 +22,7 @@
 
 ## IP address formate
 ![](image/ip-address-format.png)
+
+
+### Q&A
+https://www.geeksforgeeks.org/top-50-ip-addressing-interview-questions-and-answers/

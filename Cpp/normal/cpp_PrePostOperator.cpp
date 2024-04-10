@@ -9,13 +9,13 @@ public:
   PrePost(int data) : data(data) {}
   int getdata() { return data; }
 
-  PrePost &operator++() // Pre increment
+  PrePost& operator++() // Pre increment
   {
     this->data++;
     return *this;
   }
 
-  PrePost &operator++(int) // Post increment
+  PrePost& operator++(int) // Post increment
   {
     static PrePost old(*this); // Copy old in static obj
     this->data++;

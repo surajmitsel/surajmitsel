@@ -14,11 +14,7 @@ void printQueue(queue<int> &que) {
     que.pop(); //remove element from queue
   }
 }
-void reverse(queue<int> &que) {
-  int size = que.size();
-  for (int i = 0; i < size; i++) {
-  }
-}
+
 void reverseQueue(queue<int> &que) {
   if (que.empty()) {
     cout << "empty queue";
