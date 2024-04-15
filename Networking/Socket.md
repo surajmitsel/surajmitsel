@@ -149,57 +149,50 @@ int recvfrom(int sockfd, void *buf, int len, unsigned int flags struct sockaddr 
 
 #include <string.h>
 
-int main(int argc, char *argv[]) {
-    int sockfd, portno, n;
-    struct sockaddr_in serv_addr;
+int main(int argc, char *argv[]) {    
 
-    struct hostent *server;
-
-    char buffer[256];
-    portno = 5001;
-
-    // 1. create socket and get file descriptor
-    sockfd = socket(AF_INET, SOCK_STREAM, 0);
-
+    struct hostent *server
     server = gethostbyname("127.0.0.1");
-
     if (server == NULL) {
         fprintf(stderr,"ERROR, no such host\n");
         exit(0);
     }
 
+    // prepare server address struct
+    struct sockaddr_in serv_addr;
+    int portno = 5001;
     bzero((char *) &serv_addr, sizeof(serv_addr));
     serv_addr.sin_family = AF_INET;
     bcopy((char *)server->h_addr, (char *)&serv_addr.sin_addr.s_addr, server->h_length);
     serv_addr.sin_port = htons(portno);
 
+    // 1. create socket and get file descriptor
+    int sockfd = socket(AF_INET, SOCK_STREAM, 0);
 
     // 2. connect to server with server address which is set above (serv_addr)
-
     if (connect(sockfd, (struct sockaddr *)&serv_addr, sizeof(serv_addr)) < 0) {
         perror("ERROR while connecting");
         exit(1);
     }
 
     // inside this while loop, implement communicating with read/write or send/recv function
+    char buffer[256];
     while (1) {
         printf("What do you want to say? ");
-        bzero(buffer,256);
-        scanf("%s", buffer);
-
+        
         // 3 send some data to server
-        n = write(sockfd,buffer,strlen(buffer));
-
+        bzero(buffer,256); // clear buff
+        scanf("%s", buffer); 
+        int n = write(sockfd,buffer,strlen(buffer));
         if (n < 0){
             perror("ERROR while writing to socket");
             exit(1);
         }
 
-        bzero(buffer,256);
 
         // 4 receive some data from server
+        bzero(buffer,256); // clear buff
         n = read(sockfd, buffer, 255);
-
         if (n < 0){
             perror("ERROR while reading from socket");
             exit(1);
@@ -225,24 +218,24 @@ int main(int argc, char *argv[]) {
 #include <string.h>
 
 int main( int argc, char *argv[] ) {
-    int sockfd, newsockfd, portno, clilen;
-    char buffer[256];
-    struct sockaddr_in serv_addr, cli_addr;
-    int  n;
 
-    /* Initialize socket structure */
+    /* Initialize server structure */
+    struct sockaddr_in serv_addr;
     bzero((char *) &serv_addr, sizeof(serv_addr));
-    portno = 5001;
-
-    // 1. create socket and get file descriptor
-    sockfd = socket(AF_INET, SOCK_STREAM, 0);
-
+    int portno = 5001;
     serv_addr.sin_family = AF_INET;
     serv_addr.sin_addr.s_addr = INADDR_ANY;
     serv_addr.sin_port = htons(portno);
 
-    clilen = sizeof(cli_addr);
+    /* Initialize client structure */
+    struct sockaddr_in cli_addr;
+    int clilen = sizeof(cli_addr);
+    
 
+    // 1. create socket and get file descriptor
+    int sockfd = socket(AF_INET, SOCK_STREAM, 0);
+
+    
     // 2. bind the host address using bind() call
     if (bind(sockfd, (struct sockaddr *)&serv_addr, sizeof(serv_addr)) < 0){
         perror("ERROR on binding\n");
@@ -254,15 +247,15 @@ int main( int argc, char *argv[] ) {
     listen(sockfd, 5);
 
     // 4. accept actual connection from the client
-    newsockfd = accept(sockfd, (struct sockaddr *)&cli_addr, &clilen);
+    int newsockfd = accept(sockfd, (struct sockaddr *)&cli_addr, &clilen);
 
     // inside this while loop, implemented communication with read/write or send/recv function
     printf("start");
+    char buffer[256];
     while (1) {
-        bzero(buffer,256);
         // 5. read data from client 
-        n = read(newsockfd, buffer, 255);
-
+        bzero(buffer,256);
+        int n = read(newsockfd, buffer, 255);
         if (n < 0){
             perror("ERROR in reading from socket");
             exit(1);
@@ -270,9 +263,8 @@ int main( int argc, char *argv[] ) {
 
         printf("client said: %s \n", buffer);
 
-        // 5. Write data to client 
+        // 6. Write data to client 
         n = write(newsockfd, buffer, strlen(buffer));
-
         if (n < 0){
             perror("ERROR in writing to socket");
             exit(1);
@@ -326,14 +318,15 @@ char* process_operation(char *input) {
 
 int main( int argc, char *argv[] ) {
 
+    // prepare client and server
     const uint16_t port_number = 5001;
-    // 1. Socket
-    int server_fd = socket(AF_INET, SOCK_STREAM, 0);
-
     struct sockaddr_in *server_sockaddr = init_sockaddr_in(port_number);
     struct sockaddr_in *client_sockaddr = malloc(sizeof(struct sockaddr_in));
     socklen_t server_socklen = sizeof(*server_sockaddr);
     socklen_t client_socklen = sizeof(*client_sockaddr);
+
+    // 1. Socket
+    int server_fd = socket(AF_INET, SOCK_STREAM, 0);
 
     // 2. bind
     if (bind(server_fd, (const struct sockaddr *) server_sockaddr, server_socklen) < 0)
@@ -348,7 +341,6 @@ int main( int argc, char *argv[] ) {
         printf("Error! Can't listen\n");
         exit(0);
     }
-
 
     const size_t buffer_len = 256;
     char *buffer = malloc(buffer_len * sizeof(char));

@@ -22,7 +22,7 @@ Overall, BGP plays a critical role in enabling the Internet to function as a glo
 
 ### What is an autonomous system
 The Internet is a network of networks. It is broken up into hundreds of thousands of smaller networks known as autonomous systems (ASes). Each of these networks is essentially a large pool of routers run by a single organization.
-![](image/BGP_1.png)
+![](image/bgp_1.png)
 
 
 
