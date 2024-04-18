@@ -84,9 +84,9 @@ int main() {
         }
 
         for (int i = 0; i < num_events; ++i) {
-            int fd = events[i].data.fd;
+            int fd = events[i].data.fd; // these are all ready socket FD either ready to connect or ready to read
 
-            // New client connection
+            // New client connection available
             if (fd == server_fd) {
                 struct sockaddr_in client_addr;
                 socklen_t client_len = sizeof(client_addr);
@@ -106,7 +106,7 @@ int main() {
                     exit(EXIT_FAILURE);
                 }
             }
-            // Data available to read
+            // Data available to read from ready socket FD
             else {
                 char buffer[1024];
                 ssize_t num_bytes = read(fd, buffer, sizeof(buffer));
