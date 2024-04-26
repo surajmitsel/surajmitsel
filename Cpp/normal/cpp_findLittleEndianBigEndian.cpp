@@ -20,7 +20,7 @@ void checkEndian_1() {
     } else {
         std::cout << "Big endian" << std::endl;
     }
-}
+} 
 
 void checkEndian_2() {
     unsigned int num = 1;  // Initialize an integer with a value where only the lowest byte is non-zero.
