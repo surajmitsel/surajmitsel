@@ -58,3 +58,4 @@ APIs: Expose RESTful APIs to allow integration with third-party systems, clients
 - `Reporting`: Provide reporting capabilities to generate audit trails, compliance reports, and analytics on update distribution activities.
 
 By following these steps and considerations, you can design and implement a robust SaaS-based security update package distribution system that meets the needs of organizations for efficiently distributing security updates while ensuring security, compliance, and reliability.
+![](image/Package_distrubutor.png)

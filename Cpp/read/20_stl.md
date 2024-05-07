@@ -59,6 +59,9 @@ The STL includes classes that overload the function call operator. Instances of 
 - `Lack of control`: When using the STL, you have to rely on the implementation provided by the library, which can limit your control over certain aspects of your code.
 - `Performance`: In some cases, using the STL can result in slower execution times compared to custom code, especially when dealing with small amounts of data.
 
+### STL Container Performance and time complexity
+- https://www.geeksforgeeks.org/analysis-of-time-and-space-complexity-of-stl-containers/
+![](image/time_complexity_stl.png)
 
 ### Data Structure and API calls
 ```cpp 
@@ -297,7 +300,3 @@ auto sorted_until = std::is_sorted_until(vec.begin(), vec.end());
 auto it = std::search(vec.begin(), vec.end(), subseq.begin(), subseq.end());
 
 ```
-
-
-### time complexity of various containers
-https://www.geeksforgeeks.org/analysis-of-time-and-space-complexity-of-stl-containers/
