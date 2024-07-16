@@ -50,12 +50,16 @@ We can use the REST API based design approach
     Response: longUrl String
     ```
 
+![](image/url_algo.png)
+
 STATUS Code: 301/302
 
 - 301: requested url is permanentaly moved to the long Url
 - 302: url temporary moved to long url
-
 ![](image/url_hash.png)
+
+
+![](image/url_status.png)
 ### Data Model
 
 Database table can be 
@@ -94,6 +98,9 @@ To convert a long URL into a unique short URL we can use some hashing techniques
 
 ### Diagram
 ![](image/url.png)
+
+
+![](image/url_design.png)
 
 
 
