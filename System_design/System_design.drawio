@@ -1,4 +1,4 @@
-<mxfile host="Electron" modified="2024-05-09T10:33:06.459Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.2.5 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="R5ulrMRJzfUxifTb0ald" version="24.2.5" type="device" pages="5">
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.8 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.8" pages="6">
   <diagram name="Search_hotel_nearBy" id="aEH3ONf6oAaMelo6ffjl">
     <mxGraphModel dx="1036" dy="606" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -801,6 +801,187 @@
         </mxCell>
         <mxCell id="5_7r_7RKbllteR_1wSDd-36" value="Notification Service&lt;div&gt;Mail/Sms&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="595" y="688.75" width="110" height="47.5" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="LG6f5Kq9F1767FxymXj3" name="Mob-App-FetchNews">
+    <mxGraphModel dx="2092" dy="796" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="bkX8Slmcs0Gbsb7K4Y4F-1" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="-30" y="335" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bkX8Slmcs0Gbsb7K4Y4F-2" value="Mob App" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="110" y="310" width="60" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="bkX8Slmcs0Gbsb7K4Y4F-3" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="-20" y="345" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bkX8Slmcs0Gbsb7K4Y4F-4" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="-10" y="355" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bkX8Slmcs0Gbsb7K4Y4F-5" value="" style="endArrow=none;dashed=1;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="220" y="710" as="sourcePoint" />
+            <mxPoint x="220" y="140" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bkX8Slmcs0Gbsb7K4Y4F-6" value="Load balancer" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="265" y="270" width="60" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="bkX8Slmcs0Gbsb7K4Y4F-7" value="news Server" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="590" y="275" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bkX8Slmcs0Gbsb7K4Y4F-8" value="" style="endArrow=none;dashed=1;html=1;rounded=0;" edge="1" parent="1" target="bkX8Slmcs0Gbsb7K4Y4F-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="30" y="380" as="sourcePoint" />
+            <mxPoint x="320" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bkX8Slmcs0Gbsb7K4Y4F-9" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="bkX8Slmcs0Gbsb7K4Y4F-2" target="bkX8Slmcs0Gbsb7K4Y4F-6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="270" y="500" as="sourcePoint" />
+            <mxPoint x="320" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bkX8Slmcs0Gbsb7K4Y4F-10" value="DNS" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="250" y="160" width="90" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="bkX8Slmcs0Gbsb7K4Y4F-11" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="bkX8Slmcs0Gbsb7K4Y4F-6" target="bkX8Slmcs0Gbsb7K4Y4F-10">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="270" y="500" as="sourcePoint" />
+            <mxPoint x="320" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bkX8Slmcs0Gbsb7K4Y4F-12" value="user DB SQL&amp;nbsp;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="790" y="120" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="bkX8Slmcs0Gbsb7K4Y4F-13" value="User: Login detais:&lt;div&gt;perfremce lang:&lt;/div&gt;&lt;div&gt;Location: of user&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="840" y="100" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bkX8Slmcs0Gbsb7K4Y4F-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="bkX8Slmcs0Gbsb7K4Y4F-15" target="bkX8Slmcs0Gbsb7K4Y4F-41">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="810" y="350" />
+              <mxPoint x="748" y="350" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bkX8Slmcs0Gbsb7K4Y4F-15" value="New DB&lt;div&gt;NoSQL&amp;nbsp;&lt;/div&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="780" y="250" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="bkX8Slmcs0Gbsb7K4Y4F-16" value="&lt;div&gt;country based&lt;/div&gt;New DB&lt;div&gt;NoSQL&amp;nbsp;&lt;/div&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="860" y="290" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="bkX8Slmcs0Gbsb7K4Y4F-17" value="blob store for image" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="830" y="440" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="bkX8Slmcs0Gbsb7K4Y4F-18" value="Text" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="260" y="460" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="bkX8Slmcs0Gbsb7K4Y4F-19" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;- news DB&lt;/font&gt;&lt;/h1&gt;&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;&lt;span style=&quot;font-size: medium; background-color: initial; font-weight: normal;&quot;&gt;news text,&lt;/span&gt;&lt;span style=&quot;font-size: medium; background-color: initial; font-weight: normal;&quot;&gt;-type of new&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-size: medium; background-color: initial; font-weight: normal;&quot;&gt;url to image db,&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-size: medium; background-color: initial; font-weight: normal;&quot;&gt;url to video, news location,&lt;/span&gt;&lt;/h1&gt;&lt;div&gt;actual url: redirecet to the actual artical&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="950" y="265" width="180" height="165" as="geometry" />
+        </mxCell>
+        <mxCell id="bkX8Slmcs0Gbsb7K4Y4F-20" value="CDN" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="265" y="520" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bkX8Slmcs0Gbsb7K4Y4F-21" value="news Server" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="300" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bkX8Slmcs0Gbsb7K4Y4F-22" value="news Server" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="610" y="345" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bkX8Slmcs0Gbsb7K4Y4F-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.017;entryY=0.633;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="bkX8Slmcs0Gbsb7K4Y4F-6" target="bkX8Slmcs0Gbsb7K4Y4F-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bkX8Slmcs0Gbsb7K4Y4F-24" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="bkX8Slmcs0Gbsb7K4Y4F-12">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="660" y="270" as="sourcePoint" />
+            <mxPoint x="530" y="450" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="660" y="160" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bkX8Slmcs0Gbsb7K4Y4F-25" value="Source1" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="295" y="80" width="105" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="bkX8Slmcs0Gbsb7K4Y4F-26" value="Source 2" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="80" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="bkX8Slmcs0Gbsb7K4Y4F-27" value="Source 3" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="590" y="80" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="bkX8Slmcs0Gbsb7K4Y4F-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="bkX8Slmcs0Gbsb7K4Y4F-30" target="bkX8Slmcs0Gbsb7K4Y4F-34">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="480" y="260" />
+              <mxPoint x="445" y="260" />
+              <mxPoint x="445" y="268" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bkX8Slmcs0Gbsb7K4Y4F-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="bkX8Slmcs0Gbsb7K4Y4F-30" target="bkX8Slmcs0Gbsb7K4Y4F-35">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bkX8Slmcs0Gbsb7K4Y4F-30" value="Fatching service&lt;div&gt;Raw data&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="430" y="180" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bkX8Slmcs0Gbsb7K4Y4F-31" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.15;exitY=0.017;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="bkX8Slmcs0Gbsb7K4Y4F-30" target="bkX8Slmcs0Gbsb7K4Y4F-25">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="450" y="360" as="sourcePoint" />
+            <mxPoint x="500" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bkX8Slmcs0Gbsb7K4Y4F-32" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.417;exitY=-0.033;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="bkX8Slmcs0Gbsb7K4Y4F-30" target="bkX8Slmcs0Gbsb7K4Y4F-26">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="480" y="170" as="sourcePoint" />
+            <mxPoint x="500" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bkX8Slmcs0Gbsb7K4Y4F-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.36;entryY=1.1;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="bkX8Slmcs0Gbsb7K4Y4F-30" target="bkX8Slmcs0Gbsb7K4Y4F-27">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bkX8Slmcs0Gbsb7K4Y4F-34" value="100 word summary out of 5 new source" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="260" width="85" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="bkX8Slmcs0Gbsb7K4Y4F-35" value="Kafka" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="580" y="220" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="bkX8Slmcs0Gbsb7K4Y4F-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.433;entryY=0.033;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="bkX8Slmcs0Gbsb7K4Y4F-35" target="bkX8Slmcs0Gbsb7K4Y4F-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bkX8Slmcs0Gbsb7K4Y4F-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0;entryDx=0;entryDy=52.5;entryPerimeter=0;" edge="1" parent="1" source="bkX8Slmcs0Gbsb7K4Y4F-21" target="bkX8Slmcs0Gbsb7K4Y4F-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bkX8Slmcs0Gbsb7K4Y4F-38" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;" edge="1" parent="1" source="bkX8Slmcs0Gbsb7K4Y4F-2" target="bkX8Slmcs0Gbsb7K4Y4F-20">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="450" y="360" as="sourcePoint" />
+            <mxPoint x="500" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bkX8Slmcs0Gbsb7K4Y4F-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="bkX8Slmcs0Gbsb7K4Y4F-16">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="385" y="555" as="sourcePoint" />
+            <mxPoint x="860" y="360" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="385" y="556" />
+              <mxPoint x="800" y="556" />
+              <mxPoint x="800" y="390" />
+              <mxPoint x="860" y="390" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bkX8Slmcs0Gbsb7K4Y4F-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="bkX8Slmcs0Gbsb7K4Y4F-41" target="bkX8Slmcs0Gbsb7K4Y4F-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bkX8Slmcs0Gbsb7K4Y4F-41" value="radish-database cacjhes" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="680" y="440" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bkX8Slmcs0Gbsb7K4Y4F-42" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;&lt;p id=&quot;docs-internal-guid-a6f242cf-7fff-49ab-5a97-0d78ea8267c2&quot; style=&quot;line-height:1.38;margin-top:0pt;margin-bottom:0pt;&quot; dir=&quot;ltr&quot;&gt;&lt;span style=&quot;font-family: Roboto, sans-serif; color: rgb(60, 64, 67); background-color: rgb(255, 255, 255); font-weight: 400; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;&quot;&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;Design the server side of a news-serving mobile app that sequentially shows news cards, each with a 100-word summary of the news and an image. News are aggregated from other web sites and the user can tap on a news to be redirected to the original article&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;&lt;ul style=&quot;margin-top:0;margin-bottom:0;padding-inline-start:48px;&quot;&gt;&lt;li aria-level=&quot;1&quot; style=&quot;list-style-type: disc; font-family: Roboto, sans-serif; color: rgb(60, 64, 67); background-color: transparent; font-weight: 400; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; vertical-align: baseline; white-space: pre;&quot; dir=&quot;ltr&quot;&gt;&lt;p role=&quot;presentation&quot; style=&quot;line-height:1.38;margin-top:0pt;margin-bottom:0pt;&quot; dir=&quot;ltr&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; vertical-align: baseline; text-wrap: wrap;&quot;&gt;&lt;font size=&quot;3&quot;&gt;Other news source from there need to fetch the new&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;li aria-level=&quot;1&quot; style=&quot;list-style-type: disc; font-family: Roboto, sans-serif; color: rgb(60, 64, 67); background-color: transparent; font-weight: 400; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; vertical-align: baseline; white-space: pre;&quot; dir=&quot;ltr&quot;&gt;&lt;p role=&quot;presentation&quot; style=&quot;line-height:1.38;margin-top:0pt;margin-bottom:0pt;&quot; dir=&quot;ltr&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; vertical-align: baseline; text-wrap: wrap;&quot;&gt;&lt;font size=&quot;3&quot;&gt;How many news :top 10 news (100 word summary)&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;ul style=&quot;margin-top:0;margin-bottom:0;padding-inline-start:48px;&quot;&gt;&lt;li aria-level=&quot;2&quot; style=&quot;list-style-type: disc; font-family: Roboto, sans-serif; color: rgb(60, 64, 67); background-color: transparent; font-weight: 400; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; vertical-align: baseline; white-space: pre;&quot; dir=&quot;ltr&quot;&gt;&lt;p role=&quot;presentation&quot; style=&quot;line-height:1.38;margin-top:0pt;margin-bottom:0pt;&quot; dir=&quot;ltr&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; vertical-align: baseline; text-wrap: wrap;&quot;&gt;&lt;font size=&quot;3&quot;&gt;Need to come-up with 100 word summary&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;li aria-level=&quot;2&quot; style=&quot;list-style-type: disc; font-family: Roboto, sans-serif; color: rgb(60, 64, 67); background-color: transparent; font-weight: 400; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; vertical-align: baseline; white-space: pre;&quot; dir=&quot;ltr&quot;&gt;&lt;p role=&quot;presentation&quot; style=&quot;line-height:1.38;margin-top:0pt;margin-bottom:0pt;&quot; dir=&quot;ltr&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; vertical-align: baseline; text-wrap: wrap;&quot;&gt;&lt;font size=&quot;3&quot;&gt;News aggregation: same news from multiple source&amp;nbsp;&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;li aria-level=&quot;2&quot; style=&quot;list-style-type: disc; font-family: Roboto, sans-serif; color: rgb(60, 64, 67); background-color: transparent; font-weight: 400; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; vertical-align: baseline; white-space: pre;&quot; dir=&quot;ltr&quot;&gt;&lt;p role=&quot;presentation&quot; style=&quot;line-height:1.38;margin-top:0pt;margin-bottom:0pt;&quot; dir=&quot;ltr&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; vertical-align: baseline; text-wrap: wrap;&quot;&gt;&lt;font size=&quot;3&quot;&gt;Permission to access url and source and permission&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;li aria-level=&quot;2&quot; style=&quot;list-style-type: disc; font-family: Roboto, sans-serif; color: rgb(60, 64, 67); background-color: transparent; font-weight: 400; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; vertical-align: baseline; white-space: pre;&quot; dir=&quot;ltr&quot;&gt;&lt;p role=&quot;presentation&quot; style=&quot;line-height:1.38;margin-top:0pt;margin-bottom:0pt;&quot; dir=&quot;ltr&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; vertical-align: baseline; text-wrap: wrap;&quot;&gt;&lt;font size=&quot;3&quot;&gt;Redirection: to original resource&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;li aria-level=&quot;1&quot; style=&quot;list-style-type: disc; font-family: Roboto, sans-serif; color: rgb(60, 64, 67); background-color: transparent; font-weight: 400; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; vertical-align: baseline; white-space: pre;&quot; dir=&quot;ltr&quot;&gt;&lt;p role=&quot;presentation&quot; style=&quot;line-height:1.38;margin-top:0pt;margin-bottom:0pt;&quot; dir=&quot;ltr&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; vertical-align: baseline; text-wrap: wrap;&quot;&gt;&lt;font size=&quot;3&quot;&gt;Sports new, business new, entertainment, health: 4 categories&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;ul style=&quot;margin-top:0;margin-bottom:0;padding-inline-start:48px;&quot;&gt;&lt;li aria-level=&quot;2&quot; style=&quot;list-style-type: disc; font-family: Roboto, sans-serif; color: rgb(60, 64, 67); background-color: transparent; font-weight: 400; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; vertical-align: baseline; white-space: pre;&quot; dir=&quot;ltr&quot;&gt;&lt;p role=&quot;presentation&quot; style=&quot;line-height:1.38;margin-top:0pt;margin-bottom:0pt;&quot; dir=&quot;ltr&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; vertical-align: baseline; text-wrap: wrap;&quot;&gt;&lt;font size=&quot;3&quot;&gt;News card is same there&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;li aria-level=&quot;1&quot; style=&quot;list-style-type: disc; font-family: Roboto, sans-serif; color: rgb(60, 64, 67); background-color: transparent; font-weight: 400; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; vertical-align: baseline; white-space: pre;&quot; dir=&quot;ltr&quot;&gt;&lt;p role=&quot;presentation&quot; style=&quot;line-height:1.38;margin-top:0pt;margin-bottom:0pt;&quot; dir=&quot;ltr&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; vertical-align: baseline; text-wrap: wrap;&quot;&gt;&lt;font size=&quot;3&quot;&gt;Content type: words and images&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;li aria-level=&quot;1&quot; style=&quot;list-style-type: disc; font-family: Roboto, sans-serif; color: rgb(60, 64, 67); background-color: transparent; font-weight: 400; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; vertical-align: baseline; white-space: pre;&quot; dir=&quot;ltr&quot;&gt;&lt;p role=&quot;presentation&quot; style=&quot;line-height:1.38;margin-top:0pt;margin-bottom:0pt;&quot; dir=&quot;ltr&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; vertical-align: baseline; text-wrap: wrap;&quot;&gt;&lt;font size=&quot;3&quot;&gt;Language: English source to accommodate from different lag&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;li aria-level=&quot;1&quot; style=&quot;list-style-type: disc; font-family: Roboto, sans-serif; color: rgb(60, 64, 67); background-color: transparent; font-weight: 400; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; vertical-align: baseline; white-space: pre;&quot; dir=&quot;ltr&quot;&gt;&lt;p role=&quot;presentation&quot; style=&quot;line-height:1.38;margin-top:0pt;margin-bottom:0pt;&quot; dir=&quot;ltr&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; vertical-align: baseline; text-wrap: wrap;&quot;&gt;&lt;font size=&quot;3&quot;&gt;Search of old news is not criteria now&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;li aria-level=&quot;1&quot; style=&quot;list-style-type: disc; font-family: Roboto, sans-serif; color: rgb(60, 64, 67); background-color: transparent; font-weight: 400; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; vertical-align: baseline; white-space: pre;&quot; dir=&quot;ltr&quot;&gt;&lt;p role=&quot;presentation&quot; style=&quot;line-height:1.38;margin-top:0pt;margin-bottom:0pt;&quot; dir=&quot;ltr&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; vertical-align: baseline; text-wrap: wrap;&quot;&gt;&lt;font size=&quot;3&quot;&gt;Next 10 news upto max capacity&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;li aria-level=&quot;1&quot; style=&quot;list-style-type: disc; font-family: Roboto, sans-serif; color: rgb(60, 64, 67); background-color: transparent; font-weight: 400; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; vertical-align: baseline; white-space: pre;&quot; dir=&quot;ltr&quot;&gt;&lt;p role=&quot;presentation&quot; style=&quot;line-height:1.38;margin-top:0pt;margin-bottom:0pt;&quot; dir=&quot;ltr&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; vertical-align: baseline; text-wrap: wrap;&quot;&gt;&lt;font size=&quot;3&quot;&gt;News from different countries on login:&amp;nbsp;&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;font size=&quot;3&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;p style=&quot;line-height:1.38;margin-top:0pt;margin-bottom:0pt;&quot; dir=&quot;ltr&quot;&gt;&lt;span style=&quot;font-family: Roboto, sans-serif; color: rgb(60, 64, 67); background-color: rgb(255, 255, 255); font-weight: 400; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;&quot;&gt;&lt;font size=&quot;3&quot;&gt;capacity&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;&lt;ul style=&quot;margin-top:0;margin-bottom:0;padding-inline-start:48px;&quot;&gt;&lt;li aria-level=&quot;1&quot; style=&quot;list-style-type: disc; font-family: Roboto, sans-serif; color: rgb(60, 64, 67); background-color: transparent; font-weight: 400; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; vertical-align: baseline; white-space: pre;&quot; dir=&quot;ltr&quot;&gt;&lt;p role=&quot;presentation&quot; style=&quot;line-height:1.38;margin-top:0pt;margin-bottom:0pt;&quot; dir=&quot;ltr&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; vertical-align: baseline; text-wrap: wrap;&quot;&gt;&lt;font size=&quot;3&quot;&gt;DAU: 10 mill: 1 crores&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;li aria-level=&quot;1&quot; style=&quot;list-style-type: disc; font-family: Roboto, sans-serif; color: rgb(60, 64, 67); background-color: transparent; font-weight: 400; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; vertical-align: baseline; white-space: pre;&quot; dir=&quot;ltr&quot;&gt;&lt;p role=&quot;presentation&quot; style=&quot;line-height:1.38;margin-top:0pt;margin-bottom:0pt;&quot; dir=&quot;ltr&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; vertical-align: baseline; text-wrap: wrap;&quot;&gt;&lt;font size=&quot;3&quot;&gt;Only mobile app&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;li aria-level=&quot;1&quot; style=&quot;list-style-type: disc; font-family: Roboto, sans-serif; color: rgb(60, 64, 67); background-color: transparent; font-weight: 400; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; vertical-align: baseline; white-space: pre;&quot; dir=&quot;ltr&quot;&gt;&lt;p role=&quot;presentation&quot; style=&quot;line-height:1.38;margin-top:0pt;margin-bottom:0pt;&quot; dir=&quot;ltr&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; vertical-align: baseline; text-wrap: wrap;&quot;&gt;&lt;font size=&quot;3&quot;&gt;Store capacity 10*100 = 1000 words * 10 = 10000 words * 1cores = 10^5 * 10 mill =&amp;nbsp;&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p style=&quot;line-height:1.38;margin-top:0pt;margin-bottom:0pt;&quot; dir=&quot;ltr&quot;&gt;&lt;span style=&quot;font-family: Roboto, sans-serif; color: rgb(60, 64, 67); background-color: rgb(255, 255, 255); font-weight: 400; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;&quot;&gt;&lt;font size=&quot;3&quot;&gt;&amp;nbsp;20kb * 10 = 200 kb * 10 = 200gb =&amp;nbsp; 10 min + 200 = 500gb data&amp;nbsp;&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;line-height:1.38;margin-top:0pt;margin-bottom:0pt;&quot; dir=&quot;ltr&quot;&gt;&lt;span style=&quot;font-family: Roboto, sans-serif; color: rgb(60, 64, 67); background-color: rgb(255, 255, 255); font-weight: 400; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;&quot;&gt;&lt;font size=&quot;3&quot;&gt;&amp;nbsp;Single daty : 20 mb store =&amp;gt; 100 mb -&amp;gt; 1gB&amp;nbsp;&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;&lt;/h1&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="720" width="940" height="760" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

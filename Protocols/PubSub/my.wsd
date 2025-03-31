@@ -1,0 +1,160 @@
+@startuml update
+
+actor User
+
+participant cluster_image_update_iterator
+participant MetroclusterIf
+participant AnduUtil
+participant RdbTaskHelper
+participant zero_rto_failover_utils
+participant UmRulesMgr
+participant invoke_andu_support_iterator
+participant metrocluster_utils
+participant upgrade_manager_rdb_iterator
+participant UpdatePayload
+
+User -> cluster_image_update_iterator: create_imp()
+activate cluster_image_update_iterator
+
+cluster_image_update_iterator -> MetroclusterIf: isMccConfigured(isMCC)
+activate MetroclusterIf
+deactivate MetroclusterIf
+
+alt errMCC != smdb_error::Ok
+    cluster_image_update_iterator -> User: smdb_error::AppError(UPGRADE_MANAGER_CLUSTER_CONF_NOT_SUPPORTED)
+    deactivate cluster_image_update_iterator
+else
+    cluster_image_update_iterator -> AnduUtil: is_two_node_mcc(is_two_node_mcc_config)
+    activate AnduUtil
+    deactivate AnduUtil
+
+    alt !err.is_ok()
+        cluster_image_update_iterator -> User: err
+        deactivate cluster_image_update_iterator
+    else
+        alt is_two_node_mcc_config && have_code_trigger() && !get_code_trigger()
+            cluster_image_update_iterator -> cluster_image_update_iterator: update_two_node_mcc()
+        else
+            alt !is_two_node_mcc_config && get_node_count() == 1
+                cluster_image_update_iterator -> cluster_image_update_iterator: validateParametersForSingleNodeCluster()
+                alt !err.is_ok()
+                    cluster_image_update_iterator -> User: err
+                    deactivate cluster_image_update_iterator
+                end
+            end
+
+            cluster_image_update_iterator -> RdbTaskHelper: IsSameTaskRunning(_ontap_updates, _initialize)
+            activate RdbTaskHelper
+            deactivate RdbTaskHelper
+
+            alt result
+                cluster_image_update_iterator -> User: smdb_error::AppError(UPGRADE_MANAGER_UPDATE_IN_PROGRESS)
+                deactivate cluster_image_update_iterator
+            else
+                cluster_image_update_iterator -> zero_rto_failover_utils: is_failover_inprogress()
+                activate zero_rto_failover_utils
+                deactivate zero_rto_failover_utils
+
+                alt result
+                    cluster_image_update_iterator -> User: smdb_error::AppError(SM_FAILOVER_IN_PROGRESS)
+                    deactivate cluster_image_update_iterator
+                else
+                    cluster_image_update_iterator -> RdbTaskHelper: delete_update_tasks_info(get_skip_validation())
+                    activate RdbTaskHelper
+                    deactivate RdbTaskHelper
+
+                    alt !result
+                        cluster_image_update_iterator -> User: smdb_error::AppError(UPGRADE_MANAGER_UPDATE_PREPARE_ERROR)
+                        deactivate cluster_image_update_iterator
+                    else
+                        cluster_image_update_iterator -> UmRulesMgr: UmRulesMgr(get_version())
+                        activate UmRulesMgr
+                        deactivate UmRulesMgr
+
+                        cluster_image_update_iterator -> cluster_image_update_iterator: checkClusterHealth(unHealthyNode, ...)
+                        alt health_err != smdb_error::Ok
+                            cluster_image_update_iterator -> User: health_err
+                            deactivate cluster_image_update_iterator
+                        else
+                            alt !have_nodes()
+                                cluster_image_update_iterator -> cluster_image_update_iterator: createAllNodeList()
+                                cluster_image_update_iterator -> cluster_image_update_iterator: _haveNodesInput = false
+                            else
+                                cluster_image_update_iterator -> UmRulesMgr: validateHApairs(nodes, missingpairs)
+                                activate UmRulesMgr
+                                deactivate UmRulesMgr
+
+                                alt rc != UmRulesMgr::HA_PAIRS_GOOD
+                                    cluster_image_update_iterator -> User: smdb_error::AppError(UPGRADE_MANAGER_INVALID_HA_PAIR_LIST)
+                                    deactivate cluster_image_update_iterator
+                                end
+                            end
+
+                            alt have_invoke_andu_support() && get_invoke_andu_support() && have_nodes()
+                                cluster_image_update_iterator -> invoke_andu_support_iterator: invoke_andu_support_iterator(0)
+                                activate invoke_andu_support_iterator
+                                deactivate invoke_andu_support_iterator
+
+                                cluster_image_update_iterator -> invoke_andu_support_iterator: create()
+                                activate invoke_andu_support_iterator
+                                deactivate invoke_andu_support_iterator
+
+                                alt !result
+                                    cluster_image_update_iterator -> User: smdb_error::AppError(UPGRADE_MANAGER_ANDUSUPPORT_PREUPDATE_ERROR)
+                                    deactivate cluster_image_update_iterator
+                                end
+                            end
+
+                            cluster_image_update_iterator -> cluster_image_update_iterator: doValidation()
+                            alt !err.is_ok()
+                                cluster_image_update_iterator -> User: smdb_error::AppError(UPGRADE_MANAGER_INTERNAL_ERROR_WITH_REASON)
+                                deactivate cluster_image_update_iterator
+                            end
+
+                            cluster_image_update_iterator -> cluster_image_update_iterator: getNodesToUpdateList(nodesToUpdateList, nodesToSkip, upgradeVersion, get_nodes(), isSkipRedundant)
+                            alt nodeListErr != smdb_error::Ok
+                                cluster_image_update_iterator -> User: smdb_error::AppError(UPGRADE_MANAGER_UPDATE_NODE_LIST_ERROR)
+                                deactivate cluster_image_update_iterator
+                            end
+
+                            cluster_image_update_iterator -> UpdatePayload: UpdatePayload(...)
+                            activate UpdatePayload
+                            deactivate UpdatePayload
+
+                            cluster_image_update_iterator -> UpdatePayload: serialize()
+                            activate UpdatePayload
+                            deactivate UpdatePayload
+
+                            cluster_image_update_iterator -> upgrade_manager_rdb_iterator: upgrade_manager_rdb_iterator(0)
+                            activate upgrade_manager_rdb_iterator
+                            deactivate upgrade_manager_rdb_iterator
+
+                            cluster_image_update_iterator -> upgrade_manager_rdb_iterator: get()
+                            activate upgrade_manager_rdb_iterator
+                            deactivate upgrade_manager_rdb_iterator
+
+                            alt !result
+                                cluster_image_update_iterator -> User: smdb_error::KeyNotFound
+                                deactivate cluster_image_update_iterator
+                            end
+
+                            cluster_image_update_iterator -> RdbTaskHelper: createTask(_ontap_updates, _ready_to_run, _initialize, "MUM", payloadstring)
+                            activate RdbTaskHelper
+                            deactivate RdbTaskHelper
+
+                            alt rc == RDB_TASK_STATUS_FAILURE
+                                cluster_image_update_iterator -> User: smdb_error::AppError(UPGRADE_MANAGER_UPDATE_TASK_CREATE_ERROR)
+                                deactivate cluster_image_update_iterator
+                            else
+                                cluster_image_update_iterator -> User: smdb_error::Ok
+                                deactivate cluster_image_update_iterator
+                            end
+                        end
+                    end
+                end
+            end
+        end
+    end
+end
+
+@enduml
