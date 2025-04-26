@@ -1,3 +1,9 @@
+### QA Link: 
+- https://www.interviewbit.com/networking-interview-questions/
+- https://www.shiksha.com/online-courses/articles/networking-interview-questions-answers/
+- https://www.ambitionbox.com/skills/networking-interview-questions
+- https://www.simplilearn.com/network-engineer-interview-questions-article 
+
 ### "google.com" when you type in your browser what happend behind
 When you type "google.com" into your web browser and press Enter, several steps occur behind the scenes to resolve the domain name and load the website. Here's an overview of the process:
 ![](image/GoogleUrl.png)
@@ -21,6 +27,19 @@ The browser sends an HTTP (Hypertext Transfer Protocol) request to the Google se
 It may also fetch additional resources (such as images, scripts, or stylesheets) referenced in the webpage to complete the rendering process.
 
 Overall, this sequence of steps involves DNS resolution, establishing a connection to the server, sending and processing HTTP requests and responses, and finally rendering the webpage for the user to view.
+
+### What happens when you enter google.com in the web browser?
+
+Below are the steps that are being followed:
+
+- Check the browser cache first if the content is fresh and present in cache display the same.
+- If not, the browser checks if the IP of the URL is present in the cache (browser and OS) if not then request the OS to do a DNS lookup using UDP to get the corresponding IP address of the URL from the DNS server to establish a new TCP connection.
+- A new TCP connection is set between the browser and the server using three-way handshaking.
+- An HTTP request is sent to the server using the TCP connection.
+- The web servers running on the Servers handle the incoming HTTP request and send the HTTP response.
+- The browser process the HTTP response sent by the server and may close the TCP connection or reuse the same for future requests.
+- If the response data is cacheable then browsers cache the same.
+- Browser decodes the response and renders the content.
 
 ### what is diffrence b/w routing policy and firewall policy
 
@@ -113,5 +132,14 @@ By analyzing the output of traceroute, network administrators can identify the n
 
 ### LAN vs VLAN
 ![](image/LAN_VLAN.png)
+
+
+###  What are Unicasting, Anycasting, Multicasting and Broadcasting?
+
+- `Unicasting`: If the message is sent to a single node from the source then it is known as unicasting. This is commonly used in networks to establish a new connection.
+- `Anycasting`: If the message is sent to any of the nodes from the source then it is known as anycasting. It is mainly used to get the content from any of the servers in the Content Delivery System.
+- `Multicasting`: If the message is sent to a subset of nodes from the source then it is known as multicasting. Used to send the same data to multiple receivers. 
+- `Broadcasting`: If the message is sent to all the nodes in a network from a source then it is known as broadcasting. DHCP and ARP in the local network use broadcasting.
+
 
 
