@@ -1,3 +1,11 @@
+# Example Recent which have resolved conflict
+During working in Cisco we have the requirement to get the multi-tenancy instead of single tenant vs multi tenant based architecture so for that
+2 senior one was in my team as lead and one was in counterpart was projecting different solution, one was based on MQTT pub-sub modle based and other one was based on 
+Web-socket message communication based along wth using of RB Mq. so for that
+i first arrrange the individual meeting did the open discussion the pro and cons of each approches 
+and then i arrage the meeting where i tried to flip the design approches for on each other side and did open communication to identify the limitation of each design from other side and also collected the point which fits in to current requirement with minimum impact on backword compatability breakiing. 
+So evantually we find the limitations in both the design and came up with hybrid design where pub-sub and websocket both were used and also it kept the backword compatibility intact.
+
 # Resolving Conflict Between Team Members
 
 Resolving conflict in a team can be approached with empathy, clear communication, and structured guidance. Below are several steps and techniques to help you navigate and resolve conflicts effectively.
