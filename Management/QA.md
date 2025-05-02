@@ -1,3 +1,21 @@
+### Brief about your self:
+
+Hi, I am Suraj I am currently working in NetApp as a Senior technical lead in a cloud storage core software group 
+and I currently work with multiple technical team for implementing the PM requirement I closely works with PMs and 
+Director to understand and gather the requirement and execute them using Scrum team. I also involved in d in working I also handle contractor 
+team which is of around 8 people which mainly handles the customer cases and defects. 
+
+Prior to that I was working in a Cisco in cloud and networking BU as a Engineering Leader and managing a team of 12 people and there also 
+I had one contractor team of Germany of 5 people to handle specific Government project. 
+The project which I was handling was related to Saas based solution for SDWAN and in the team I had control plan and data plan engineers.
+
+I have done my engineering in 2007 and also done Mtech in Software systems from BITTS pilani.
+
+### What are you looking for from this JOB 
+- The reason why i am looking for this job is i intially understood this will be on the engineeting manger job role but its more like cunsltaions with lots of team and running the program as they have Program manager role at very high level and i am kind of doing similar so i am looking for engineering maanger job role.
+- Inially 6-7 month when there was no manager was highred i was doing the manager role now its changed
+
+
 ### Example: Recent which have resolved conflict
 
 - During working in `Cisco` we have the requirement to get the multi-tenancy instead of single tenant vs multi tenant based architecture so for that
@@ -25,6 +43,9 @@ So i took preventive measure and action on this situation
 - In `NetApp` we had lot of issue realated to Pasue event becaue the system upgrade was pausing due to so amany several issue in storage stystem despite of having lot of prechec during run time still those issue can arrive and running upgrade can go into pause state and it require again user intervanetion to come out of it. So to reduce lot of user intervantion for the pause cases we did data log analysis throught customver data using smart slove tool which has access to cusotmer generated data mining from data lake and the we identified lot of common problem right now the tool is still adeprting AI process to give good analytics but its still not sufficeient so we arrive on common problems using some time manual analysis and also drafted multiple solution throught out multiple semester release. 
 
 ### did you failed any time in your decision making and how did you hanled that failure
+- In`netApp` in the Storage system upgrade we have lots of components check which we wanted to centarlize it some framework where other Netapp team also can centalize the check which automatically populates based on system configuration, this was very large effort ,we did POC and found those hardles and came to know many unkowns about this approches. So finally we took back steps about that becaause the vision was very big and it was not worth to considers as of now after PMs and VP discussion.
+- In `Cisco` we had some requirement to handle industries specific on prem on system solution for eg. automotive sector which was not the idea of the product we did the integration as asked by Product management but later it was dropped and showcases. For that team got upset about not setting the right priorities 
+- 
 
 
 
