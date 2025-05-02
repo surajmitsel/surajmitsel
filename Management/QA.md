@@ -1,3 +1,33 @@
+### Example: Recent which have resolved conflict
+
+- During working in `Cisco` we have the requirement to get the multi-tenancy instead of single tenant vs multi tenant based architecture so for that
+2 senior one was in my team as lead and one was in counterpart was projecting different solution, one was based on MQTT pub-sub model based and other one was based on 
+Web-socket message communication based along with using of RB Mq. so for that
+i first arrange the individual meeting did the open discussion the pro and cons of each approach 
+and then i arrange the meeting where i tried to flip the design approaches for on each other side and did open communication to identify the limitation of each design from other side and also collected the point which fits in to current requirement with minimum impact on backward compatibility breaking. 
+So eventually we find the limitations in both the design and came up with hybrid design where pub-sub and WebSocket both were used and also it kept the backward compatibility intact.
+
+- While working in `netapp` I encountered one of the members who was having lots of knowledge about the product was not sharing the information to the new member and it was affecting the productivity and delivery of the project due to that there were stated the conflict b/w those members. When i did one on one to identify the situation it was from one side the appreciation was missing and from other side the willingness and the fear of sharing the knowledge was found.
+So i took preventive measure and action on this situation 
+- Appreciation and credit of of the team member if anyone is helping you
+- Sharing knowledge through tech talk and by setting the goal.
+- For senior member to mentor one person in area which they are expert so that that also can move to new opportunity and others can grow.
+
+- In `ABB` i handled one customer issue which was from reliace refinary where the production was halted due to one CI was starting exactly after 49 days we had intially problem to understand the problem but it was happening due to counter oveflow which was causing the CI to start. Though it was an static anaysis warnning but was ignored during development.
+
+
+### Example: Explain the difficult customer escalation you have encountered and how did you resolve it
+- In `Cisco` in the edge intelligence project we got one customer case when there was low bandwidths the data pipeline communication was crashing the router and it was app was starting several time but the same application where the other data center was present was not having the issue. First of all, it was very difficult to reproduce the issue, as initially we were not knowing its happening due to low bandwidth. So we restricted bandwidth locally in the lab with 5g networked based communication and then we reduced the bandwidth and was able to reproduce the issue, the issue when found it was using data pipeline with destination as azure cloud for that we were using open source lib from azure in that queue was crashing and they were not exposing the queue control to the application. so we posted the issue with all the logs to them to fix the issue but as an solution we propose buffer mechanism in application to control the pressure on outbound and fixed that issue. We also exposed the queue configuration to the user to configure and queue count and max memory to allocate whichever is minimum for handling the pressure so that the overall memory will be predictable. We also try to analyze the approach of integrating DB where the que data can be managed in SQ lite but that was not needed for any of the customer.
+- flood of the event which was overwhelming the cloud application by lots of pipline status which was flucatuating. So we implemented the buffer oveload event and it was buffer drop event and start dropping the packet rather processing it for every event.
+
+- In `NetApp` we encounter the issue during upgrade as we do the mounting of the image and unmounting of the image as part of validation but that was causing memory leak as unmonting was not happening and without retrying again so because of lots of mount point it was causing the memory leak as the customver was calling the validation script so many time to validate the system and keep the calcuate the helth of the running system and it was rebooting node many time which was causing the failover again and again.
+
+- In `NetApp` we had lot of issue realated to Pasue event becaue the system upgrade was pausing due to so amany several issue in storage stystem despite of having lot of prechec during run time still those issue can arrive and running upgrade can go into pause state and it require again user intervanetion to come out of it. So to reduce lot of user intervantion for the pause cases we did data log analysis throught customver data using smart slove tool which has access to cusotmer generated data mining from data lake and the we identified lot of common problem right now the tool is still adeprting AI process to give good analytics but its still not sufficeient so we arrive on common problems using some time manual analysis and also drafted multiple solution throught out multiple semester release. 
+
+### did you failed any time in your decision making and how did you hanled that failure
+
+
+
 ### Q1. Can you describe your project management experience and the methodologies you use?
 - I have been involved in project management for several years, successfully overseeing projects from initiation to completion across various industries, including IT, software development, and infrastructure.
 
