@@ -23,6 +23,7 @@ classname::functionName();
 - It is used in singleton, factory, abstract factory design patterns.
 - Static member function can access only static variables it can not access non static variable of a class. However non-static member function can access both static and non static member functions.
 - Every object has its own copy of non static member variable, since static member function does not know about object so it is impossible for a static function to know on which class object or class instance it is being called. So because of this whenever we try to call non-static variable from a static function the compiler gives error.
+- C++ does not allow defining a class itself as static. However, the effect of a static class can be achieved by using a class with only static members or by using a namespace.
 
 
 ```cpp

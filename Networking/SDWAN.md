@@ -41,3 +41,40 @@ Within the SD-WAN overlay network, OSPF can be used to establish dynamic routing
 
 In summary, SD-WAN solutions can leverage both OSPF and BGP protocols to achieve dynamic routing, optimize traffic flow, and ensure connectivity between SD-WAN edges and external networks. The choice between OSPF and BGP, as well as their specific configurations, will depend on the requirements of the SD-WAN deployment, the underlying network infrastructure, and the desired network policies and objectives.
 
+
+## What happend when device joins SDWAN network:
+
+A device joins an SD-WAN network through a process that typically involves authentication, establishing secure connections, and configuration. This process can be automated through zero-touch provisioning (ZTP) or manually configured. The device then connects to the SD-WAN controller(s) and begins participating in the overlay network. 
+Here's a more detailed breakdown:
+### 1. Authentication and Authorization:
+
+- `ZTP`: In a typical ZTP scenario, the device obtains an IP address, default gateway, and DNS information via DHCP. It then attempts to resolve a URL (e.g., ztp.viptela.com) to reach a ZTP server. 
+
+- `Manual Configuration`: Alternatively, a basic configuration can be manually applied to the device, allowing it to connect to the vBond orchestrator. 
+- `Controller Interaction`: The device authenticates with the SD-WAN controller (e.g., vBond) which then authorizes the device to join the overlay network. The device may also need to authenticate with other controllers like vManage and vSmart. 
+
+### 2. Establishing Connections:
+
+- `Secure Tunnels`: Once authenticated, the device establishes secure, encrypted tunnels to the SD-WAN controllers (vSmart, vManage). 
+
+- `Control Plane Connections`:These tunnels are used for control plane communication, enabling the device to receive policies and configuration from the controllers. 
+
+- `Data Plane Connections`: The device also establishes data plane connections to other devices within the SD-WAN fabric, potentially using IPsec. 
+
+### 3. Configuration and Policy Application:
+
+- `Feature Templates`: The SD-WAN controller (vManage) uses feature templates to push configurations to the device. 
+
+- `Device Templates`: Device templates can be used to further customize the configuration of the device. 
+
+- `Policy Enforcement`: The device then enforces the policies received from the controllers, enabling dynamic path selection, traffic steering, and security features. 
+
+### 4. Overlay Network Participation:
+
+- `OMP`: The device uses the Overlay Management Protocol (OMP) to communicate with other devices in the overlay network. 
+
+- `Dynamic Routing`: SD-WAN devices dynamically learn routes from each other through OMP and adapt to network changes.
+
+- `Application Prioritization`: Traffic is routed based on application requirements and link performance, ensuring optimal connectivity. 
+
+

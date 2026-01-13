@@ -1,3 +1,6 @@
+## Introduction: 
+A broadcast domain is a logical division of a computer network where any device can directly reach all other devices by broadcasting a message. In essence, it's a network segment where a broadcast sent by one device is received by all other devices within that segment. Routers are used to separate broadcast domains, while switches (and hubs) typically forward broadcasts within the same domain
+
 ### what the meaning of broadcast domain
 
 - A broadcast domain is a portion of a computer network in which all devices can receive broadcast messages sent by any other device within the same domain. Broadcast messages are data packets that are sent to every device on a network segment simultaneously.
