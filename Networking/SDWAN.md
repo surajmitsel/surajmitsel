@@ -23,6 +23,9 @@ Overall, SD-WAN offers organizations greater agility, reliability, and cost-effe
 - The OpenFlow protocol is a standardized communication interface that allows the control plane to interact with the forwarding plane of network devices such as switches and routers. 
 - It enables centralized control of the network infrastructure, making it more programmable, flexible, and adaptable to changing network conditions.
 
+### OMP
+https://www.networkacademy.io/ccie-enterprise/sdwan/omp-overview
+
 
 ### OSPF and BGP in SDWAN
 Yes, SD-WAN (Software-Defined Wide Area Network) solutions can utilize both OSPF (Open Shortest Path First) and BGP (Border Gateway Protocol) protocols, depending on the requirements and design of the network.
